@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'open sans';
+
 }
 
 :root{
@@ -10,4 +12,9 @@
 
 body {
     background-color: var(--dark--);
+}
+
+h1{
+    color: white;
+    font-family: 'raleway';
 }

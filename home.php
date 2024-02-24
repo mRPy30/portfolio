@@ -8,7 +8,7 @@
     <title>
         <?php echo "My Portfolio"; ?>
     </title>
-
+    <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
