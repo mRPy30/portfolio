@@ -60,7 +60,7 @@ body {
   background-color: var(--superlight--); 
 }
 
-.darkmode .text { 
+.darkmode .text , .darkmode .logo { 
   background: radial-gradient(circle, rgba(216, 216, 216, 0.1) 0%, rgba(194, 194, 194, 0) 70%);
   border-radius: 10px;
 }
@@ -81,9 +81,7 @@ h1, p {
     background: var(--limeGreen--);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* fallback for some browsers */
-  text-fill-color: transparent;
-  background: radial-gradient(circle, rgba(4, 4, 4, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+  background-clip: text; 
   margin-left: 30px;
   font: normal 800 40px/normal 'openSans';
 }
