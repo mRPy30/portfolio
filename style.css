@@ -65,6 +65,7 @@ body {
   border-radius: 10px;
 }
 
+
 h1, p {
   color: var(--grayText--);
 }
@@ -173,7 +174,9 @@ h1, p {
 }
 
 .btn {
-  background-color: var(--limeGreen--);
+  background-image: var(--limeGreen--);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 10px 15px;
   margin-top: 20px;
   color: var(--light--);
