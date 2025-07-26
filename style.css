@@ -57,7 +57,7 @@ body {
 }
 
 .darkmode .logo { 
-background: linear-gradient(to right, #2f5940, #2c503b, #294836, #263f31, #23372c);
+background-image: linear-gradient(to bottom, #3b7552, #3a6b4e, #3a624a, #395846, #384f42);
  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; 
