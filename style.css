@@ -83,6 +83,7 @@ h1, p {
   -webkit-text-fill-color: transparent;
   background-clip: text; /* fallback for some browsers */
   text-fill-color: transparent;
+  background: radial-gradient(circle, rgba(4, 4, 4, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
   margin-left: 30px;
   font: normal 800 40px/normal 'openSans';
 }
