@@ -56,11 +56,18 @@ body {
   color: var(--superlight--);
 }
 
+.darkmode .logo { 
+background: linear-gradient(to right, #2f5940, #2c503b, #294836, #263f31, #23372c);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; 
+}
+
 .darkmode .image-container {
   background-color: var(--superlight--); 
 }
 
-.darkmode .text , .darkmode .logo { 
+.darkmode .text { 
   background: radial-gradient(circle, rgba(216, 216, 216, 0.1) 0%, rgba(194, 194, 194, 0) 70%);
   border-radius: 10px;
 }
@@ -78,7 +85,7 @@ h1, p {
 }
 
 .logo {
-    background: var(--limeGreen--);
+  background: var(--limeGreen--);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; 
