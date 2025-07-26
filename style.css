@@ -77,7 +77,11 @@ h1, p {
 }
 
 .logo {
-  color: var(--limeGreen--);
+    background: var(--limeGreen--);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* fallback for some browsers */
+  text-fill-color: transparent;
   margin-left: 30px;
   font: normal 800 40px/normal 'openSans';
 }
@@ -94,7 +98,9 @@ h1, p {
 }
 
 .menu .button {
-  background-color: var(--limeGreen--);
+  background-image: var(--limeGreen--);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 10px 15px;
   margin: 0 10px;
   color: var(--light--);
