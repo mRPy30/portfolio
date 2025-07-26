@@ -12,7 +12,7 @@
   --light--: #fbfbf9;
   --superlight--: #ffffff;
   --lightmode--: #FBFBF9;
-  --limeGreen--: #00704A;
+  --limeGreen--: linear-gradient(to left bottom, #1e3c29, #193123, #15261d, #111b16, #0a0f0d);
   --hoverGreen--: #00A76E;
 }
 
