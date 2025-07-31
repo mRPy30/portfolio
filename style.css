@@ -12,7 +12,7 @@
   --light--: #fbfbf9;
   --superlight--: #ffffff;
   --lightmode--: #FBFBF9;
-  --orangeGradient--: linear-gradient(to right bottom, #a33300, #ad3b00, #b84400, #c24c00, #cc5500);
+  --orangeGradient--: linear-gradient(to right bottom, #f94e00, #bf3f09, #88300c, #55200b, #271102);
   --hoverOrange--: #F83600;
 }
 
@@ -66,7 +66,7 @@ body {
 }
 
 .darkmode .projects-section {
-  background: linear-gradient(to bottom, #444444, #59443a, #d04015, #ca431b, #c34620);  
+  background: linear-gradient(to bottom, #444444, #f94e00, #d04015, #ca431b, #271102);  
 }
 
 .darkmode .project-card {
