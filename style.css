@@ -12,8 +12,8 @@
   --light--: #fbfbf9;
   --superlight--: #ffffff;
   --lightmode--: #FBFBF9;
-  --limeGreen--: linear-gradient(to left bottom, #1e3c29, #193123, #15261d, #111b16, #0a0f0d);
-  --hoverGreen--: #00A76E;
+  --orangeGradient--: linear-gradient(to right, #f83600, #fd6900, #fe9000, #fdb300, #f9d423);
+  --hoverOrange--: #F83600;
 }
 
 body {
@@ -98,7 +98,7 @@ h1, p {
 }
 
 .logo {
-  background: var(--limeGreen--);
+  background: var(--orangeGradient--);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; 
@@ -118,7 +118,7 @@ h1, p {
 }
 
 .menu .button {
-  background-image: var(--limeGreen--);
+  background-image: var(--orangeGradient--);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10px 15px;
@@ -129,7 +129,7 @@ h1, p {
 }
 
 .menu .button:hover {
-  background-color: var(--hoverGreen--);
+  background-color: var(--hoverOrange--);
 }
 
 .menu i {
@@ -192,7 +192,7 @@ h1, p {
 }
 
 .btn {
-  background-image: var(--limeGreen--);
+  background-image: var(--orangeGradient--);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10px 15px;
@@ -206,7 +206,7 @@ h1, p {
 
 .projects-section {
   padding: 60px 20px;
-  background: linear-gradient(to bottom, #fbfbf9, #eae9e9, #707673, #49504c, rgb(136, 136, 136));  
+  background: linear-gradient(to bottom, #444444, #59443a, #d04015, #ca431b, #c34620);  
   text-align: center;
 }
 
