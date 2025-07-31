@@ -23,6 +23,9 @@ body {
 
 .darkmode .logo {
   color: var(--darkmodeGradient--);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; 
 }
 
 .darkmode h1, .darkmode p {
@@ -43,6 +46,10 @@ body {
 
 .darkmode .button, .btn {
   background: linear-gradient(to right, #f83600, #fd6900, #fe9000, #fdb300, #f9d423);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; 
+  margin-left: 30px;
 }
 
 .darkmode .body-content {
