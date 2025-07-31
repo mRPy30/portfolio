@@ -151,17 +151,17 @@ h1, p {
 }
 
 .image-container {
-  width: 350px; 
+  width: 335px;
   height: 350px;
   background-color: var(--gradientBG--); 
   border-radius: 10px;
 }
 
 .image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+  width: 87%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .text {
