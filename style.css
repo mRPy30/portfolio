@@ -12,7 +12,7 @@
   --light--: #fbfbf9;
   --superlight--: #ffffff;
   --lightmode--: #FBFBF9;
-  --orangeGradient--: linear-gradient(to right, #f83600, #fd6900, #fe9000, #fdb300, #f9d423);
+  --orangeGradient--: linear-gradient(to right bottom, #a33300, #ad3b00, #b84400, #c24c00, #cc5500);
   --hoverOrange--: #F83600;
 }
 
@@ -54,13 +54,6 @@ body {
 .darkmode .text h1,
 .darkmode .text p {
   color: var(--superlight--);
-}
-
-.darkmode .logo { 
- background: linear-gradient(to bottom, #444444, #59443a, #d04015, #ca431b, #c34620);  
- -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; 
 }
 
 .darkmode .image-container {
