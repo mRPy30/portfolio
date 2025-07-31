@@ -13,6 +13,7 @@
   --superlight--: #ffffff;
   --lightmode--: #FBFBF9;
   --orangeGradient--: linear-gradient(to right bottom, #f94e00, #bf3f09, #88300c, #55200b, #271102);
+  --darkmodeGradient--: linear-gradient(to right, #f83600, #fd6900, #fe9000, #fdb300, #f9d423);
   --hoverOrange--: #F83600;
 }
 
@@ -21,7 +22,7 @@ body {
 }
 
 .darkmode .logo {
-  color: var(--superlight--);
+  color: var(--darkmodeGradient--);
 }
 
 .darkmode h1, .darkmode p {
@@ -41,7 +42,7 @@ body {
 }
 
 .darkmode .button, .btn {
-  background-color: var(--hoverGreen--);
+  background: linear-gradient(to right, #f83600, #fd6900, #fe9000, #fdb300, #f9d423);
 }
 
 .darkmode .body-content {
@@ -147,21 +148,22 @@ h1, p {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 80%;
+  width: 90%;
 }
 
 .image-container {
-  width: 335px;
+  width: 310px;
   height: 350px;
   background-color: var(--gradientBG--); 
   border-radius: 10px;
 }
 
 .image-container img {
-  width: 87%;
-    height: 100%;
+  width: 102%;
+    height: 104%;
     object-fit: cover;
     border-radius: 10px;
+    margin: -4% 0% 0% -6%;
 }
 
 .text {
