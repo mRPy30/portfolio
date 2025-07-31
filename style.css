@@ -206,7 +206,7 @@ h1, p {
 
 .projects-section {
   padding: 60px 20px;
-  background: var(--gradientBG--);
+  background: linear-gradient(to bottom, #fbfbf9, #eae9e9, #707673, #49504c, rgb(136, 136, 136));  
   text-align: center;
 }
 
