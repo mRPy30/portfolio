@@ -21,7 +21,7 @@ body {
 }
 
 .darkmode .logo {
-  background-image: linear-gradient(to right, #f83600, #fd6900, #fe9000, #fdb300, #f9d423);
+  background-image: var(--orangeGradient--);
 }
 
 .darkmode h1, .darkmode p {
