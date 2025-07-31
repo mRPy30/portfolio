@@ -57,7 +57,7 @@ body {
 }
 
 .darkmode .logo { 
-background: linear-gradient(to bottom, #54ac77, #519b6f, #4e8966, #4a795e, #476855);
+ background: linear-gradient(to bottom, #54ac77, #519b6f, #4e8966, #4a795e, #476855);
  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; 
@@ -73,16 +73,16 @@ background: linear-gradient(to bottom, #54ac77, #519b6f, #4e8966, #4a795e, #4768
 }
 
 .darkmode .projects-section {
-  background-color: var(--darkmode--);
+   background: linear-gradient(to bottom, #54ac77, #519b6f, #4e8966, #4a795e, #476855);
 }
 
 .darkmode .project-card {
   background-color: var(--light--);
 }
 
-.darkmode .project-info h3,
-.darkmode .project-info p {
-  color: var(--grayText--);
+.darkmode .projects-header h2,
+.darkmode .projects-header p{
+  color: var(--superlight--);
 }
 
 
@@ -183,7 +183,6 @@ h1, p {
 
 
 .text h1 {
-  letter-spacing: 2px;
   font: italic 800 70px/normal 'Raleway';
 }
 
