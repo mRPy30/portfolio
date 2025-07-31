@@ -13,7 +13,6 @@
   --superlight--: #ffffff;
   --lightmode--: #FBFBF9;
   --orangeGradient--: linear-gradient(to right bottom, #f94e00, #bf3f09, #88300c, #55200b, #271102);
-  --darkmodeGradient--: linear-gradient(to right, #f83600, #fd6900, #fe9000, #fdb300, #f9d423);
   --hoverOrange--: #F83600;
 }
 
@@ -22,10 +21,7 @@ body {
 }
 
 .darkmode .logo {
-  color: var(--darkmodeGradient--);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; 
+  background-image: linear-gradient(to right, #f83600, #fd6900, #fe9000, #fdb300, #f9d423);
 }
 
 .darkmode h1, .darkmode p {
@@ -46,10 +42,6 @@ body {
 
 .darkmode .button, .btn {
   background: linear-gradient(to right, #f83600, #fd6900, #fe9000, #fdb300, #f9d423);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; 
-  margin-left: 30px;
 }
 
 .darkmode .body-content {
@@ -74,7 +66,7 @@ body {
 }
 
 .darkmode .projects-section {
-  background: linear-gradient(to bottom, #444444, #f94e00, #d04015, #ca431b, #271102);  
+  background: linear-gradient(to bottom, #444444, #90563b, #d04015, #ca431b, #271102);
 }
 
 .darkmode .project-card {
