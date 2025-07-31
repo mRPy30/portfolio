@@ -57,7 +57,7 @@ body {
 }
 
 .darkmode .logo { 
- background: linear-gradient(to bottom, #54ac77, #519b6f, #4e8966, #4a795e, #476855);
+ background: linear-gradient(to bottom, #444444, #59443a, #d04015, #ca431b, #c34620);  
  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; 
@@ -73,7 +73,7 @@ body {
 }
 
 .darkmode .projects-section {
-  background: linear-gradient(to bottom, #444444, #3e684f, #569971, #4a795e, #476855);
+  background: linear-gradient(to bottom, #444444, #59443a, #d04015, #ca431b, #c34620);  
 }
 
 .darkmode .project-card {
@@ -206,7 +206,7 @@ h1, p {
 
 .projects-section {
   padding: 60px 20px;
-  background: linear-gradient(to bottom, #444444, #59443a, #d04015, #ca431b, #c34620);  
+  background: linear-gradient(to bottom, #fbfbf9, #eae9e9, #707673, #49504c, rgb(136, 136, 136));
   text-align: center;
 }
 
