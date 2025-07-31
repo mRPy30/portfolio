@@ -73,7 +73,7 @@ body {
 }
 
 .darkmode .projects-section {
-    background: linear-gradient(to bottom, #444444, #3e684f, #244732, #4a795e, #476855);
+  background: linear-gradient(to bottom, #444444, #3e684f, #569971, #4a795e, #476855);
 }
 
 .darkmode .project-card {
