@@ -41,7 +41,7 @@ body {
 }
 
 .darkmode .button, .btn {
-  background: linear-gradient(to right, #f83600, #fd6900, #fe9000, #fdb300, #f9d423);
+  background-image: linear-gradient(to right, #f83600, #fd6900, #fe9000, #fdb300, #f9d423);
 }
 
 .darkmode .body-content {
