@@ -265,7 +265,7 @@ h1, p {
 
 .project-link {
   display: inline-block;
-  background-image: var(--limeGreen--);
+  background-image: var(--orangeGradient--);
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--light--);
