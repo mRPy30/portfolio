@@ -53,14 +53,12 @@ body {
   background-image: var(--orangeDark--);
 }
 
-.darkmode .body-content {
+.darkmode .body-content, .darkmode .skills-section, .darkmode .about-section, {
   background-color: var(--darkmode--);
 }
 
 .darkmode .text,
 .darkmode .body-content,
-.darkmode .skills-section,
-.darkmode .about-section,
 .darkmode .icons,
 .darkmode .text h1,
 .darkmode .text p {
