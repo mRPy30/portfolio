@@ -100,6 +100,16 @@ body {
   color: var(--superlight--);
 }
 
+.darkmode .about-section h2,
+.darkmode .about-section p,
+.darkmode .about-section h2,
+.darkmode .skills-section p{
+  color: var(--superlight--);
+}
+
+.darkmode.animate, .darkmode.animate.visibile{
+    background-color: var(--darkmode--);
+}
 
 h1, p {
   color: var(--grayText--);
