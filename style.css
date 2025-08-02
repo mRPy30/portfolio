@@ -13,6 +13,7 @@
   --superlight--: #ffffff;
   --lightmode--: #FBFBF9;
   --orangeGradient--: linear-gradient(to right bottom, #f94e00, #bf3f09, #88300c, #55200b, #271102);
+  --orangeDark--: linear-gradient(316deg, #f28500 0%, #ff6801 74%);
   --hoverOrange--: #F83600;
 }
 
@@ -21,7 +22,7 @@ body {
 }
 
 .darkmode .logo {
-  background-image: var(--orangeGradient--);
+  background-image: var(--orangeDark--);
 }
 
 .darkmode h1, .darkmode p {
@@ -41,7 +42,7 @@ body {
 }
 
 .darkmode .button, .btn {
-  background-image: linear-gradient(to right, #f83600, #fd6900, #fe9000, #fdb300, #f9d423);
+  background-image: var(--orangeDark--);
 }
 
 .darkmode .body-content {
@@ -61,7 +62,7 @@ body {
 }
 
 .darkmode .image-container {
-  background-color: var(--superlight--); 
+  background-color: #c0c0c0;
 }
 
 .darkmode .text { 
@@ -373,7 +374,7 @@ h1, p {
 
   .image-container {
     width: 325px;
-    height: 215px;
+    height: 185px;
   }
 
   .image-container img {
