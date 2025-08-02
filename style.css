@@ -44,6 +44,7 @@ body {
 .darkmode .menu a {
   color: var(--superlight--);
 }
+
 .darkmode .menu .button{
   background-image: var(--orangeDark--);
 }
@@ -58,6 +59,8 @@ body {
 
 .darkmode .text,
 .darkmode .body-content,
+.darkmode .skills-section,
+.darkmode .about-section,
 .darkmode .icons,
 .darkmode .text h1,
 .darkmode .text p {
@@ -270,7 +273,7 @@ h1, p {
 
 .skills-section .progress-bar {
   height: 100%;
-  background: linear-gradient(to right, #1e3c29, #193123, #15261d);
+  background-image: var(--orangeDark--);
   color: #fff;
   text-align: right;
   padding-right: 10px;
