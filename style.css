@@ -41,7 +41,7 @@ body {
   color: var(--superlight--);
 }
 
-.darkmode .button, .btn {
+.darkmode .button, .darkmode .btn {
   background-image: var(--orangeDark--);
 }
 
