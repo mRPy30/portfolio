@@ -395,18 +395,6 @@ h1, p {
   transition: width 1.2s ease-in-out;
 }
 
-@media (max-width: 1028px) {
-  .text h1 {
-    font-size: 40px;
-  }
-  .text p {
-    font-size: 18px;
-  }
-  .icons {
-    font-size: 20px;
-  }
-}
-
 @media (max-width: 768px) {
   .text h1 {
     font-size: 28px;
@@ -447,7 +435,7 @@ h1, p {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 486px) {
 .text h1 {
     font-size: 23px;
     line-height: 1.2;
