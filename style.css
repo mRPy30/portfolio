@@ -37,10 +37,6 @@ body {
 }
 
 .darkmode .menu a {
-  color: var(--grayText--);
-}
-
-.darkmode .menu .button {
   color: var(--superlight--);
 }
 
@@ -296,6 +292,14 @@ h1, p {
   .btn {
     padding: 8px 12px;
   }
+
+  .darkmode .menu a {
+  color: var(--grayText--);
+}
+
+.darkmode .menu .button {
+  color: var(--superlight--);
+}
 }
 
 @media (max-width: 480px) {
@@ -327,4 +331,12 @@ h1, p {
   .menu.show {
       display: flex;
   }
+
+  .darkmode .menu a {
+  color: var(--grayText--);
+}
+
+.darkmode .menu .button {
+  color: var(--superlight--);
+}
 }
