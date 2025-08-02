@@ -300,11 +300,11 @@ h1, p {
 
 @media (max-width: 768px) {
   .text h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .text p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .icons {
@@ -316,15 +316,23 @@ h1, p {
   }
 
   .darkmode .menu a {
-  color: var(--grayText--);
-}
+    color: var(--grayText--);
+  }
 
-.darkmode .menu .button {
-  color: var(--superlight--);
-}
+  .darkmode .menu .button {
+    color: var(--superlight--);
+  }
+
+  .logo{
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 480px) {
+  .text h1 {
+    font-size: 23px;
+  }
+  
   .hamburger {
       display: block; 
   }
@@ -355,10 +363,14 @@ h1, p {
   }
 
   .darkmode .menu a {
-  color: var(--grayText--);
-}
+    color: var(--grayText--);
+  }
 
-.darkmode .menu .button {
-  color: var(--superlight--);
-}
+  .darkmode .menu .button {
+    color: var(--superlight--);
+  }
+
+  .logo{
+    margin-left: 0;
+  }
 }
