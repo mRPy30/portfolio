@@ -25,6 +25,10 @@ body {
   background-color: var(--lightmode--);
 }
 
+.darkmode body {
+  background: var(--darkmode--);
+}
+
 .darkmode .logo {
   background-image: var(--orangeDark--);
 }
@@ -101,8 +105,10 @@ body {
 }
 
 .darkmode .about-section h2,
-.darkmode .about-section p,
-.darkmode .about-section h2,
+.darkmode .about-section p{
+  color: var(--superlight--);
+}
+.darkmode .skills-section h2,
 .darkmode .skills-section p{
   color: var(--superlight--);
 }
