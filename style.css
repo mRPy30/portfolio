@@ -17,6 +17,10 @@
   --hoverOrange--: #F83600;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--lightmode--);
 }
@@ -223,6 +227,59 @@ h1, p {
   font-weight: bold;
   border-radius: 5px;
 }
+
+.about-section,
+.skills-section {
+  padding: 80px 20px;
+  background: #f4f4f4;
+}
+
+.about-section h2,
+.skills-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.about-section p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+}
+
+.skills-section .skill {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.skills-section .skill span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.skills-section .progress {
+  background-color: #ddd;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 25px;
+}
+
+.skills-section .progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, #1e3c29, #193123, #15261d);
+  color: #fff;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 25px;
+  font-weight: bold;
+  border-radius: 30px 0 0 30px;
+}
+
 
 .projects-section {
   padding: 60px 20px;
