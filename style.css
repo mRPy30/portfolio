@@ -300,19 +300,27 @@ h1, p {
 
 @media (max-width: 1028px) {
   .text h1 {
-    font-size: 28px;
+    font-size: 40px;
+  }
+  .text p {
+    font-size: 18px;
+  }
+  .icons {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 768px) {
-
+  .text h1 {
+    font-size: 28px;
+  }
 
   .text p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .icons {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .btn {
@@ -335,6 +343,18 @@ h1, p {
 @media (max-width: 480px) {
   .text h1 {
     font-size: 23px;
+  }
+
+  .text p {
+    font-size: 12px;
+  }
+
+  .icons {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 5px 10px;
   }
   
   .hamburger {
