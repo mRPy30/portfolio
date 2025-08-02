@@ -108,12 +108,16 @@ body {
 .darkmode .about-section p{
   color: var(--superlight--);
 }
-.darkmode .skills-section h2,
+
+.darkmode .skills-section h2{
+  color: var(--superlight--);
+}
+
 .darkmode .skill span{
   color: var(--superlight--);
 }
 
-.darkmode.animate, .darkmode .animate.visibile{
+.darkmode .animate, .darkmode .animate.visibile{
     background-color: var(--darkmode--);
 }
 
