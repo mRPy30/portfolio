@@ -13,7 +13,7 @@
   --superlight--: #ffffff;
   --lightmode--: #FBFBF9;
   --orangeGradient--: linear-gradient(to right bottom, #f94e00, #bf3f09, #88300c, #55200b, #271102);
-  --orangeDark--: linear-gradient(316deg, #f28500 0%, #ca431b 74%);
+  --orangeDark--: linear-gradient(316deg, #e24c00 0%, #ee7600 74%);
   --hoverOrange--: #F83600;
 }
 
@@ -40,7 +40,7 @@ body {
 .darkmode .menu a {
   color: var(--superlight--);
 }
-.darkmode .button{
+.darkmode .menu .button{
   background-image: var(--orangeDark--);
 }
 
