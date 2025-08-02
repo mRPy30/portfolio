@@ -37,6 +37,10 @@ body {
 }
 
 .darkmode .menu a {
+  color: var(--grayText--);
+}
+
+.darkmode .menu .button {
   color: var(--superlight--);
 }
 
