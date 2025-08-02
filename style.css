@@ -169,7 +169,7 @@ h1, p {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 90%;
+  width: 70%;
 }
 
 .image-container {
@@ -199,7 +199,7 @@ h1, p {
 
 
 .text h1 {
-  font: italic 800 70px/normal 'Raleway';
+  font: italic 800 50px/normal 'Raleway';
 }
 
 .icons {
