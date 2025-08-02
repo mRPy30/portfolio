@@ -113,7 +113,7 @@ body {
   color: var(--superlight--);
 }
 
-.darkmode .skill span{
+.darkmode .skills-section .skill span{
   color: var(--superlight--);
 }
 
