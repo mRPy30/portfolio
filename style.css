@@ -236,8 +236,8 @@ h1, p {
 }
 
 
-.text h1 {
-  font: italic 800 60px/normal 'Raleway';
+.text h1, .lastname {
+  font: italic 700 60px / 1.5 'Rosca', sans-serif;
 }
 
 .icons {
