@@ -7,11 +7,11 @@
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <title>My Portfolio</title>
     
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/fonts.css">
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="font-awesome-6/css/all.css">
    
-
+<!--navbr-->
     <header class="navbar">
         <div class="logo">
           <span>JEA</span>
@@ -22,16 +22,15 @@
         </div>
 
         <div class="menu" id="nav-menu">
-          <a class="nav" href=""></a>
           <a class="nav" href="#about">About</a>
           <a class="nav" href="#skills">Skills</a>
-          <a class="nav" href="#projects">My Projects</a>
-          <a href="araquejanvier@gmail.com" class="button">Contact Me</a>
+          <a class="nav" href="#projects">Projects</a>
+          <a href="#" class="button" onclick="emailMe(event)">Email Me</a>
           <a href="#" id="theme-toggle">
               <i class="fas fa-moon" id="theme-icon" title="Switch to Dark Mode"></i>
           </a>
           <a href="https://www.facebook.com/janzier.30/"><i class="fab fa-facebook"></i></a>
-          <a href="thub.com/mRPy30"><i class="fab fa-github"></i></a>
+          <a href="github.com/mRPy30"><i class="fab fa-github"></i></a>
         </div>
     </header>
 
@@ -39,25 +38,24 @@
 
 <body>
 
-
+<!--Body Content-->
     <section class="body-content animate">
       <div class="content-container">
-          <div class="image-container">
-            <img src="grad-picwbg.png" alt="">
+        <div class="image-container animate-seq image-seq">
+          <img src="pictures/grad-picwbg.png" alt="">
+        </div>
+        <div class="text animate-seq text-seq">
+          <p>Hello I'm</p>
+          <h1 class="typewriter">Janvier Erickson <span class="lastname">Araque</span></h1>
+          <p>Aspiring Web Developer<br>I develop responsive websites with real-world functionality and design.</p>
+      
+          <div class="icons animate-seq fade-seq">
+            <i class="fas fa-laptop"></i>
+            <i class="fas fa-mobile-alt"></i>
           </div>
-          <div class="text">
-              <p>Hello I'm</p>
-              <h1 class="typewriter">Janvier Erickson <span class="lastname">Araque</span></h1>
-              <p>Aspiring Web Developer<br>I develop responsive websites with real-world functionality and design.</p>
-
-          
-          <div class="icons">
-              <i class="fas fa-laptop"></i>
-              <i class="fas fa-mobile-alt"></i>
-          </div>
-          
-            <a href="My Resume.pdf" class="btn" download="Janvier_Araque_Resume.pdf">Download My Resume</a>
-          </div>
+      
+          <a href="assets/My Resume.pdf" class="btn animate-seq fade-seq" download="Janvier_Araque_Resume.pdf">Download My Resume</a>
+        </div>
       </div>
     </section>
 
@@ -66,7 +64,7 @@
       <div class="container">
         <h2>About Me</h2>
         <p>
-          I’m Janvier Erickson Araque, an aspiring full-stack web developer passionate about 
+          I`m Janvier Erickson Araque, an aspiring full-stack web developer passionate about 
         crafting responsive and efficient web solutions. My journey began with frontend design 
         and gradually evolved to backend integration, database management, and now, full-stack development.
         </p>
@@ -118,7 +116,7 @@
       <div class="projects-grid">
         <!-- Project 1 -->
         <div class="project-card">
-          <img src="project1.png" alt="ICSM Creatives">
+          <img src="pictures/project1.png" alt="ICSM Creatives">
           <div class="project-info">
               <h3>ICSM Creatives</h3>
               <p>Online booking system with decision support tool and dynamic content editor.</p>
@@ -128,7 +126,7 @@
 
         <!-- Project 2 -->
         <div class="project-card">
-          <img src="project2.png" alt="ICSM Creatives">
+          <img src="pictures/project2.png" alt="ICSM Creatives">
           <div class="project-info">
             <h3>TaskQueya</h3>
              <p>"Self Project": A task management and scheduling system.</p>
@@ -138,7 +136,7 @@
 
         <!-- Project 3 -->
         <div class="project-card">
-          <img src="project3.png" alt="Project 3 Screenshot">
+          <img src="pictures/project3.png" alt="Project 3 Screenshot">
           <div class="project-info">
             <h3>CVSU - IMUS NSTP PORTAL</h3>
             <p>Cavite State University NSTP Portal.</p>
@@ -149,6 +147,5 @@
     </section>
     
 </body>
-<script src="function.js"></script>
-
+<script src="assets/function.js"></script>
 </html>

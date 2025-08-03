@@ -51,3 +51,32 @@ const skillObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.skills-section').forEach(sec => skillObserver.observe(sec));
 
+function emailMe(event) {
+  event.preventDefault(); // Prevent default link behavior
+
+  const email = "araquejanvier@gmail.com";
+  
+  navigator.clipboard.writeText(email).then(() => {
+    console.log("Email copied to clipboard!");
+
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, "_blank");
+  }).catch(err => {
+    alert("Failed to copy email. Please try manually.");
+    console.error("Clipboard error:", err);
+  });
+}
+
+window.addEventListener('load', () => {
+  document.querySelectorAll('.animate-seq').forEach(el => {
+    el.classList.add('start');
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".project-card").forEach(card => {
+    const link = card.querySelector("a.project-link");
+    if (link && link.textContent.trim().toLowerCase() === "preview soon") {
+      card.classList.add("preview-soon");
+    }
+  });
+});

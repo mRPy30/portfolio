@@ -698,3 +698,10 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('SpaceGrotesk-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
