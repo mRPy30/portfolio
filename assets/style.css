@@ -89,7 +89,7 @@ body {
 }
 
 .darkmode .text { 
-  background: radial-gradient(circle, rgba(216, 216, 216, 0.1) 0%, rgba(194, 194, 194, 0) 70%);
+  background: radial-gradient(circle, rgba(216, 216, 216, 0.1) 0%, rgba(194, 194, 194, 0) 60%);
   border-radius: 10px;
 }
 
@@ -293,7 +293,6 @@ h1, p {
   max-width: 700px;
   padding: 20px;
   position: relative; 
-  background: radial-gradient(circle, rgba(4, 4, 4, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
   border-radius: 10px;
 }
 
