@@ -32,6 +32,7 @@ body {
   background: var(--darkmode--);
 }
 
+.darkmode .section-badge,
 .darkmode .logo {
   background-image: var(--orangeDark--);
 }
@@ -110,6 +111,7 @@ body {
   background-color: var(--darkmode--);
 }
 
+.darkmode .title .highlight,
 .darkmode .about-description,
 .darkmode .skills-subtitle,
 .darkmode .category-title,
@@ -418,8 +420,20 @@ h1, p {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
   box-shadow: 0 4px 15px rgba(248, 54, 0, 0.3);
+}
+
+.title {
+  font: normal 700 60px / normal 'Rosca', sans-serif;
+  margin-bottom: 1.5rem;
+  color: var(--grayText--);
+}
+
+.title .highlight {
+  color: var(--grayText--);
+  font: normal 700 60px / normal 'Rosca', sans-serif;
+
 }
 
 .about-description {
@@ -601,7 +615,6 @@ h1, p {
 
 .projects-section {
   padding: 60px 140px;
-  background: linear-gradient(to bottom, #fbfbf9, #eae9e9, #f85e39, #cd2d00, rgb(186 98 60));
 }
 
 .projects-header h2 {
