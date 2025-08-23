@@ -9,6 +9,7 @@
   --darkmode--: #444444;
   --grayText--: #1E1E1E;
   --gradientBG--: #eae9e9;
+  --backgroundLight--: linear-gradient(to bottom, #fbfbf9, #eae9e9, #f85e39, #cd2d00, rgb(186 98 60));
   --light--: #fbfbf9;
   --superlight--: #ffffff;
   --lightmode--: #FBFBF9;
@@ -16,7 +17,7 @@
   --hoverGradient--: linear-gradient(to left bottom, #f92100, #d44304, #ae3809, #ad3a0c, #4c2002);
   --orangeDark--: linear-gradient(316deg, #e24c00, #ca431b);
   --hoverDarkOrange--: #F83600;
- 
+  
 }
 
 html {
@@ -122,6 +123,10 @@ body {
     background-color: var(--darkmode--);
 }
 
+.darkmode .skill-card{
+  background-color: var(--darkmode--);
+}
+
 h1, p {
   color: var(--grayText--);
 }
@@ -152,17 +157,17 @@ h1, p {
 }
 
 .image-seq {
-  animation: fadeUp 2s ease-out 0.8s forwards;
+  animation: fadeUp 1s ease-out 0.8s forwards;
 }
 .text-seq {
-  animation: fadeUp 2s ease-out 3s forwards;
+  animation: fadeUp 1s ease-out 3s forwards;
 }
 .fade-seq {
-  animation: fadeOnly 2s ease-out 3s forwards;
+  animation: fadeOnly 1s ease-out 3s forwards;
 }
-.animate-seq.start.image-seq { animation: fadeUp 2s ease-out 0.8s forwards; }
-.animate-seq.start.text-seq  { animation: fadeUp 2s ease-out 3s forwards; }
-.animate-seq.start.fade-seq  { animation: fadeOnly 2s ease-out 3s forwards; }
+.animate-seq.start.image-seq { animation: fadeUp 1s ease-out 0.8s forwards; }
+.animate-seq.start.text-seq  { animation: fadeUp 1s ease-out 2s forwards; }
+.animate-seq.start.fade-seq  { animation: fadeOnly 1s ease-out 2s forwards; }
 
 .typewriter {
   overflow: hidden;
@@ -185,7 +190,7 @@ h1, p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 10px 140px;
 }
 
 .logo {
@@ -342,14 +347,13 @@ h1, p {
 
 .about-section,
 .skills-section {
-  padding: 80px 20px;
+  padding: 80px 200px;
 }
 
 .about-section h2,
 .skills-section h2 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #333;
   text-align: center;
 }
 
@@ -361,36 +365,46 @@ h1, p {
   text-align: center;
 }
 
-.skills-section .skill {
-  margin: 20px auto;
-  max-width: 600px;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
 }
 
-.skills-section .skill span {
+.skill-card {
+  background: var(--superlight--);
+  font: 700 20px 'Open Sans', sans-serif;
+  margin-bottom: 20px;
+  color: var(--grayText--);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  width: 120px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  border-color: var(--hoverDarkOrange--);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+
+.skill-card img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.skill-card span {
   display: block;
+  margin-top: 8px;
   font-weight: bold;
-  margin-bottom: 5px;
-  color: #222;
+  font-size: 14px;
 }
-
-.skills-section .progress {
-  background-color: #ddd;
-  border-radius: 30px;
-  overflow: hidden;
-  height: 25px;
-}
-
-.skills-section .progress-bar {
-  height: 100%;
-  background-image: var(--orangeDark--);
-  color: #fff;
-  text-align: right;
-  padding-right: 10px;
-  line-height: 25px;
-  font-weight: bold;
-  border-radius: 30px 0 0 30px;
-}
-
 
 .projects-section {
   padding: 60px 20px;
@@ -480,17 +494,12 @@ h1, p {
 .animate {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition: opacity 0.7s ease-out, transform 0.5s ease-out;
 }
 
 .animate.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-.progress-bar {
-  width: 0; 
-  transition: width 2.5s ease-in-out;
 }
 
 @media (max-width: 920px) {
@@ -591,17 +600,19 @@ h1, p {
   }
 
   .menu {
-      display: none; 
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 10px;
-      background: white;
-      width: 200px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      padding: 10px;
-      border-radius: 5px;
-      z-index: 1;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    background: rgba(216, 216, 216, 0.1);
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    align-items: center;
+    width: 100%;
+    left: 10px;
+  
   }
 
   .menu a {
@@ -616,7 +627,7 @@ h1, p {
   }
 
   .darkmode .menu a {
-    color: var(--grayText--);
+    color: var(--light--);
   }
 
   .darkmode .menu .button {

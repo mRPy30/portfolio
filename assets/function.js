@@ -38,21 +38,11 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.animate').forEach((el) => observer.observe(el));
 
-const skillObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const bars = entry.target.querySelectorAll('.progress-bar');
-      bars.forEach(bar => {
-        bar.style.width = bar.getAttribute('data-width');
-      });
-    }
-  });
-}, { threshold: 0.3 });
 
 document.querySelectorAll('.skills-section').forEach(sec => skillObserver.observe(sec));
 
 function emailMe(event) {
-  event.preventDefault(); // Prevent default link behavior
+  event.preventDefault(); 
 
   const email = "araquejanvier@gmail.com";
   
