@@ -24,6 +24,37 @@
       }
   });
 
+  function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.getAttribute('data-count'));
+          let current = 0;
+          const increment = target / 30;
+          
+          const updateCounter = () => {
+            if (current < target) {
+              current += increment;
+              counter.textContent = Math.ceil(current);
+              setTimeout(updateCounter, 50);
+            } else {
+              counter.textContent = target;
+              counter.classList.add('counting');
+            }
+          };
+          
+          updateCounter();
+          observer.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.5 });
+  
+    counters.forEach(counter => observer.observe(counter));
+  }
+  
+
 function toggleMenu() {
     document.getElementById("nav-menu").classList.toggle("show");
 }
