@@ -120,7 +120,7 @@ const galleryData = [
         desc: "Desktop Wallpaper"
     },
     {
-      img: "Birthday_celebrant_client.jpg",
+      img: "pictures/Birthday_celebrant_client.jpg",
       title: "Birthday Party",
       desc: "Second Client"
     },
@@ -130,7 +130,7 @@ const galleryData = [
         desc: "Sample Logo Barangay"
     },
     {
-      img: "client3business.jpg",
+      img: "pictures/client3business.jpg",
       title: "Ms.Stiquee Fisball Business",
       desc: "Client Business"
     },
@@ -140,7 +140,7 @@ const galleryData = [
         desc: "Personal Project Website logo"
     },
     {
-      img: "sample.png",
+      img: "pictures/sample.png",
       title: "Sample Business",
       desc: "School Project"
     }
