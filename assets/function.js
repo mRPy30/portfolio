@@ -120,14 +120,29 @@ const galleryData = [
         desc: "Desktop Wallpaper"
     },
     {
+      img: "Birthday_celebrant_client.jpg",
+      title: "Birthday Party",
+      desc: "Second Client"
+    },
+    {
         img: "pictures/logoPSD - no bg.png",
         title: "BARANGAY TIBAY SEALED",
         desc: "Sample Logo Barangay"
     },
     {
+      img: "client3business.jpg",
+      title: "Ms.Stiquee Fisball Business",
+      desc: "Client Business"
+    },
+    {
         img: "pictures/Logo-TQ.png",
         title: "TaskQueya",
         desc: "Personal Project Website logo"
+    },
+    {
+      img: "sample.png",
+      title: "Sample Business",
+      desc: "School Project"
     }
 ];
 
