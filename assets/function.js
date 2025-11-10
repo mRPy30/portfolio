@@ -125,7 +125,7 @@ const galleryData = [
       desc: "Second Client"
     },
     {
-        img: "pictures/logoPSD - no bg.png",
+        img: "pictures/logoPsD - no bg.png",
         title: "BARANGAY TIBAY SEALED",
         desc: "Sample Logo Barangay"
     },
