@@ -94,10 +94,6 @@ body {
   border-radius: 10px;
 }
 
-.darkmode .projects-section {
-  background: linear-gradient(to bottom, #444444, #90563b, #ca431b, #ca431b, #271102);
-}
-
 .darkmode .project-card {
   background-color: var(--light--);
 }
@@ -165,6 +161,9 @@ body {
     background-color: var(--darkmode--);
 }
 
+.darkmode .graphics-section{
+  background: linear-gradient(to bottom, #444444, #90563b, #ca431b, #ca431b, #271102);
+}
 
 
 h1, p {
@@ -707,6 +706,195 @@ h1, p {
   transform: translateY(0);
 }
 
+
+/* Graphics Section */
+.graphics-section {
+  padding: 80px 140px;
+  background-color: var(--light--);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.5s ease-out;
+}
+
+.graphics-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--superlight--);
+  aspect-ratio: 4/3;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  transform: translateY(0);
+}
+
+.gallery-overlay h3 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.gallery-overlay p {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); }
+  to { transform: scale(1); }
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+  transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.2);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.lightbox-nav:hover {
+  color: var(--hoverDarkOrange--);
+  transform: translateY(-50%) scale(1.2);
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  padding: 30px;
+  text-align: center;
+}
+
+.lightbox-info h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.lightbox-info p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1rem;
+}
+
+.lightbox-counter {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+
+
 @media (max-width: 920px) {
   .text h1, .lastname{
     font-size: 45px;
@@ -778,6 +966,36 @@ h1, p {
   .modern-skill-card {
     padding: 1.5rem;
   }
+
+  .graphics-section {
+    padding: 60px 20px;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.lightbox-nav {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.lightbox-close {
+    font-size: 30px;
+    top: 10px;
+    right: 15px;
+}
+
+.lightbox-counter {
+    top: 10px;
+    left: 15px;
+    font-size: 1rem;
+}
 
 }
 
@@ -856,6 +1074,15 @@ h1, p {
     left: 10px;
   
   }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+}
+
+.section-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
 
   .menu a {
       display: block;
