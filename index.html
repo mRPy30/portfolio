@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-    <title>My Portfolio</title>
-    
+    <title>JEA — Janvier Erickson Araque</title>
+
     <link rel="stylesheet" href="assets/fonts.css">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="font-awesome-6/css/all.css">
-   
-<!--navbr-->
+
+    <!-- navbar -->
     <header class="navbar">
         <div class="logo">
-          <span>JEA</span>
+          <span>JEA.</span>
         </div>
 
         <div class="hamburger" onclick="toggleMenu()">
@@ -30,368 +29,310 @@
           </a>
         </div>
     </header>
-
 </head>
 
 <body>
 
-<!--Body Content-->
-    <section class="body-content animate">
-      <div class="content-container">
-        <div class="image-container animate-seq image-seq">
-          <img src="pictures/grad-picwbg.png" alt="">
-        </div>
-        <div class="text animate-seq text-seq">
-          <p>Hello I'm</p>
-          <h1 class="typewriter">Janvier Erickson <span class="lastname">Araque</span></h1>
-          <p>Aspiring Web Developer<br>I develop responsive websites with real-world functionality and design.</p>
-      
-          <div class="icons animate-seq fade-seq">
-            <a href="https://www.facebook.com/janzier.30/"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/in/janvier-erickson-araque-54744b347/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/mRPy30"><i class="fab fa-github"></i></a>
-          </div>
-      
-          <a href="#" onclick="emailMe(event)" class="btn animate-seq fade-seq">Email Me</a>
-        </div>
-      </div>
-    </section>
+<!-- ══ HERO ══ -->
+<section class="body-content animate">
+  <div class="content-container">
 
+    <div class="text animate-seq text-seq">
+      <div class="hero-label">Available for work</div>
+      <h1 class="typewriter">Janvier Erickson <span class="lastname">Araque</span></h1>
+      <p class="sub-role">Aspiring Web Developer — I build responsive websites with real-world functionality and thoughtful design.</p>
 
-    <section id="about" class="about animate">
-      <div class="container">
-        <!-- About Content -->
-        <div class="about-content-grid">
-          <div class="about-text-content">
-            <div class="section-badge">
-              <i class="fas fa-user"></i>
-              About Me
-            </div>
-            <p class="about-description animate-seq text-seq">
-              I'm Janvier Erickson Araque, an aspiring full-stack web developer passionate about 
-              crafting responsive and efficient web solutions. My journey began with frontend design 
-              and gradually evolved to backend integration, database management, and now, full-stack development.
-            </p>
-    
-            <div class="expertise-tags">
-              <span class="tag">Frontend Development</span>
-              <span class="tag">Backend Integration</span>
-              <span class="tag">Database Management</span>
-              <span class="tag">UI/UX Design</span>
-              <span class="tag">Graphic Designer</span>
-            </div>
-          </div>
-          
-          <div class="about-visual animate">
-            <div class="profile-showcase animate-seq image-seq">
-              <div class="profile-frame">
-                <img src="pictures/mypic.png" alt="Janvier Erickson Araque">
-              </div>
-              <div class="floating-icons">
-                <div class="float-icon" style="--delay: 0s;">
-                  <i class="fas fa-code"></i>
-                </div>
-                <div class="float-icon" style="--delay: 1s;">
-                  <i class="fas fa-laptop-code"></i>
-                </div>
-                <div class="float-icon" style="--delay: 2s;">
-                  <i class="fas fa-database"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Skills Content -->
-        <div class="skills-content animate">
-          <div class="content-header">
-            <div class="section-badge">
-              <i class="fas fa-tools"></i>
-              My Skills
-            </div>
-            <p class="content-subtitle">Technologies and tools that power my development process</p>
-          </div>
-    
-          <div class="skills-showcase">
-            <!-- Frontend Skills -->
-            <div class="skill-category animate">
-              <h3 class="category-title">Frontend</h3>
-              <div class="skills-grid">
-                <div class="skill-card">
-                  <img src="pictures/icons-html.png" alt="HTML">
-                </div>
-    
-                <div class="skill-card">
-                  <img src="pictures/icons-css.png" alt="CSS">
-                </div>
-    
-                <div class="skill-card">
-                  <img src="pictures/icons-javascript.png" alt="JavaScript">
-                </div>
-    
-                <div class="skill-card">
-                  <img src="pictures/icons-react.png" alt="React">
-                </div>
-              </div>
-            </div>
-    
-            <!-- Backend & Database -->
-            <div class="skill-category animate">
-              <h3 class="category-title">Backend & Database</h3>
-              <div class="skills-grid">
-                <div class="skill-card">
-                  <img src="pictures/icons-php.png" alt="PHP">
-                </div>
-    
-                <div class="skill-card">
-                  <img src="pictures/icons-phpmyadmin.png" alt="phpMyAdmin">
-                </div>
-              </div>
-            </div>
-    
-            <!-- Design Tools -->
-            <div class="skill-category animate">
-              <h3 class="category-title">Design Tools</h3>
-              <div class="skills-grid">
-                <div class="skill-card">
-                  <img src="pictures/icons-figma.png" alt="Figma">
-                </div>
-    
-                <div class="skill-card">
-                  <img src="pictures/icons-photoshop.png" alt="Photoshop">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section id="projects" class="projects-section animate">
-      <div class="content-header">
-        <div class="section-badge animate-seq fade-seq">
-          <i class="fa-solid fa-diagram-project"></i>
-          Projects
-        </div>
-        <h2 class="title">Web<span class="highlight"> Systems</span></h2>
-        <p class="content-subtitle">A collection of websites and systems I`ve built with passion and precision.</p>
+      <div class="icons animate-seq fade-seq">
+        <a href="https://www.facebook.com/janzier.30/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/janvier-erickson-araque-54744b347/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/mRPy30" aria-label="GitHub"><i class="fab fa-github"></i></a>
       </div>
 
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <img src="pictures/project1.png" alt="ICSM Creatives">
-          <div class="project-info">
-              <h3>ICSM Creatives</h3>
-              <p>Online booking system with decision support tool and dynamic content editor.</p>
-              <a href="https://icsmcreatives-woad.vercel.app/" target="_blank" class="project-link">Visit</a>
-          </div>
-        </div>
+      <a href="#" onclick="emailMe(event)" class="btn animate-seq fade-seq">Send an Email</a>
+    </div>
 
-        <!-- Project 2 -->
-        <div class="project-card">
-          <img src="pictures/project2.png" alt="ICSM Creatives">
-          <div class="project-info">
-            <h3>TaskQueya</h3>
-             <p>"Self Project": A task management and scheduling system.</p>
-            <a href="https://taskqueya.vercel.app/" class="project-link">Visit</a>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card preview-soon">
-          <img src="pictures/project3.png" alt="Project 3 Screenshot">
-          <div class="project-info">
-            <h3>CVSU - IMUS NSTP PORTAL</h3>
-            <p>Cavite State University NSTP Portal.</p>
-            <a href="#" class="project-link">Preview Soon</a>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card">
-          <img src="pictures/project4.png" alt="Project 4 Screenshot">
-          <div class="project-info">
-            <h3>La Secuya</h3>
-            <p>Ordering System of La Secuya Fine Dining Restaurant.</p>
-            <a href="https://restaurant-orcin-omega.vercel.app/" class="project-link">Visit</a>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project-card">
-          <img src="pictures/solarpower.png" alt="Project 5 Screenshot">
-          <div class="project-info">
-            <h3>SolarPower Energy Corporation</h3>
-            <p>Ecommerce and admin and staff dashboard</p>
-            <a href="https://solarpower.com.ph" class="project-link">Visit</a>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="project-card">
-          <img src="pictures/worldcityPh.png" alt="Project 6 Screenshot">
-          <div class="project-info">
-            <h3>Worldcity Real Estate Ph</h3>
-            <p>Showcase property on Philippines with admin dashboard</p>
-            <a href="https://worldcityrealestate.ph" class="project-link">Visit</a>
-          </div>
-        </div>
-
-        <!-- Project 7 -->
-        <div class="project-card">
-          <img src="pictures/worldcityDubai.png" alt="Project 7 Screenshot">
-          <div class="project-info">
-            <h3>Worldcity Real Estate Dubai</h3>
-            <p>Showcase property on Dubai with admin dashboard</p>
-            <a href="https://worldcityrealestate.com" class="project-link">Visit</a>
-          </div>
-        </div>
-
-        <!-- Project 8 -->
-        <div class="project-card">
-          <img src="pictures/mobilityventures.png" alt="Project 8 Screenshot">
-          <div class="project-info">
-            <h3>Mobility Venture</h3>
-            <p>Ev Charging company</p>
-            <a href="https://mobilityventures.ph" class="project-link">Visit</a>
-          </div>
-        </div>
-
-        <!-- Project 9-->
-        <div class="project-card">
-          <img src="pictures/worldcityarchitects.png" alt="Project 8 Screenshot">
-          <div class="project-info">
-            <h3>Worldcity Architects</h3>
-            <p>Showcase the worldcity company architect design.</p>
-            <a href="https://worldcityarchitects.com" class="project-link">Visit</a>
-          </div>
-        </div>
-
-        <!-- Project 10-->
-        <div class="project-card">
-          <img src="pictures/wcgconsulting.png" alt="Project 8 Screenshot">
-          <div class="project-info">
-            <h3>WCG Consulting Inc.</h3>
-            <p>Inquiry about Business Consulting.</p>
-            <a href="#" class="project-link">Preview Soon</a>
-          </div>
-        </div>
-
-         <!-- Project 10-->
-         <div class="project-card">
-          <img src="pictures/dubaigoldenvisa.png" alt="Project 8 Screenshot">
-          <div class="project-info">
-            <h3>WCG Dubai Golden Visa</h3>
-            <p>Get your Golden Visa on Dubai by WCG.</p>
-            <a href="https://dubaigoldenvisa.online/" class="project-link">Visit</a>
-          </div>
+    <div class="image-container animate-seq image-seq">
+      <div class="hero-image-wrapper">
+        <img src="pictures/grad-picwbg.png" alt="Janvier Erickson Araque">
+        <div class="hero-badge">
+          <span>11+</span>
+          <span>Projects Delivered</span>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Graphics & Illustrations Section -->
-    <section id="graphics" class="graphics-section animate">
-      <div class="content-header">
-          <div class="section-badge">
-              <i class="fas fa-palette"></i>
-              Graphics & Illustrations
-          </div>
-          <h2 class="title">Creative<span class="highlight"> Designs</span></h2>
-          <p class="content-subtitle">A showcase of my graphic design and illustration work</p>
-      </div>
-
-      <div class="gallery-grid ">
-          <!-- Gallery Item 1 -->
-          <div class="gallery-item animate" data-index="0">
-              <img src="pictures/bts_price.png" alt="Business">
-              <div class="gallery-overlay">
-                  <h3>BTS Business</h3>
-                  <p>Pricing business design</p>
-              </div>
-          </div>
-
-          <!-- Gallery Item 2 -->
-          <div class="gallery-item animate" data-index="1">
-              <img src="pictures/quote1.png" alt="Quote">
-              <div class="gallery-overlay">
-                  <h3>Quote 1</h3>
-                  <p>Motivational Wallpaper</p>
-              </div>
-          </div>
-
-          <!-- Gallery Item 3 -->
-          <div class="gallery-item animate" data-index="2">
-              <img src="pictures/wallpaper2.jpg" alt="Bible Verse Design">
-              <div class="gallery-overlay">
-                <h3>Bible Verse</h3>
-                <p>Desktop Wallpaper</p>
-              </div>
-          </div>
-
-          <!-- Gallery Item 4 -->
-          <div class="gallery-item animate" data-index="3">
-              <img src="pictures/Birthday_celebrant_client.jpg"  alt="Birthday Invitation">
-              <div class="gallery-overlay">
-                  <h3>Birthday Party</h3>
-                  <p>Second Client</p>
-              </div>
-          </div>
-
-          <!-- Gallery Item 5 -->
-          <div class="gallery-item animate" data-index="3">
-            <img src="pictures/logoPsD - no bg.png"  alt="Logo Barangay">
-            <div class="gallery-overlay">
-                <h3>BARANGAY TIBAY SEALED</h3>
-                <p>Personal Project Website logo</p>
-            </div>
-        </div>
-
-          <!-- Gallery Item 6 -->
-          <div class="gallery-item animate" data-index="4">
-              <img src="pictures/client3business.jpg" alt="Logo Website">
-              <div class="gallery-overlay">
-                  <h3>Ms.Stiquee Fisball Business</h3>
-                  <p>Client Business</p>
-              </div>
-          </div>
-
-          <!-- Gallery Item 7 -->
-          <div class="gallery-item animate" data-index="4">
-            <img src="pictures/Logo-TQ.png" alt="Logo Website">
-            <div class="gallery-overlay">
-                <h3>TaskQueya</h3>
-                <p>Personal Project Website logo</p>
-            </div>
-          </div>
-
-          <!-- Gallery Item 8 -->
-          <div class="gallery-item animate" data-index="3">
-            <img src="pictures/sample.png"  alt="School Activity">
-            <div class="gallery-overlay">
-                <h3>Sample Business</h3>
-                <p>School Project</p>
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-      <span class="lightbox-close" id="lightbox-close">&times;</span>
-      <span class="lightbox-counter" id="lightbox-counter"></span>
-      <span class="lightbox-nav lightbox-prev" id="lightbox-prev">&#10094;</span>
-      <span class="lightbox-nav lightbox-next" id="lightbox-next">&#10095;</span>
-      <div class="lightbox-content">
-          <img id="lightbox-img" src="" alt="">
-          <div class="lightbox-info">
-              <h3 id="lightbox-title"></h3>
-              <p id="lightbox-desc"></p>
-          </div>
-      </div>
   </div>
-    
+</section>
+
+
+<!-- ══ ABOUT ══ -->
+<section id="about" class="about animate">
+  <div class="container">
+    <div class="about-content-grid">
+
+      <div class="about-text-content">
+        <div class="section-badge">
+          <i class="fas fa-user"></i>
+          About Me
+        </div>
+        <p class="about-description animate-seq text-seq">
+          I'm Janvier Erickson Araque, an aspiring full-stack web developer passionate about
+          crafting responsive and efficient web solutions. My journey began with frontend design
+          and gradually evolved to backend integration, database management, and now, full-stack development.
+        </p>
+        <div class="expertise-tags">
+          <span class="tag">Frontend Development</span>
+          <span class="tag">Backend Integration</span>
+          <span class="tag">Database Management</span>
+          <span class="tag">UI/UX Design</span>
+          <span class="tag">Graphic Designer</span>
+        </div>
+      </div>
+
+      <div class="about-visual animate">
+        <div class="profile-showcase animate-seq image-seq">
+          <div class="profile-frame">
+            <img src="pictures/mypic.png" alt="Janvier Erickson Araque">
+          </div>
+          <div class="floating-icons">
+            <div class="float-icon" style="--delay: 0s;"><i class="fas fa-code"></i></div>
+            <div class="float-icon" style="--delay: 1s;"><i class="fas fa-laptop-code"></i></div>
+            <div class="float-icon" style="--delay: 2s;"><i class="fas fa-database"></i></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Skills -->
+    <div id="skills" class="skills-content animate">
+      <div class="content-header">
+        <div class="section-badge">
+          <i class="fas fa-tools"></i>
+          My Skills
+        </div>
+        <p class="content-subtitle">Technologies and tools that power my development process</p>
+      </div>
+
+      <div class="skills-showcase">
+        <div class="skill-category animate">
+          <h3 class="category-title">Frontend</h3>
+          <div class="skills-grid">
+            <div class="skill-card"><img src="pictures/icons-html.png" alt="HTML"></div>
+            <div class="skill-card"><img src="pictures/icons-css.png" alt="CSS"></div>
+            <div class="skill-card"><img src="pictures/icons-javascript.png" alt="JavaScript"></div>
+            <div class="skill-card"><img src="pictures/icons-react.png" alt="React"></div>
+            <div class="skill-card"><img src="pictures/vue.png" alt="React"></div>
+            <div class="skill-card"><img src="pictures/tsc.png" alt="React"></div>
+          </div>
+        </div>
+
+        <div class="skill-category animate">
+          <h3 class="category-title">Backend & Database</h3>
+          <div class="skills-grid">
+            <div class="skill-card"><img src="pictures/icons-php.png" alt="PHP"></div>
+            <div class="skill-card"><img src="pictures/icons-phpmyadmin.png" alt="phpMyAdmin"></div>
+            <div class="skill-card"><img src="pictures/supabase.png" alt="React"></div>
+          </div>
+        </div>
+
+        <div class="skill-category animate">
+          <h3 class="category-title">Design Tools</h3>
+          <div class="skills-grid">
+            <div class="skill-card"><img src="pictures/icons-figma.png" alt="Figma"></div>
+            <div class="skill-card"><img src="pictures/icons-photoshop.png" alt="Photoshop"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ PROJECTS ══ -->
+<section id="projects" class="projects-section animate">
+  <div class="content-header">
+    <div class="section-badge animate-seq fade-seq">
+      <i class="fa-solid fa-diagram-project"></i>
+      Projects
+    </div>
+    <h2 class="title">Web <span class="highlight">Systems</span></h2>
+    <p class="content-subtitle">A collection of websites and systems I've built with passion and precision.</p>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <img src="pictures/project1.png" alt="ICSM Creatives">
+      <div class="project-info">
+        <h3>ICSM Creatives</h3>
+        <p>Online booking system with decision support tool and dynamic content editor.</p>
+        <a href="https://icsmcreatives-woad.vercel.app/" target="_blank" class="project-link">Visit</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="pictures/project2.png" alt="TaskQueya">
+      <div class="project-info">
+        <h3>TaskQueya</h3>
+        <p>"Self Project": A task management and scheduling system.</p>
+        <a href="https://taskqueya.vercel.app/" class="project-link">Visit</a>
+      </div>
+    </div>
+
+    <div class="project-card preview-soon">
+      <img src="pictures/project3.png" alt="CVSU NSTP Portal">
+      <div class="project-info">
+        <h3>CVSU — IMUS NSTP Portal</h3>
+        <p>Cavite State University NSTP Portal.</p>
+        <a href="#" class="project-link">Preview Soon</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="pictures/project4.png" alt="La Secuya">
+      <div class="project-info">
+        <h3>La Secuya</h3>
+        <p>Ordering system for La Secuya Fine Dining Restaurant.</p>
+        <a href="https://restaurant-orcin-omega.vercel.app/" class="project-link">Visit</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="pictures/solarpower.png" alt="SolarPower Energy">
+      <div class="project-info">
+        <h3>SolarPower Energy Corp.</h3>
+        <p>Ecommerce and admin/staff dashboard.</p>
+        <a href="https://solarpower.com.ph" class="project-link">Visit</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="pictures/worldcityPh.png" alt="Worldcity Real Estate PH">
+      <div class="project-info">
+        <h3>Worldcity Real Estate PH</h3>
+        <p>Showcase property in Philippines with admin dashboard.</p>
+        <a href="https://worldcityrealestate.ph" class="project-link">Visit</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="pictures/worldcityDubai.png" alt="Worldcity Real Estate Dubai">
+      <div class="project-info">
+        <h3>Worldcity Real Estate Dubai</h3>
+        <p>Showcase property in Dubai with admin dashboard.</p>
+        <a href="https://worldcityrealestate.com" class="project-link">Visit</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="pictures/mobilityventures.png" alt="Mobility Ventures">
+      <div class="project-info">
+        <h3>Mobility Ventures</h3>
+        <p>EV charging company website.</p>
+        <a href="https://mobilityventures.ph" class="project-link">Visit</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="pictures/worldcityarchitects.png" alt="Worldcity Architects">
+      <div class="project-info">
+        <h3>Worldcity Architects</h3>
+        <p>Showcase the Worldcity company architect designs.</p>
+        <a href="https://worldcityarchitects.com" class="project-link">Visit</a>
+      </div>
+    </div>
+
+    <div class="project-card preview-soon">
+      <img src="pictures/wcgconsulting.png" alt="WCG Consulting">
+      <div class="project-info">
+        <h3>WCG Consulting Inc.</h3>
+        <p>Inquiry portal for business consulting.</p>
+        <a href="#" class="project-link">Preview Soon</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="pictures/dubaigoldenvisa.png" alt="Dubai Golden Visa">
+      <div class="project-info">
+        <h3>WCG Dubai Golden Visa</h3>
+        <p>Get your Golden Visa in Dubai by WCG.</p>
+        <a href="https://dubaigoldenvisa.online/" class="project-link">Visit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ GRAPHICS ══ -->
+<section id="graphics" class="graphics-section animate">
+  <div class="content-header">
+    <div class="section-badge">
+      <i class="fas fa-palette"></i>
+      Graphics & Illustrations
+    </div>
+    <h2 class="title">Creative <span class="highlight">Designs</span></h2>
+    <p class="content-subtitle">A showcase of my graphic design and illustration work</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item animate" data-index="0">
+      <img src="pictures/bts_price.png" alt="Business">
+      <div class="gallery-overlay"><h3>BTS Business</h3><p>Pricing business design</p></div>
+    </div>
+    <div class="gallery-item animate" data-index="1">
+      <img src="pictures/quote1.png" alt="Quote">
+      <div class="gallery-overlay"><h3>Quote 1</h3><p>Motivational Wallpaper</p></div>
+    </div>
+    <div class="gallery-item animate" data-index="2">
+      <img src="pictures/wallpaper2.jpg" alt="Bible Verse">
+      <div class="gallery-overlay"><h3>Bible Verse</h3><p>Desktop Wallpaper</p></div>
+    </div>
+    <div class="gallery-item animate" data-index="3">
+      <img src="pictures/Birthday_celebrant_client.jpg" alt="Birthday">
+      <div class="gallery-overlay"><h3>Birthday Party</h3><p>Second Client</p></div>
+    </div>
+    <div class="gallery-item animate" data-index="4">
+      <img src="pictures/logoPsD - no bg.png" alt="Logo Barangay">
+      <div class="gallery-overlay"><h3>Barangay Tibay Seal</h3><p>Personal Project Logo</p></div>
+    </div>
+    <div class="gallery-item animate" data-index="5">
+      <img src="pictures/client3business.jpg" alt="Ms. Stiquee">
+      <div class="gallery-overlay"><h3>Ms.Stiquee Fishball</h3><p>Client Business</p></div>
+    </div>
+    <div class="gallery-item animate" data-index="6">
+      <img src="pictures/Logo-TQ.png" alt="TaskQueya Logo">
+      <div class="gallery-overlay"><h3>TaskQueya</h3><p>Personal Project Logo</p></div>
+    </div>
+    <div class="gallery-item animate" data-index="7">
+      <img src="pictures/sample.png" alt="Sample Business">
+      <div class="gallery-overlay"><h3>Sample Business</h3><p>School Project</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightbox-close">&times;</span>
+  <span class="lightbox-counter" id="lightbox-counter"></span>
+  <span class="lightbox-nav lightbox-prev" id="lightbox-prev">&#10094;</span>
+  <span class="lightbox-nav lightbox-next" id="lightbox-next">&#10095;</span>
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-info">
+      <h3 id="lightbox-title"></h3>
+      <p id="lightbox-desc"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Messenger Button -->
+<div class="floating-chat">
+  <span class="floating-chat-tooltip">Chat on Messenger</span>
+  <a href="https://m.me/janzier.30" target="_blank" class="floating-chat-btn" aria-label="Chat on Messenger">
+    <i class="fab fa-facebook-messenger"></i>
+  </a>
+</div>
+
 </body>
 <script src="assets/function.js"></script>
 </html>
