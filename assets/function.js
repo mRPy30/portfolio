@@ -1,107 +1,3 @@
-
-const themeToggle = document.getElementById("theme-toggle");
-const themeIcon = document.getElementById("theme-icon");
-const body = document.body;
-
-// Load stored theme
-if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("darkmode");
-    themeIcon.classList.replace("fa-moon", "fa-sun");
-    themeIcon.title = "Switch to Light Mode";
-}
-
-themeToggle.addEventListener("click", function () {
-    body.classList.toggle("darkmode");
-    
-    if (body.classList.contains("darkmode")) {
-        localStorage.setItem("theme", "dark");
-        themeIcon.classList.replace("fa-moon", "fa-sun");
-        themeIcon.title = "Switch to Light Mode";
-    } else {
-        localStorage.setItem("theme", "light");
-        themeIcon.classList.replace("fa-sun", "fa-moon");
-        themeIcon.title = "Switch to Dark Mode";
-    }
-});
-
-function animateCounters() {
-  const counters = document.querySelectorAll('.stat-number');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counter = entry.target;
-        const target = parseInt(counter.getAttribute('data-count'));
-        let current = 0;
-        const increment = target / 30;
-        
-        const updateCounter = () => {
-          if (current < target) {
-            current += increment;
-            counter.textContent = Math.ceil(current);
-            setTimeout(updateCounter, 50);
-          } else {
-            counter.textContent = target;
-            counter.classList.add('counting');
-          }
-        };
-        
-        updateCounter();
-        observer.unobserve(counter);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  counters.forEach(counter => observer.observe(counter));
-}
-
-
-function toggleMenu() {
-  document.getElementById("nav-menu").classList.toggle("show");
-}
-
-const observer = new IntersectionObserver((entries) => {
-entries.forEach((entry) => {
-  if (entry.isIntersecting) {
-    entry.target.classList.add('visible');
-  }
-});
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.animate').forEach((el) => observer.observe(el));
-
-
-document.querySelectorAll('.skills-section').forEach(sec => skillObserver.observe(sec));
-
-function emailMe(event) {
-event.preventDefault(); 
-
-const email = "araquejanvier@gmail.com";
-
-navigator.clipboard.writeText(email).then(() => {
-  console.log("Email copied to clipboard!");
-
-  window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, "_blank");
-}).catch(err => {
-  alert("Failed to copy email. Please try manually.");
-  console.error("Clipboard error:", err);
-});
-}
-
-window.addEventListener('load', () => {
-document.querySelectorAll('.animate-seq').forEach(el => {
-  el.classList.add('start');
-});
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-document.querySelectorAll(".project-card").forEach(card => {
-  const link = card.querySelector("a.project-link");
-  if (link && link.textContent.trim().toLowerCase() === "preview soon") {
-    card.classList.add("preview-soon");
-  }
-});
-});
-
 // Gallery data
 const galleryData = [
     {
@@ -120,104 +16,230 @@ const galleryData = [
         desc: "Desktop Wallpaper"
     },
     {
-      img: "pictures/Birthday_celebrant_client.jpg",
-      title: "Birthday Party",
-      desc: "Second Client"
+        img: "pictures/Birthday_celebrant_client.jpg",
+        title: "Birthday Party",
+        desc: "Second Client"
     },
     {
         img: "pictures/logoPsD - no bg.png",
-        title: "BARANGAY TIBAY SEALED",
-        desc: "Sample Logo Barangay"
+        title: "Barangay Tibay Seal",
+        desc: "Personal Project Logo"
     },
     {
-      img: "pictures/client3business.jpg",
-      title: "Ms.Stiquee Fisball Business",
-      desc: "Client Business"
+        img: "pictures/client3business.jpg",
+        title: "Ms.Stiquee Fishball",
+        desc: "Client Business"
     },
     {
         img: "pictures/Logo-TQ.png",
         title: "TaskQueya",
-        desc: "Personal Project Website logo"
+        desc: "Personal Project Logo"
     },
     {
-      img: "pictures/sample.png",
-      title: "Sample Business",
-      desc: "School Project"
+        img: "pictures/sample.png",
+        title: "Sample Business",
+        desc: "School Project"
     }
 ];
 
-// Lightbox functionality
-let currentIndex = 0;
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const lightboxTitle = document.getElementById('lightbox-title');
-const lightboxDesc = document.getElementById('lightbox-desc');
-const lightboxCounter = document.getElementById('lightbox-counter');
-const lightboxClose = document.getElementById('lightbox-close');
-const lightboxPrev = document.getElementById('lightbox-prev');
-const lightboxNext = document.getElementById('lightbox-next');
+document.addEventListener("DOMContentLoaded", () => {
+    // ─── THEME TOGGLE STATE MANAGEMENT ───
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+    const themeToggleMobile = document.getElementById("theme-toggle-mobile");
+    const themeIconMobile = document.getElementById("theme-icon-mobile");
+    const body = document.body;
 
-// Open lightbox
-document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', function() {
-        currentIndex = parseInt(this.getAttribute('data-index'));
-        openLightbox(currentIndex);
-    });
-});
-
-function openLightbox(index) {
-    currentIndex = index;
-    lightboxImg.src = galleryData[index].img;
-    lightboxTitle.textContent = galleryData[index].title;
-    lightboxDesc.textContent = galleryData[index].desc;
-    lightboxCounter.textContent = `${index + 1} / ${galleryData.length}`;
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox() {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
-
-function nextImage() {
-    currentIndex = (currentIndex + 1) % galleryData.length;
-    openLightbox(currentIndex);
-}
-
-function prevImage() {
-    currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
-    openLightbox(currentIndex);
-}
-
-// Event listeners
-lightboxClose.addEventListener('click', closeLightbox);
-lightboxNext.addEventListener('click', nextImage);
-lightboxPrev.addEventListener('click', prevImage);
-
-// Close on background click
-lightbox.addEventListener('click', function(e) {
-    if (e.target === lightbox) {
-        closeLightbox();
-    }
-});
-
-// Keyboard navigation
-document.addEventListener('keydown', function(e) {
-    if (!lightbox.classList.contains('active')) return;
-    
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowRight') nextImage();
-    if (e.key === 'ArrowLeft') prevImage();
-});
-
-// Graphics section observer
-const graphicsObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+    // Helper to update toggle icons
+    function updateThemeIcons(isLight) {
+        if (isLight) {
+            themeIcon.className = "fas fa-moon text-lg";
+            themeIconMobile.className = "fas fa-moon text-lg";
+            themeIcon.title = "Switch to Dark Mode";
+        } else {
+            themeIcon.className = "fas fa-sun text-lg text-amber-400";
+            themeIconMobile.className = "fas fa-sun text-lg text-amber-400";
+            themeIcon.title = "Switch to Light Mode";
         }
-    });
-}, { threshold: 0.1 });
+    }
 
-document.querySelectorAll('.graphics-section').forEach((el) => graphicsObserver.observe(el));
+    // Load theme setting (Default is Dark, Light is toggled via class 'lightmode')
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "light") {
+        body.classList.add("lightmode");
+        updateThemeIcons(true);
+    } else {
+        body.classList.remove("lightmode");
+        updateThemeIcons(false);
+    }
+
+    // Toggle logic for desktop & mobile buttons
+    function toggleTheme() {
+        body.classList.toggle("lightmode");
+        const isLight = body.classList.contains("lightmode");
+        localStorage.setItem("theme", isLight ? "light" : "dark");
+        updateThemeIcons(isLight);
+    }
+
+    if (themeToggle) themeToggle.addEventListener("click", toggleTheme);
+    if (themeToggleMobile) themeToggleMobile.addEventListener("click", toggleTheme);
+
+
+    // ─── LIVE RUNNING DIGITAL CLOCK (PH Timezone) ───
+    function updateClock() {
+        const clockEl = document.getElementById("live-clock");
+        if (!clockEl) return;
+        
+        const options = {
+            timeZone: "Asia/Manila",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false
+        };
+        try {
+            const timeString = new Intl.DateTimeFormat("en-US", options).format(new Date());
+            clockEl.textContent = timeString;
+        } catch (e) {
+            // Fallback to local system time if timezone translation errors
+            const now = new Date();
+            const format = (num) => String(num).padStart(2, '0');
+            clockEl.textContent = `${format(now.getHours())}:${format(now.getMinutes())}:${format(now.getSeconds())}`;
+        }
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+
+    // ─── VIEWPORT SCROLL REVEAL (Intersection Observer) ───
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                // Stop observing once revealed to maintain performance
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { 
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    document.querySelectorAll('.reveal-item').forEach((el) => {
+        revealObserver.observe(el);
+    });
+
+
+    // ─── LIGHTBOX INTERACTIVE COMPONENT ───
+    let currentIndex = 0;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+
+    // Attach click events to gallery items
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', function() {
+            currentIndex = parseInt(this.getAttribute('data-index'), 10);
+            openLightbox(currentIndex);
+        });
+    });
+
+    function openLightbox(index) {
+        if (!lightbox || !galleryData[index]) return;
+        currentIndex = index;
+        
+        // Setup lightbox elements
+        lightboxImg.src = galleryData[index].img;
+        lightboxTitle.textContent = galleryData[index].title;
+        lightboxDesc.textContent = galleryData[index].desc;
+        lightboxCounter.textContent = `${index + 1} / ${galleryData.length}`;
+        
+        // Show lightbox with transitions
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        
+        // Allow rendering frame first, then animate class
+        setTimeout(() => {
+            lightbox.classList.add('active');
+            document.body.classList.add('lightbox-active');
+        }, 10);
+    }
+
+    function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove('active');
+        document.body.classList.remove('lightbox-active');
+        
+        // Hide after transition completes
+        setTimeout(() => {
+            lightbox.classList.remove('flex');
+            lightbox.classList.add('hidden');
+        }, 300);
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % galleryData.length;
+        openLightbox(currentIndex);
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+        openLightbox(currentIndex);
+    }
+
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightboxNext) lightboxNext.addEventListener('click', nextImage);
+    if (lightboxPrev) lightboxPrev.addEventListener('click', prevImage);
+
+    // Close on background click
+    if (lightbox) {
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+
+    // Keyboard navigation support
+    document.addEventListener('keydown', function(e) {
+        if (!lightbox || lightbox.classList.contains('hidden')) return;
+        
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+    });
+});
+
+// ─── MOBILE MENU TOGGLE ───
+function toggleMenu() {
+    const menu = document.getElementById("nav-menu");
+    if (!menu) return;
+    
+    if (menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
+        menu.classList.add("block");
+    } else {
+        menu.classList.remove("block");
+        menu.classList.add("hidden");
+    }
+}
+
+// ─── EMAIL CLIPBOARD & REDIRECT ───
+function emailMe(event) {
+    event.preventDefault(); 
+    const email = "araquejanvier@gmail.com";
+    
+    navigator.clipboard.writeText(email).then(() => {
+        // Open Gmail in a new tab
+        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, "_blank");
+    }).catch(err => {
+        // Fallback standard mailto if clipboard API is blocked
+        window.location.href = `mailto:${email}`;
+        console.error("Clipboard copy failed, falling back to standard mailto link:", err);
+    });
+}
