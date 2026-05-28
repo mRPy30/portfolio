@@ -4,8 +4,8 @@
   "description": "Premium Full-Stack Developer Portfolio Revamp",
   "main": "index.html",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i assets/src-style.css -o assets/style.css --watch",
-    "build": "npx @tailwindcss/cli -i assets/src-style.css -o assets/style.css --minify"
+    "dev": "tailwindcss -i assets/src-style.css -o assets/style.css --watch",
+    "build:css": "tailwindcss -i assets/src-style.css -o assets/style.css --minify"
   },
   "keywords": [],
   "author": "Janvier Erickson Araque",
