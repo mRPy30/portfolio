@@ -1,78 +1,163 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <title>Janvier Erickson Araque — Full-Stack Developer</title>
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Full-Stack Developer specializing in high-performance web ecosystems, dynamic dashboards, and fluid interfaces. Over 11 projects delivered with precision design.">
-    <meta name="keywords" content="Janvier Erickson Araque, Full-Stack Developer, PHP, React, Supabase, Vue, UI/UX, Web Developer Portfolio">
+    <meta name="description"
+        content="Full-Stack Developer specializing in high-performance web ecosystems, dynamic dashboards, and fluid interfaces. Over 11 projects delivered with precision design.">
+    <meta name="keywords"
+        content="Janvier Erickson Araque, Full-Stack Developer, PHP, React, Supabase, Vue, UI/UX, Web Developer Portfolio">
     <meta name="author" content="Janvier Erickson Araque">
-    
+
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Janvier Erickson Araque — Full-Stack Developer">
-    <meta property="og:description" content="Crafting High-Performance Full-Stack Applications with Precision Design. Check out my latest systems and graphics design.">
+    <meta property="og:description"
+        content="Crafting High-Performance Full-Stack Applications with Precision Design. Check out my latest systems and graphics design.">
     <meta property="og:image" content="pictures/grad-picwbg.png">
     <meta property="og:type" content="website">
 
     <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/fonts.css">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="font-awesome-6/css/all.css">
+
+    <!-- Theme Initial State Initialization Script (FOUC Prevention) -->
+    <script>
+        (function () {
+            const currentTheme = localStorage.getItem("theme");
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            if (currentTheme === "light" || (!currentTheme && !prefersDark)) {
+                document.documentElement.classList.remove("dark");
+                document.documentElement.classList.add("light");
+                // Wait for DOM to be parsed before adding class to body to prevent FOUC
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.body.classList.add("lightmode");
+                });
+            } else {
+                document.documentElement.classList.add("dark");
+                document.documentElement.classList.remove("light");
+            }
+        })();
+    </script>
 </head>
 
-<body class="bg-bg-canvas text-text-main font-sans selection:bg-accent-primary/20 selection:text-accent-primary overflow-x-hidden antialiased min-h-screen relative">
+<body
+    class="bg-bg-canvas text-text-main font-sans selection:bg-accent-primary/20 selection:text-accent-primary overflow-x-hidden antialiased min-h-screen relative">
 
     <!-- Background Decorative Glow Elements -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        <div class="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-indigo-500/10 dark:bg-indigo-500/[0.07] blur-[120px] animate-glow"></div>
-        <div class="absolute top-[40%] -right-40 w-[600px] h-[600px] rounded-full bg-emerald-500/10 dark:bg-emerald-500/[0.05] blur-[150px] animate-glow" style="animation-delay: -3s;"></div>
-        <div class="absolute -bottom-40 left-1/3 w-[450px] h-[450px] rounded-full bg-cyan-500/10 dark:bg-cyan-500/[0.06] blur-[100px] animate-glow" style="animation-delay: -6s;"></div>
+        <div
+            class="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-rose-950/10 dark:bg-rose-950/[0.05] blur-[120px] animate-glow">
+        </div>
+        <div class="absolute top-[40%] -right-40 w-[600px] h-[600px] rounded-full bg-[#800020]/5 dark:bg-[#800020]/[0.03] blur-[150px] animate-glow"
+            style="animation-delay: -3s;"></div>
+        <div class="absolute -bottom-40 left-1/3 w-[450px] h-[450px] rounded-full bg-rose-950/5 dark:bg-rose-950/[0.03] blur-[100px] animate-glow"
+            style="animation-delay: -6s;"></div>
     </div>
 
     <!-- ══ HEADER / NAVBAR ══ -->
     <header class="sticky top-0 z-50 w-full border-b border-border-card bg-bg-canvas/80 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Logo -->
-            <a href="#" class="logo font-brand text-3xl font-black tracking-tighter text-text-main hover:text-accent-primary transition-colors flex items-center gap-1">
+            <a href="#"
+                class="logo font-brand text-3xl font-black tracking-tighter text-text-main hover:text-accent-primary transition-colors flex items-center gap-1">
                 <span>JEA.</span>
             </a>
 
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center gap-2">
-                <a href="#about" class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200">About</a>
-                <a href="#skills" class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200">Skills</a>
-                <a href="#projects" class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200">Projects</a>
-                <a href="#graphics" class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200 font-sans">Graphics</a>
-                
+                <a href="#about"
+                    class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200">About</a>
+                <a href="#skills"
+                    class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200">Skills</a>
+                <a href="#experience"
+                    class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200">Experience</a>
+                <a href="#education"
+                    class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200">Education</a>
+                <a href="#projects"
+                    class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200">Projects</a>
+                <a href="#graphics"
+                    class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200 font-sans">Graphics</a>
+
                 <div class="h-6 w-[1px] bg-border-card mx-2"></div>
-                
+
                 <!-- Theme Toggle Button -->
-                <button id="theme-toggle" class="p-2.5 rounded-full hover:bg-bg-tag border border-transparent hover:border-border-card text-text-muted hover:text-text-main cursor-pointer transition-all duration-200" aria-label="Toggle Theme">
-                    <i class="fas fa-moon text-lg" id="theme-icon"></i>
+                <button id="theme-toggle"
+                    class="p-2.5 rounded-full hover:bg-bg-tag border border-transparent hover:border-border-card cursor-pointer transition-all duration-200 flex items-center justify-center"
+                    aria-label="Toggle Theme">
+                    <!-- Sun Icon (visible in light mode) -->
+                    <svg class="sun-icon w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path
+                            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
+                        </path>
+                    </svg>
+                    <!-- Moon Icon (visible in dark mode) -->
+                    <svg class="moon-icon w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
                 </button>
             </nav>
 
             <!-- Mobile Hamburger Button -->
             <div class="flex items-center gap-4 md:hidden">
-                <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-bg-tag text-text-muted hover:text-text-main" aria-label="Toggle Theme">
-                    <i class="fas fa-moon text-lg" id="theme-icon-mobile"></i>
+                <button id="theme-toggle-mobile"
+                    class="p-2 rounded-full hover:bg-bg-tag flex items-center justify-center" aria-label="Toggle Theme">
+                    <!-- Sun Icon (visible in light mode) -->
+                    <svg class="sun-icon w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path
+                            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
+                        </path>
+                    </svg>
+                    <!-- Moon Icon (visible in dark mode) -->
+                    <svg class="moon-icon w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
                 </button>
-                <button class="hamburger p-2 rounded-lg text-text-muted hover:text-text-main focus:outline-none cursor-pointer" onclick="toggleMenu()" aria-label="Toggle Menu">
+                <button
+                    class="hamburger p-2 rounded-lg text-text-muted hover:text-text-main focus:outline-none cursor-pointer"
+                    onclick="toggleMenu()" aria-label="Toggle Menu">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <nav id="nav-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-bg-canvas/98 border-b border-border-card backdrop-blur-lg transition-all duration-300">
+        <nav id="nav-menu"
+            class="hidden md:hidden absolute top-20 left-0 w-full bg-bg-canvas/98 border-b border-border-card backdrop-blur-lg transition-all duration-300">
             <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
-                <a href="#about" class="text-lg font-medium text-text-muted hover:text-text-main py-3 border-b border-border-card/50" onclick="toggleMenu()">About</a>
-                <a href="#skills" class="text-lg font-medium text-text-muted hover:text-text-main py-3 border-b border-border-card/50" onclick="toggleMenu()">Skills</a>
-                <a href="#projects" class="text-lg font-medium text-text-muted hover:text-text-main py-3 border-b border-border-card/50" onclick="toggleMenu()">Projects</a>
-                <a href="#graphics" class="text-lg font-medium text-text-muted hover:text-text-main py-3" onclick="toggleMenu()">Graphics</a>
+                <a href="#about"
+                    class="text-lg font-medium text-text-muted hover:text-text-main py-3 border-b border-border-card/50"
+                    onclick="toggleMenu()">About</a>
+                <a href="#skills"
+                    class="text-lg font-medium text-text-muted hover:text-text-main py-3 border-b border-border-card/50"
+                    onclick="toggleMenu()">Skills</a>
+                <a href="#experience"
+                    class="text-lg font-medium text-text-muted hover:text-text-main py-3 border-b border-border-card/50"
+                    onclick="toggleMenu()">Experience</a>
+                <a href="#education"
+                    class="text-lg font-medium text-text-muted hover:text-text-main py-3 border-b border-border-card/50"
+                    onclick="toggleMenu()">Education</a>
+                <a href="#projects"
+                    class="text-lg font-medium text-text-muted hover:text-text-main py-3 border-b border-border-card/50"
+                    onclick="toggleMenu()">Projects</a>
+                <a href="#graphics" class="text-lg font-medium text-text-muted hover:text-text-main py-3"
+                    onclick="toggleMenu()">Graphics</a>
             </div>
         </nav>
     </header>
@@ -86,34 +171,52 @@
                 <!-- Hero Content -->
                 <div class="lg:col-span-7 space-y-6 text-left">
                     <!-- Status Badge -->
-                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-accent-primary/10 border border-accent-primary/20 text-accent-primary text-xs font-semibold uppercase tracking-wider font-display">
-                        <span class="w-2 h-2 rounded-full bg-accent-primary animate-pulse"></span>
+                    <div
+                        class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-rose-700/40 dark:border-rose-900/50 bg-rose-100 dark:bg-rose-950/20 text-rose-950 dark:text-zinc-300 text-xs font-semibold uppercase tracking-wider font-heading">
+                        <span class="w-2 h-2 rounded-full bg-rose-700 animate-pulse"></span>
                         Available for contracts & freelance
                     </div>
 
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-text-main font-display">
-                        Crafting High-Performance <span class="bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text text-transparent">Full-Stack Applications</span> with Precision Design.
+                    <h1
+                        class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-text-main font-heading">
+                        Turning Your Vision Into <span
+                            class="bg-gradient-to-r from-rose-800 to-[#800020] bg-clip-text text-transparent">Digital
+                            Reality.</span>
                     </h1>
 
-                    <p class="text-base sm:text-lg text-text-muted leading-relaxed max-w-2xl font-sans">
-                        Full-Stack Developer specializing in scalable web ecosystems, dynamic business dashboards, and fluid user interfaces. From local e-commerce infrastructure to international real estate platforms, I bridge the gap between complex backend logic and pixel-perfect design.
+                    <p class="text-base sm:text-lg text-text-muted leading-relaxed max-w-2xl font-body">
+                        Full-Stack Developer specializing in scalable web ecosystems, dynamic business dashboards, and
+                        fluid user interfaces. I bridge the gap between complex backend logic and pixel-perfect design.
                     </p>
 
                     <!-- CTAs & Socials -->
                     <div class="pt-4 flex flex-wrap items-center gap-6">
-                        <a href="#" onclick="emailMe(event)" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-primary to-accent-secondary text-slate-950 font-bold px-8 py-4 rounded-full shadow-lg shadow-accent-primary/20 hover:shadow-accent-primary/45 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300">
+                        <a href="#" onclick="emailMe(event)"
+                            class="inline-flex items-center gap-2 border border-rose-700 dark:border-rose-800 hover:bg-rose-100 dark:hover:bg-rose-950/30 text-rose-950 dark:text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]">
                             Send an Email <i class="fas fa-arrow-right"></i>
                         </a>
 
                         <div class="flex items-center gap-4">
-                            <a href="https://www.facebook.com/janzier.30/" target="_blank" aria-label="Facebook" class="w-11 h-11 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
+                            <a href="https://www.facebook.com/janzier.30/" target="_blank" aria-label="Facebook"
+                                class="w-11 h-11 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
                                 <i class="fab fa-facebook-f text-lg"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/janvier-erickson-araque-54744b347/" target="_blank" aria-label="LinkedIn" class="w-11 h-11 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
+                            <a href="https://www.linkedin.com/in/janvier-erickson-araque-54744b347/" target="_blank"
+                                aria-label="LinkedIn"
+                                class="w-11 h-11 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
                                 <i class="fab fa-linkedin-in text-lg"></i>
                             </a>
-                            <a href="https://github.com/mRPy30" target="_blank" aria-label="GitHub" class="w-11 h-11 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
+                            <a href="https://github.com/mRPy30" target="_blank" aria-label="GitHub"
+                                class="w-11 h-11 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
                                 <i class="fab fa-github text-lg"></i>
+                            </a>
+                            <a href="https://wa.me/YOUR_NUMBER_HERE" target="_blank" aria-label="WhatsApp"
+                                class="w-11 h-11 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
+                                <i class="fab fa-whatsapp text-lg"></i>
+                            </a>
+                            <a href="viber://contact?number=YOUR_NUMBER_HERE" target="_blank" aria-label="Viber"
+                                class="w-11 h-11 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
+                                <i class="fab fa-viber text-lg"></i>
                             </a>
                         </div>
                     </div>
@@ -121,15 +224,24 @@
 
                 <!-- Hero Visual -->
                 <div class="lg:col-span-5 flex justify-center">
-                    <div class="relative w-full max-w-[420px] aspect-[4/5] rounded-3xl overflow-hidden border border-border-card bg-bg-card shadow-2xl group">
+                    <div
+                        class="relative w-full max-w-[420px] aspect-[4/5] rounded-3xl overflow-hidden border border-border-card bg-bg-card shadow-2xl group">
                         <!-- Neon Ambient Backlight -->
-                        <div class="absolute inset-0 bg-gradient-to-tr from-accent-primary/10 to-accent-secondary/10 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <img src="pictures/grad-picwbg.png" alt="Janvier Erickson Araque" class="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover:scale-105">
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-accent-primary/10 to-accent-secondary/10 opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <img src="pictures/grad-picwbg.png" alt="Janvier Erickson Araque"
+                            class="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover:scale-105">
+
                         <!-- Mini Stat Badge on Image -->
-                        <div class="absolute bottom-6 left-6 z-20 bg-bg-canvas/90 border border-border-card backdrop-blur-md rounded-2xl p-4 flex items-center gap-3">
-                            <div class="text-accent-primary font-display font-black text-2xl tracking-tight leading-none">11+</div>
-                            <div class="text-[10px] text-text-muted uppercase tracking-widest font-semibold leading-tight">Projects<br>Delivered</div>
+                        <div
+                            class="absolute bottom-6 left-6 z-20 bg-bg-canvas/90 border border-border-card backdrop-blur-md rounded-2xl p-4 flex items-center gap-3">
+                            <div
+                                class="text-accent-primary font-display font-black text-2xl tracking-tight leading-none">
+                                11+</div>
+                            <div
+                                class="text-[10px] text-text-muted uppercase tracking-widest font-semibold leading-tight">
+                                Projects<br>Delivered</div>
                         </div>
                     </div>
                 </div>
@@ -141,18 +253,22 @@
         <section id="about" class="space-y-8 reveal-item">
             <!-- Section Header -->
             <div class="space-y-3">
-                <div class="inline-flex items-center gap-2 text-accent-primary text-xs font-semibold uppercase tracking-wider font-display">
+                <div
+                    class="inline-flex items-center gap-2 text-accent-primary text-xs font-semibold uppercase tracking-wider font-display">
                     <i class="fas fa-th-large"></i> Professional Profile
                 </div>
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-text-main font-display">About Me & Expertise</h2>
-                <p class="text-text-muted max-w-xl">A high-performance Bento Grid showcasing my development capabilities, core metrics, and toolsets.</p>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-text-main font-display">About Me &
+                    Expertise</h2>
+                <p class="text-text-muted max-w-xl">A high-performance Bento Grid showcasing my development
+                    capabilities, core metrics, and toolsets.</p>
             </div>
 
             <!-- Bento Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
+
                 <!-- Card 1: Professional Bio (Spans 2 cols, 2 rows) -->
-                <div class="md:col-span-2 lg:col-span-2 flex flex-col justify-between p-8 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md relative overflow-hidden group hover:border-accent-primary/30 transition-all duration-300">
+                <div
+                    class="md:col-span-2 lg:col-span-2 flex flex-col justify-between p-8 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md relative overflow-hidden group hover:border-accent-primary/30 transition-all duration-300">
                     <div class="space-y-6">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-full overflow-hidden border border-border-card bg-bg-tag">
@@ -166,31 +282,49 @@
 
                         <div class="space-y-4 text-sm sm:text-base text-text-muted leading-relaxed font-sans">
                             <p>
-                                I am an engineered-focused developer passionate about constructing secure, high-performance, and efficient web ecosystems. My workflow bridges secure, robust backend systems with fluid, pixel-perfect user interfaces, delivering complete end-to-end applications.
+                                I am an engineered-focused developer passionate about constructing secure,
+                                high-performance, and efficient web ecosystems. My workflow bridges secure, robust
+                                backend systems with fluid, pixel-perfect user interfaces, delivering complete
+                                end-to-end applications.
                             </p>
                             <p>
-                                With experience spanning custom backend architectures, relational database management, and UI/UX design, I specialize in building complex business pipelines, automated booking workflows, and dynamic client dashboards.
+                                With experience spanning custom backend architectures, relational database management,
+                                and UI/UX design, I specialize in building complex business pipelines, automated booking
+                                workflows, and dynamic client dashboards.
                             </p>
                         </div>
                     </div>
 
                     <div class="pt-6 flex flex-wrap gap-2">
-                        <span class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">Full-Stack Dev</span>
-                        <span class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">Backend Systems</span>
-                        <span class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">Relational Databases</span>
-                        <span class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">UI/UX Optimization</span>
-                        <span class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">Business Dashboards</span>
+                        <span
+                            class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">Full-Stack
+                            Dev</span>
+                        <span
+                            class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">Backend
+                            Systems</span>
+                        <span
+                            class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">Relational
+                            Databases</span>
+                        <span
+                            class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">UI/UX
+                            Optimization</span>
+                        <span
+                            class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">Business
+                            Dashboards</span>
                     </div>
                 </div>
 
                 <!-- Card 2: Location & Clock (1 col) -->
-                <div class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between hover:border-accent-secondary/30 transition-all duration-300">
+                <div
+                    class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between hover:border-accent-secondary/30 transition-all duration-300">
                     <div class="space-y-4">
-                        <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display">Operational Hub</h3>
-                        
+                        <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display">
+                            Operational Hub</h3>
+
                         <!-- Map Marker / Location -->
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl bg-accent-secondary/10 flex items-center justify-center text-accent-secondary border border-accent-secondary/20">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-accent-secondary/10 flex items-center justify-center text-accent-secondary border border-accent-secondary/20">
                                 <i class="fas fa-map-marker-alt text-lg"></i>
                             </div>
                             <div>
@@ -201,16 +335,22 @@
                     </div>
 
                     <!-- Digital Clock Widget -->
-                    <div class="bg-bg-canvas/50 border border-border-card rounded-xl p-4 mt-6 flex flex-col items-center justify-center">
-                        <div id="live-clock" class="text-3xl font-black tracking-wider text-accent-secondary font-display font-mono">00:00:00</div>
-                        <div class="text-[10px] text-text-muted uppercase tracking-widest font-medium mt-1">Live Local Time</div>
+                    <div
+                        class="bg-bg-canvas/50 border border-border-card rounded-xl p-4 mt-6 flex flex-col items-center justify-center">
+                        <div id="live-clock"
+                            class="text-3xl font-black tracking-wider text-accent-secondary font-display font-mono">
+                            00:00:00</div>
+                        <div class="text-[10px] text-text-muted uppercase tracking-widest font-medium mt-1">Live Local
+                            Time</div>
                     </div>
                 </div>
 
                 <!-- Card 3: Metrics & Stats (1 col) -->
-                <div class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between hover:border-accent-primary/30 transition-all duration-300">
-                    <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display">Key Performance Indicators</h3>
-                    
+                <div
+                    class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between hover:border-accent-primary/30 transition-all duration-300">
+                    <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display">Key
+                        Performance Indicators</h3>
+
                     <div class="grid grid-cols-3 gap-2 mt-4 text-center">
                         <div class="p-3 bg-bg-tag/50 border border-border-card rounded-xl">
                             <div class="text-xl font-black text-accent-primary font-display">11+</div>
@@ -226,38 +366,53 @@
                         </div>
                     </div>
 
-                    <div class="text-xs text-text-muted leading-relaxed mt-4 bg-accent-primary/[0.03] border border-accent-primary/10 rounded-xl p-3 text-center">
+                    <div
+                        class="text-xs text-text-muted leading-relaxed mt-4 bg-accent-primary/[0.03] border border-accent-primary/10 rounded-xl p-3 text-center">
                         "Delivering scalable systems on time."
                     </div>
                 </div>
 
                 <!-- Card 4: Frontend Development (1 col) -->
-                <div id="skills" class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between hover:border-accent-primary/30 transition-all duration-300">
+                <div id="skills"
+                    class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between hover:border-accent-primary/30 transition-all duration-300">
                     <div>
-                        <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display mb-4">Frontend Frameworks</h3>
+                        <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display mb-4">
+                            Frontend Frameworks</h3>
                         <div class="grid grid-cols-3 gap-3">
-                            <div class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
-                                <img src="pictures/icons-react.png" alt="React" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-react.png" alt="React"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
                                 <span class="text-[9px] font-semibold text-text-muted uppercase">React</span>
                             </div>
-                            <div class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
-                                <img src="pictures/vue.png" alt="Vue" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/vue.png" alt="Vue"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
                                 <span class="text-[9px] font-semibold text-text-muted uppercase">Vue</span>
                             </div>
-                            <div class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
-                                <img src="pictures/tsc.png" alt="TS" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/tsc.png" alt="TS"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
                                 <span class="text-[9px] font-semibold text-text-muted uppercase">TypeScript</span>
                             </div>
-                            <div class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
-                                <img src="pictures/icons-javascript.png" alt="JS" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-javascript.png" alt="JS"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
                                 <span class="text-[9px] font-semibold text-text-muted uppercase">JS</span>
                             </div>
-                            <div class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
-                                <img src="pictures/icons-css.png" alt="CSS" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-css.png" alt="CSS"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
                                 <span class="text-[9px] font-semibold text-text-muted uppercase">CSS</span>
                             </div>
-                            <div class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
-                                <img src="pictures/icons-html.png" alt="HTML" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-html.png" alt="HTML"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
                                 <span class="text-[9px] font-semibold text-text-muted uppercase">HTML</span>
                             </div>
                         </div>
@@ -265,20 +420,28 @@
                 </div>
 
                 <!-- Card 5: Backend & Database (1 col) -->
-                <div class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between hover:border-accent-primary/30 transition-all duration-300">
+                <div
+                    class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between hover:border-accent-primary/30 transition-all duration-300">
                     <div>
-                        <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display mb-4">Backend & Server</h3>
+                        <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display mb-4">
+                            Backend & Server</h3>
                         <div class="grid grid-cols-3 gap-3">
-                            <div class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
-                                <img src="pictures/icons-php.png" alt="PHP" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-php.png" alt="PHP"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
                                 <span class="text-[9px] font-semibold text-text-muted uppercase">PHP</span>
                             </div>
-                            <div class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
-                                <img src="pictures/supabase.png" alt="Supabase" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/supabase.png" alt="Supabase"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
                                 <span class="text-[9px] font-semibold text-text-muted uppercase">Supabase</span>
                             </div>
-                            <div class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
-                                <img src="pictures/icons-phpmyadmin.png" alt="MySQL" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-phpmyadmin.png" alt="MySQL"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
                                 <span class="text-[9px] font-semibold text-text-muted uppercase">MySQL</span>
                             </div>
                         </div>
@@ -286,16 +449,22 @@
                 </div>
 
                 <!-- Card 6: Design Tools (1 col, spans 2 on md for grid filling) -->
-                <div class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between md:col-span-2 lg:col-span-1 hover:border-accent-primary/30 transition-all duration-300">
+                <div
+                    class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between md:col-span-2 lg:col-span-1 hover:border-accent-primary/30 transition-all duration-300">
                     <div>
-                        <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display mb-4">UI/UX & Design Tools</h3>
+                        <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display mb-4">
+                            UI/UX & Design Tools</h3>
                         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-3">
-                            <div class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
-                                <img src="pictures/icons-figma.png" alt="Figma" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-figma.png" alt="Figma"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
                                 <span class="text-[9px] font-semibold text-text-muted uppercase">Figma</span>
                             </div>
-                            <div class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
-                                <img src="pictures/icons-photoshop.png" alt="PS" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-photoshop.png" alt="PS"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
                                 <span class="text-[9px] font-semibold text-text-muted uppercase">Photoshop</span>
                             </div>
                         </div>
@@ -306,147 +475,423 @@
         </section>
 
 
+        <!-- ══ WORK EXPERIENCE SECTION ══ -->
+        <section id="experience" class="space-y-8 reveal-item">
+            <!-- Section Header -->
+            <div class="space-y-3">
+                <div
+                    class="inline-flex items-center gap-2 text-accent-primary text-xs font-semibold uppercase tracking-wider font-display">
+                    <i class="fas fa-briefcase"></i> Professional History
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-text-main font-display">Work Experience
+                </h2>
+                <p class="text-text-muted max-w-xl">A timeline of my professional journey and significant contributions.
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-l border-border-card ml-3 md:ml-6 space-y-8 pl-8 md:pl-10">
+                <!-- Timeline Item 1 -->
+                <div class="relative group">
+                    <!-- Accent Dot -->
+                    <span
+                        class="absolute -left-[41px] md:-left-[49px] top-1.5 w-4 h-4 rounded-full bg-bg-canvas border-2 border-rose-800 shadow-[0_0_10px_rgba(159,18,57,0.5)] group-hover:bg-rose-800 transition-colors duration-300"></span>
+
+                    <div
+                        class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md hover:border-accent-primary/30 transition-all duration-300">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <h3 class="text-xl font-bold text-text-main font-display">Web Developer & IT Support
+                                Specialist</h3>
+                            <span
+                                class="inline-block px-3 py-1 rounded-full bg-rose-950/20 border border-rose-900/50 text-rose-500 text-xs font-semibold font-mono tracking-widest whitespace-nowrap">2025
+                                - Present</span>
+                        </div>
+                        <div class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">Worldcity
+                            Development Corporation</div>
+
+                        <ul class="space-y-3 text-sm sm:text-base text-text-muted font-sans list-disc list-inside">
+                            <li>Built and deployed 9 live production websites for company affiliates (SolarPower Energy
+                                Corp., Worldcity Real Estate PH & Dubai, Dubai Golden Visa, Mobility Ventures PH, WCG
+                                Consulting Inc., Worldcity Architects, Worldcity Development Corp., Worldcity Group, and
+                                CreditSure).</li>
+                            <li>Developed and maintained secure, database-driven systems using PHP, MySQL, ReactJS,
+                                TypeScript, and JavaScript.</li>
+                            <li>Managed hosting architectures, domains, SSL deployment, website security configurations,
+                                and optimized deliverability for email infrastructure (DNS, SPF, DKIM).</li>
+                            <li>Executed automated email marketing campaigns using Mailchimp and applied core SEO, page
+                                speed, and mobile responsiveness practices.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative group">
+                    <span
+                        class="absolute -left-[41px] md:-left-[49px] top-1.5 w-4 h-4 rounded-full bg-bg-canvas border-2 border-rose-800 shadow-[0_0_10px_rgba(159,18,57,0.5)] group-hover:bg-rose-800 transition-colors duration-300"></span>
+                    <div
+                        class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md hover:border-accent-primary/30 transition-all duration-300">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <h3 class="text-xl font-bold text-text-main font-display">Admin Aide</h3>
+                            <span
+                                class="inline-block px-3 py-1 rounded-full bg-rose-950/20 border border-rose-900/50 text-rose-500 text-xs font-semibold font-mono tracking-widest whitespace-nowrap">03/2025
+                                - 06/2025</span>
+                        </div>
+                        <div class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">EMI Yazaki Eds
+                            Manufacturing Inc.</div>
+                        <ul class="space-y-3 text-sm sm:text-base text-text-muted font-sans list-disc list-inside">
+                            <li>Managed data entry, updated performance reports, and collaborated with the MIS team to
+                                patch system errors.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative group">
+                    <span
+                        class="absolute -left-[41px] md:-left-[49px] top-1.5 w-4 h-4 rounded-full bg-bg-canvas border-2 border-rose-800 shadow-[0_0_10px_rgba(159,18,57,0.5)] group-hover:bg-rose-800 transition-colors duration-300"></span>
+                    <div
+                        class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md hover:border-accent-primary/30 transition-all duration-300">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <h3 class="text-xl font-bold text-text-main font-display">Real Estate Document Encoder
+                                (Part-Time)</h3>
+                            <span
+                                class="inline-block px-3 py-1 rounded-full bg-rose-950/20 border border-rose-900/50 text-rose-500 text-xs font-semibold font-mono tracking-widest whitespace-nowrap">2024
+                                - 2025</span>
+                        </div>
+                        <div class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">Real Estate
+                            Division</div>
+                        <ul class="space-y-3 text-sm sm:text-base text-text-muted font-sans list-disc list-inside">
+                            <li>Verified property data accuracy and managed high volumes of division paperwork.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="relative group">
+                    <span
+                        class="absolute -left-[41px] md:-left-[49px] top-1.5 w-4 h-4 rounded-full bg-bg-canvas border-2 border-rose-800 shadow-[0_0_10px_rgba(159,18,57,0.5)] group-hover:bg-rose-800 transition-colors duration-300"></span>
+                    <div
+                        class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md hover:border-accent-primary/30 transition-all duration-300">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <h3 class="text-xl font-bold text-text-main font-display">Freelance Web Designer</h3>
+                            <span
+                                class="inline-block px-3 py-1 rounded-full bg-rose-950/20 border border-rose-900/50 text-rose-500 text-xs font-semibold font-mono tracking-widest whitespace-nowrap">06/2024
+                                - 08/2024</span>
+                        </div>
+                        <ul class="space-y-3 text-sm sm:text-base text-text-muted font-sans list-disc list-inside">
+                            <li>Designed and built custom responsive sites for clients using HTML, CSS, JavaScript,
+                                Figma, and Photoshop.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ EDUCATIONAL BACKGROUND SECTION ══ -->
+        <section id="education" class="space-y-8 reveal-item">
+            <!-- Section Header -->
+            <div class="space-y-3">
+                <div
+                    class="inline-flex items-center gap-2 text-accent-primary text-xs font-semibold uppercase tracking-wider font-display">
+                    <i class="fas fa-graduation-cap"></i> Academic Profile
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-text-main font-display">Educational
+                    Background</h2>
+                <p class="text-text-muted max-w-xl">My formal education and technical training history.</p>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Education Item 1 -->
+                <div
+                    class="p-8 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md hover:border-accent-primary/30 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div
+                            class="w-12 h-12 rounded-xl bg-bg-tag border border-border-card flex items-center justify-center text-accent-primary text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main font-display mb-2">Bachelor of Science in
+                            Information Technology</h3>
+                        <p class="text-sm font-semibold text-text-muted uppercase tracking-wider">Cavite State
+                            University - Imus Campus</p>
+                    </div>
+                    <div class="mt-6">
+                        <span
+                            class="inline-block px-3 py-1 rounded-full bg-bg-tag border border-border-card text-text-main text-xs font-semibold font-mono tracking-widest">01/2021
+                            - 05/2025</span>
+                    </div>
+                </div>
+
+                <!-- Education Item 2 -->
+                <div
+                    class="p-8 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md hover:border-accent-primary/30 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div
+                            class="w-12 h-12 rounded-xl bg-bg-tag border border-border-card flex items-center justify-center text-accent-primary text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main font-display mb-2">Computer Systems Servicing - TVL
+                        </h3>
+                        <p class="text-sm font-semibold text-text-muted uppercase tracking-wider">Gen. Pantaleon Garcia
+                            Senior High School</p>
+                    </div>
+                    <div class="mt-6">
+                        <span
+                            class="inline-block px-3 py-1 rounded-full bg-bg-tag border border-border-card text-text-main text-xs font-semibold font-mono tracking-widest">06/2019
+                            - 05/2020</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <!-- ══ PROJECTS GRID SECTION ══ -->
         <section id="projects" class="space-y-8 reveal-item">
             <!-- Section Header -->
             <div class="space-y-3">
-                <div class="inline-flex items-center gap-2 text-accent-primary text-xs font-semibold uppercase tracking-wider font-display">
+                <div
+                    class="inline-flex items-center gap-2 text-accent-primary text-xs font-semibold uppercase tracking-wider font-display">
                     <i class="fa-solid fa-code-fork"></i> Production Systems
                 </div>
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-text-main font-display">Web Portals & Dashboards</h2>
-                <p class="text-text-muted max-w-xl">A responsive directory of full-stack platforms, client e-commerce infrastructure, and real estate portals.</p>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-text-main font-display">Web Portals &
+                    Dashboards</h2>
+                <p class="text-text-muted max-w-xl">A responsive directory of full-stack platforms, client e-commerce
+                    infrastructure, and real estate portals.</p>
             </div>
 
             <!-- Project Cards Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                
+
                 <!-- Project 1: ICSM Creatives -->
-                <div class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
-                    <img src="pictures/project1.png" alt="ICSM Creatives" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
+                    <img src="pictures/project1.png" alt="ICSM Creatives"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
                         <h3 class="text-base font-bold text-slate-50 font-display">ICSM Creatives</h3>
-                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Online booking system with decision support tool and dynamic content editor.</p>
-                        <a href="https://icsmcreatives-woad.vercel.app/" target="_blank" class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Online booking system
+                            with decision support tool and dynamic content editor.</p>
+                        <a href="https://icsmcreatives-woad.vercel.app/" target="_blank"
+                            class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
                             Visit System <i class="fas fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Project 2: TaskQueya -->
-                <div class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
-                    <img src="pictures/project2.png" alt="TaskQueya" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
+                    <img src="pictures/project2.png" alt="TaskQueya"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
                         <h3 class="text-base font-bold text-slate-50 font-display">TaskQueya</h3>
-                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Task management and scheduling utility for personal productivity pipelines.</p>
-                        <a href="https://taskqueya.vercel.app/" target="_blank" class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Task management and
+                            scheduling utility for personal productivity pipelines.</p>
+                        <a href="https://taskqueya.vercel.app/" target="_blank"
+                            class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
                             Visit System <i class="fas fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Project 3: CVSU NSTP Portal -->
-                <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-border-card bg-bg-card shadow-md opacity-75">
-                    <img src="pictures/project3.png" alt="CVSU NSTP Portal" class="w-full h-full object-cover filter grayscale opacity-50">
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden border border-border-card bg-bg-card shadow-md opacity-75">
+                    <img src="pictures/project3.png" alt="CVSU NSTP Portal"
+                        class="w-full h-full object-cover filter grayscale opacity-50">
                     <div class="absolute inset-0 bg-slate-950/85 flex flex-col justify-end p-5">
-                        <span class="absolute top-4 right-4 bg-slate-800 text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2.5 py-1 rounded-full border border-slate-700">Deploying</span>
+                        <span
+                            class="absolute top-4 right-4 bg-slate-800 text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2.5 py-1 rounded-full border border-slate-700">Deploying</span>
                         <h3 class="text-base font-bold text-slate-50 font-display">Cavite State University NSTP</h3>
-                        <p class="text-xs text-slate-400 mt-1 mb-2 leading-relaxed">Official CVSU Imus Campus National Service Training Program student portal.</p>
+                        <p class="text-xs text-slate-400 mt-1 mb-2 leading-relaxed">Official CVSU Imus Campus National
+                            Service Training Program student portal.</p>
                         <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Preview Soon</span>
                     </div>
                 </div>
 
                 <!-- Project 4: La Secuya -->
-                <div class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
-                    <img src="pictures/project4.png" alt="La Secuya" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
+                    <img src="pictures/project4.png" alt="La Secuya"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
                         <h3 class="text-base font-bold text-slate-50 font-display">La Secuya</h3>
-                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Real-time table ordering and inventory tracking dashboard for fine dining.</p>
-                        <a href="https://restaurant-orcin-omega.vercel.app/" target="_blank" class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Real-time table
+                            ordering and inventory tracking dashboard for fine dining.</p>
+                        <a href="https://restaurant-orcin-omega.vercel.app/" target="_blank"
+                            class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
                             Visit System <i class="fas fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Project 5: SolarPower Energy -->
-                <div class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
-                    <img src="pictures/solarpower.png" alt="SolarPower Energy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
+                    <img src="pictures/solarpower.png" alt="SolarPower Energy"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
                         <h3 class="text-base font-bold text-slate-50 font-display">SolarPower Energy Corp</h3>
-                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">B2B E-commerce marketplace with custom quoting pipelines and staff dashboards.</p>
-                        <a href="https://solarpower.com.ph" target="_blank" class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">B2B E-commerce
+                            marketplace with custom quoting pipelines and staff dashboards.</p>
+                        <a href="https://solarpower.com.ph" target="_blank"
+                            class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
                             Visit System <i class="fas fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Project 6: Worldcity Real Estate PH -->
-                <div class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
-                    <img src="pictures/worldcityPh.png" alt="Worldcity Real Estate PH" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
+                    <img src="pictures/worldcityPh.png" alt="Worldcity Real Estate PH"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
                         <h3 class="text-base font-bold text-slate-50 font-display">Worldcity Real Estate PH</h3>
-                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Property search directory and agent dashboard for the Philippine real estate market.</p>
-                        <a href="https://worldcityrealestate.ph" target="_blank" class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Property search
+                            directory and agent dashboard for the Philippine real estate market.</p>
+                        <a href="https://worldcityrealestate.ph" target="_blank"
+                            class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
                             Visit System <i class="fas fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Project 7: Worldcity Real Estate Dubai -->
-                <div class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
-                    <img src="pictures/worldcityDubai.png" alt="Worldcity Real Estate Dubai" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
+                    <img src="pictures/worldcityDubai.png" alt="Worldcity Real Estate Dubai"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
                         <h3 class="text-base font-bold text-slate-50 font-display">Worldcity Real Estate Dubai</h3>
-                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">International showcase and property lead-capture system for Dubai real estate.</p>
-                        <a href="https://worldcityrealestate.com" target="_blank" class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">International showcase
+                            and property lead-capture system for Dubai real estate.</p>
+                        <a href="https://worldcityrealestate.com" target="_blank"
+                            class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
                             Visit System <i class="fas fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Project 8: Mobility Ventures -->
-                <div class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
-                    <img src="pictures/mobilityventures.png" alt="Mobility Ventures" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
+                    <img src="pictures/mobilityventures.png" alt="Mobility Ventures"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
                         <h3 class="text-base font-bold text-slate-50 font-display">Mobility Ventures</h3>
-                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Company portal showcasing EV charging grids and eco-friendly transportation networks.</p>
-                        <a href="https://mobilityventures.ph" target="_blank" class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Company portal
+                            showcasing EV charging grids and eco-friendly transportation networks.</p>
+                        <a href="https://mobilityventures.ph" target="_blank"
+                            class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
                             Visit System <i class="fas fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Project 9: Worldcity Architects -->
-                <div class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
-                    <img src="pictures/worldcityarchitects.png" alt="Worldcity Architects" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
+                    <img src="pictures/worldcityarchitects.png" alt="Worldcity Architects"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
                         <h3 class="text-base font-bold text-slate-50 font-display">Worldcity Architects</h3>
-                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Dynamic architectural design portfolio featuring structural concepts and blueprints.</p>
-                        <a href="https://worldcityarchitects.com" target="_blank" class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Dynamic architectural
+                            design portfolio featuring structural concepts and blueprints.</p>
+                        <a href="https://worldcityarchitects.com" target="_blank"
+                            class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
                             Visit System <i class="fas fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Project 10: WCG Consulting -->
-                <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-border-card bg-bg-card shadow-md opacity-75">
-                    <img src="pictures/wcgconsulting.png" alt="WCG Consulting" class="w-full h-full object-cover filter grayscale opacity-50">
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden border border-border-card bg-bg-card shadow-md opacity-75">
+                    <img src="pictures/wcgconsulting.png" alt="WCG Consulting"
+                        class="w-full h-full object-cover filter grayscale opacity-50">
                     <div class="absolute inset-0 bg-slate-950/85 flex flex-col justify-end p-5">
-                        <span class="absolute top-4 right-4 bg-slate-800 text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2.5 py-1 rounded-full border border-slate-700">Deploying</span>
+                        <span
+                            class="absolute top-4 right-4 bg-slate-800 text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2.5 py-1 rounded-full border border-slate-700">Deploying</span>
                         <h3 class="text-base font-bold text-slate-50 font-display">WCG Consulting Inc.</h3>
-                        <p class="text-xs text-slate-400 mt-1 mb-2 leading-relaxed font-sans">Business intelligence inquiry portal and consulting service directories.</p>
+                        <p class="text-xs text-slate-400 mt-1 mb-2 leading-relaxed font-sans">Business intelligence
+                            inquiry portal and consulting service directories.</p>
                         <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Preview Soon</span>
                     </div>
                 </div>
 
                 <!-- Project 11: Dubai Golden Visa -->
-                <div class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
-                    <img src="pictures/dubaigoldenvisa.png" alt="Dubai Golden Visa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
+                    <img src="pictures/dubaigoldenvisa.png" alt="Dubai Golden Visa"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
                         <h3 class="text-base font-bold text-slate-50 font-display">WCG Dubai Golden Visa</h3>
-                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Consolidated Visa assistance dashboard for Dubai immigration programs.</p>
-                        <a href="https://dubaigoldenvisa.online/" target="_blank" class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Consolidated Visa
+                            assistance dashboard for Dubai immigration programs.</p>
+                        <a href="https://dubaigoldenvisa.online/" target="_blank"
+                            class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
                             Visit System <i class="fas fa-arrow-up-right-from-square"></i>
                         </a>
+                    </div>
+                </div>
+
+                <!-- Project 12: WCG Group -->
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
+                    <img src="pictures/wcggroup.png" alt="WCG Group"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
+                        <h3 class="text-base font-bold text-slate-50 font-display">WCG Group</h3>
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Consulting business and
+                            advisory services portal.</p>
+                        <a href="https://www.worldcitygroup.com/" target="_blank"
+                            class="text-xs font-bold text-accent-primary uppercase tracking-wider flex items-center gap-1 hover:text-accent-secondary transition-colors">
+                            Visit System <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 13: CreditSure -->
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
+                    <img src="pictures/creditsure.png" alt="CreditSure"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
+                        <h3 class="text-base font-bold text-slate-50 font-display">CreditSure</h3>
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">The best loans in the
+                            Philippines, from different banks and financial institutions. Compare options, check
+                            eligibility, and get expert guidance every step of the way.</p>
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Preview Soon</span>
+                    </div>
+                </div>
+
+                <!-- Project 14: WDC -->
+                <div
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
+                    <img src="pictures/wdc.png" alt="Worldcity Development Corporation"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
+                        <h3 class="text-base font-bold text-slate-50 font-display">Worldcity Development Corporation
+                        </h3>
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Worldcity stands as a
+                            premier infrastructure and real estate construction developer in the Philippines. Operating
+                            as the comprehensive focal point for complex projects, we mobilize premium materials, expert
+                            manpower, and heavy equipment to bring state-of-the-art designs to fruition.
+                        </p>
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Preview Soon</span>
                     </div>
                 </div>
 
@@ -458,83 +903,110 @@
         <section id="graphics" class="space-y-8 reveal-item">
             <!-- Section Header -->
             <div class="space-y-3">
-                <div class="inline-flex items-center gap-2 text-accent-primary text-xs font-semibold uppercase tracking-wider font-display">
+                <div
+                    class="inline-flex items-center gap-2 text-accent-primary text-xs font-semibold uppercase tracking-wider font-display">
                     <i class="fas fa-palette"></i> Vector & Graphic Design
                 </div>
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-text-main font-display">Creative Illustrations</h2>
-                <p class="text-text-muted max-w-xl">A gallery of graphic designs, vector layouts, client branding seals, and wallpaper layouts.</p>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-text-main font-display">Creative
+                    Illustrations</h2>
+                <p class="text-text-muted max-w-xl">A gallery of graphic designs, vector layouts, client branding seals,
+                    and wallpaper layouts.</p>
             </div>
 
             <!-- Gallery Grid -->
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                
+
                 <!-- Gallery Item 0 -->
-                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer" data-index="0">
-                    <img src="pictures/bts_price.png" alt="BTS Business" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer"
+                    data-index="0">
+                    <img src="pictures/bts_price.png" alt="BTS Business"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                         <h3 class="text-sm font-bold text-slate-100 font-display">BTS Business</h3>
                         <p class="text-[10px] text-slate-300 mt-0.5">Pricing business design</p>
                     </div>
                 </div>
 
                 <!-- Gallery Item 1 -->
-                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer" data-index="1">
-                    <img src="pictures/quote1.png" alt="Quote 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer"
+                    data-index="1">
+                    <img src="pictures/quote1.png" alt="Quote 1"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                         <h3 class="text-sm font-bold text-slate-100 font-display">Quote 1</h3>
                         <p class="text-[10px] text-slate-300 mt-0.5">Motivational Wallpaper</p>
                     </div>
                 </div>
 
                 <!-- Gallery Item 2 -->
-                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer" data-index="2">
-                    <img src="pictures/wallpaper2.jpg" alt="Bible Verse" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer"
+                    data-index="2">
+                    <img src="pictures/wallpaper2.jpg" alt="Bible Verse"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                         <h3 class="text-sm font-bold text-slate-100 font-display">Bible Verse</h3>
                         <p class="text-[10px] text-slate-300 mt-0.5">Desktop Wallpaper</p>
                     </div>
                 </div>
 
                 <!-- Gallery Item 3 -->
-                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer" data-index="3">
-                    <img src="pictures/Birthday_celebrant_client.jpg" alt="Birthday Party" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer"
+                    data-index="3">
+                    <img src="pictures/Birthday_celebrant_client.jpg" alt="Birthday Party"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                         <h3 class="text-sm font-bold text-slate-100 font-display">Birthday Party</h3>
                         <p class="text-[10px] text-slate-300 mt-0.5">Second Client</p>
                     </div>
                 </div>
 
                 <!-- Gallery Item 4 -->
-                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer" data-index="4">
-                    <img src="pictures/logoPsD - no bg.png" alt="Barangay Tibay Seal" class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer"
+                    data-index="4">
+                    <img src="pictures/logoPsD - no bg.png" alt="Barangay Tibay Seal"
+                        class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                         <h3 class="text-sm font-bold text-slate-100 font-display">Barangay Tibay Seal</h3>
                         <p class="text-[10px] text-slate-300 mt-0.5">Personal Project Logo</p>
                     </div>
                 </div>
 
                 <!-- Gallery Item 5 -->
-                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer" data-index="5">
-                    <img src="pictures/client3business.jpg" alt="Ms.Stiquee Fishball" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer"
+                    data-index="5">
+                    <img src="pictures/client3business.jpg" alt="Ms.Stiquee Fishball"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                         <h3 class="text-sm font-bold text-slate-100 font-display">Ms.Stiquee Fishball</h3>
                         <p class="text-[10px] text-slate-300 mt-0.5">Client Business</p>
                     </div>
                 </div>
 
                 <!-- Gallery Item 6 -->
-                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer" data-index="6">
-                    <img src="pictures/Logo-TQ.png" alt="TaskQueya Logo" class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer"
+                    data-index="6">
+                    <img src="pictures/Logo-TQ.png" alt="TaskQueya Logo"
+                        class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                         <h3 class="text-sm font-bold text-slate-100 font-display">TaskQueya</h3>
                         <p class="text-[10px] text-slate-300 mt-0.5">Personal Project Logo</p>
                     </div>
                 </div>
 
                 <!-- Gallery Item 7 -->
-                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer" data-index="7">
-                    <img src="pictures/sample.png" alt="Sample Business" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                <div class="gallery-item relative aspect-[4/3] rounded-xl overflow-hidden border border-border-card bg-bg-card group cursor-pointer"
+                    data-index="7">
+                    <img src="pictures/sample.png" alt="Sample Business"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                         <h3 class="text-sm font-bold text-slate-100 font-display">Sample Business</h3>
                         <p class="text-[10px] text-slate-300 mt-0.5">School Project</p>
                     </div>
@@ -546,19 +1018,28 @@
     </main>
 
     <!-- ══ LIGHTBOX MODAL ══ -->
-    <div id="lightbox" class="lightbox-backdrop fixed inset-0 bg-slate-950/98 z-50 hidden items-center justify-center flex-col p-4 backdrop-blur-xl">
+    <div id="lightbox"
+        class="lightbox-backdrop fixed inset-0 bg-slate-950/98 z-50 hidden items-center justify-center flex-col p-4 backdrop-blur-xl">
         <!-- Close button -->
-        <button id="lightbox-close" class="absolute top-6 right-8 text-slate-400 hover:text-slate-100 text-3xl font-light cursor-pointer focus:outline-none" aria-label="Close Lightbox">&times;</button>
+        <button id="lightbox-close"
+            class="absolute top-6 right-8 text-slate-400 hover:text-slate-100 text-3xl font-light cursor-pointer focus:outline-none"
+            aria-label="Close Lightbox">&times;</button>
         <!-- Counter -->
-        <span id="lightbox-counter" class="absolute top-8 left-8 text-xs font-semibold text-slate-500 tracking-widest font-mono">0 / 0</span>
-        
+        <span id="lightbox-counter"
+            class="absolute top-8 left-8 text-xs font-semibold text-slate-500 tracking-widest font-mono">0 / 0</span>
+
         <!-- Navigation Controls -->
-        <button id="lightbox-prev" class="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-100 text-4xl p-2 cursor-pointer focus:outline-none" aria-label="Previous Image">&#10094;</button>
-        <button id="lightbox-next" class="absolute right-6 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-100 text-4xl p-2 cursor-pointer focus:outline-none" aria-label="Next Image">&#10095;</button>
+        <button id="lightbox-prev"
+            class="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-100 text-4xl p-2 cursor-pointer focus:outline-none"
+            aria-label="Previous Image">&#10094;</button>
+        <button id="lightbox-next"
+            class="absolute right-6 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-100 text-4xl p-2 cursor-pointer focus:outline-none"
+            aria-label="Next Image">&#10095;</button>
 
         <!-- Main Lightbox Content -->
         <div class="max-w-4xl w-full flex flex-col items-center gap-6 lightbox-img-transition">
-            <img id="lightbox-img" src="" alt="Lightbox image" class="max-h-[70vh] max-w-full object-contain rounded-xl shadow-2xl border border-slate-800">
+            <img id="lightbox-img" src="" alt="Lightbox image"
+                class="max-h-[70vh] max-w-full object-contain rounded-xl shadow-2xl border border-slate-800">
             <div class="text-center space-y-1 max-w-xl">
                 <h3 id="lightbox-title" class="text-lg font-bold text-slate-100 font-display"></h3>
                 <p id="lightbox-desc" class="text-xs text-slate-400"></p>
@@ -566,15 +1047,49 @@
         </div>
     </div>
 
-    <!-- ══ FLOATING MESSENGER CHAT ══ -->
-    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2 group/chat pointer-events-none">
-        <span class="bg-slate-950 border border-slate-800 text-slate-200 text-[10px] font-semibold tracking-wider uppercase px-3 py-1.5 rounded-full opacity-0 translate-y-1 group-hover/chat:opacity-100 group-hover/chat:translate-y-0 transition-all duration-300 pointer-events-none">Chat on Messenger</span>
-        <a href="https://m.me/janzier.30" target="_blank" aria-label="Chat on Messenger" class="pointer-events-auto w-14 h-14 rounded-full bg-gradient-to-r from-accent-primary to-accent-secondary text-slate-950 flex items-center justify-center text-2xl shadow-xl shadow-accent-primary/20 hover:shadow-accent-primary/40 hover:scale-110 hover:-translate-y-1 transition-all duration-300 animate-pulse-subtle">
-            <i class="fab fa-facebook-messenger"></i>
-        </a>
+    <!-- ══ FLOATING INTERACTIVE MESSENGER CHAT ══ -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 group pointer-events-none">
+        <!-- Floating Menu Items (Expands Upwards) -->
+        <div
+            class="flex flex-col items-end gap-2.5 opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300">
+            <!-- Viber Link -->
+            <div class="flex items-center gap-3">
+                <span
+                    class="bg-bg-canvas border border-border-card text-text-muted text-[10px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full shadow-md font-heading">Viber</span>
+                <a href="viber://contact?number=YOUR_NUMBER_HERE" target="_blank" aria-label="Chat on Viber"
+                    class="w-11 h-11 rounded-full bg-bg-card border border-border-card hover:border-accent-primary hover:text-accent-primary flex items-center justify-center text-lg text-text-muted transition-all duration-300 shadow-lg hover:scale-110 hover:-translate-y-0.5 pointer-events-auto">
+                    <i class="fab fa-viber"></i>
+                </a>
+            </div>
+            <!-- WhatsApp Link -->
+            <div class="flex items-center gap-3">
+                <span
+                    class="bg-bg-canvas border border-border-card text-text-muted text-[10px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full shadow-md font-heading">WhatsApp</span>
+                <a href="https://wa.me/YOUR_NUMBER_HERE" target="_blank" aria-label="Chat on WhatsApp"
+                    class="w-11 h-11 rounded-full bg-bg-card border border-border-card hover:border-accent-primary hover:text-accent-primary flex items-center justify-center text-lg text-text-muted transition-all duration-300 shadow-lg hover:scale-110 hover:-translate-y-0.5 pointer-events-auto">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <!-- Messenger Link -->
+            <div class="flex items-center gap-3">
+                <span
+                    class="bg-bg-canvas border border-border-card text-text-muted text-[10px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full shadow-md font-heading">Messenger</span>
+                <a href="https://m.me/janzier.30" target="_blank" aria-label="Chat on Messenger"
+                    class="w-11 h-11 rounded-full bg-bg-card border border-border-card hover:border-accent-primary hover:text-accent-primary flex items-center justify-center text-lg text-text-muted transition-all duration-300 shadow-lg hover:scale-110 hover:-translate-y-0.5 pointer-events-auto">
+                    <i class="fab fa-facebook-messenger"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Toggle Trigger Button -->
+        <button aria-label="Contact Menu"
+            class="pointer-events-auto w-14 h-14 rounded-full bg-accent-primary text-zinc-50 flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition-all duration-300 cursor-pointer">
+            <i class="fas fa-comments group-hover:rotate-12 transition-transform duration-300"></i>
+        </button>
     </div>
 
     <!-- Scripts -->
     <script src="assets/function.js"></script>
 </body>
+
 </html>

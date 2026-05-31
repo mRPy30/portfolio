@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&family=Syne:wght@700;800&display=swap');
 
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', sans-serif;
-  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: 'Satoshi', 'Inter', sans-serif;
+  --font-display: 'Clash Display', 'Syne', 'Plus Jakarta Sans', sans-serif;
   --font-brand: 'Rosca', sans-serif;
+  --font-heading: 'Clash Display', 'Syne', 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Satoshi', 'Inter', sans-serif;
   
   --color-bg-canvas: var(--bg-canvas);
   --color-bg-card: var(--bg-card);
@@ -38,35 +40,57 @@
 }
 
 @keyframes glow {
-  0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.1; }
-  33% { transform: scale(1.15) translate(30px, -50px); opacity: 0.15; }
-  66% { transform: scale(0.9) translate(-20px, 20px); opacity: 0.08; }
+  0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.05; }
+  33% { transform: scale(1.15) translate(30px, -50px); opacity: 0.08; }
+  66% { transform: scale(0.9) translate(-20px, 20px); opacity: 0.04; }
 }
 
 /* Light/Dark theme configuration */
 :root {
-  --bg-canvas: #030712; /* slate-950 */
-  --bg-card: rgba(15, 23, 42, 0.45);
-  --border-card: rgba(30, 41, 59, 0.6);
-  --text-main: #f8fafc; /* slate-50 */
-  --text-muted: #94a3b8; /* slate-400 */
-  --bg-tag: rgba(30, 41, 59, 0.6);
-  --color-primary: #10b981; /* emerald-500 */
-  --color-secondary: #06b6d4; /* cyan-500 */
-  --glow-opacity: 0.1;
+  --bg-canvas: #09090b; /* zinc-950 */
+  --bg-card: rgba(20, 20, 23, 0.6); /* zinc-900/60 */
+  --border-card: rgba(39, 39, 42, 0.6); /* zinc-800/60 */
+  --text-main: #fafafa; /* zinc-50 */
+  --text-muted: #a1a1aa; /* zinc-400 */
+  --bg-tag: rgba(39, 39, 42, 0.5); /* zinc-800/50 */
+  --color-primary: #800020; /* elegant maroon */
+  --color-secondary: #9f1239; /* rose-800 */
+  
+  /* Map CSS color tokens explicitly inside root scope */
+  --color-bg-canvas: var(--bg-canvas);
+  --color-bg-card: var(--bg-card);
+  --color-border-card: var(--border-card);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-bg-tag: var(--bg-tag);
+  --color-accent-primary: var(--color-primary);
+  --color-accent-secondary: var(--color-secondary);
+  
+  --glow-opacity: 0.05;
   --theme-transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease, box-shadow 0.5s ease;
 }
 
 body.lightmode {
-  --bg-canvas: #f8fafc; /* slate-50 */
-  --bg-card: rgba(255, 255, 255, 0.7);
-  --border-card: rgba(226, 232, 240, 0.85); /* slate-200 */
-  --text-main: #0f172a; /* slate-900 */
-  --text-muted: #475569; /* slate-600 */
-  --bg-tag: rgba(226, 232, 240, 0.8); /* slate-200 */
-  --color-primary: #059669; /* emerald-600 */
-  --color-secondary: #0891b2; /* cyan-600 */
-  --glow-opacity: 0.03;
+  --bg-canvas: #fafafa; /* zinc-50 */
+  --bg-card: rgba(244, 244, 245, 0.7); /* zinc-100/70 */
+  --border-card: rgba(228, 228, 231, 0.85); /* zinc-200/85 */
+  --text-main: #09090b; /* zinc-950 */
+  --text-muted: #71717a; /* zinc-500 */
+  --bg-tag: rgba(228, 228, 231, 0.8); /* zinc-200/80 */
+  --color-primary: #9f1239; /* rose-800 */
+  --color-secondary: #be123c; /* rose-700 */
+  
+  /* Override color tokens directly inside lightmode class scope to force browser inheritance */
+  --color-bg-canvas: var(--bg-canvas);
+  --color-bg-card: var(--bg-card);
+  --color-border-card: var(--border-card);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-bg-tag: var(--bg-tag);
+  --color-accent-primary: var(--color-primary);
+  --color-accent-secondary: var(--color-secondary);
+  
+  --glow-opacity: 0.02;
 }
 
 /* Apply smooth transitions to elements affected by light/dark modes */
@@ -127,4 +151,49 @@ body, header, section, div, p, span, a, button, input, textarea, select {
 .lightbox-backdrop.active .lightbox-img-transition {
   transform: scale(1);
   opacity: 1;
+}
+
+/* ─── THEME TOGGLE SVG TRANSITIONS & STYLING ─── */
+#theme-toggle, #theme-toggle-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+
+#theme-toggle svg, #theme-toggle-mobile svg {
+  grid-area: 1 / 1;
+  width: 20px;
+  height: 20px;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease, color 0.3s ease;
+}
+
+/* Default state: Dark Mode active (Moon shown, Sun hidden & rotated) */
+#theme-toggle svg.sun-icon, #theme-toggle-mobile svg.sun-icon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.6);
+  color: #fafafa; /* text-zinc-50 */
+}
+
+#theme-toggle svg.moon-icon, #theme-toggle-mobile svg.moon-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+  color: #fafafa; /* text-zinc-50 */
+}
+
+/* Light Mode active (Sun shown & rotated, Moon hidden & rotated) */
+body.lightmode #theme-toggle svg.sun-icon, body.lightmode #theme-toggle-mobile svg.sun-icon {
+  opacity: 1;
+  transform: rotate(180deg) scale(1);
+  color: #09090b; /* text-zinc-950 */
+}
+
+body.lightmode #theme-toggle svg.moon-icon, body.lightmode #theme-toggle-mobile svg.moon-icon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.6);
+  color: #09090b; /* text-zinc-950 */
 }

@@ -42,43 +42,46 @@ const galleryData = [
     }
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
+function initPortfolio() {
     // ─── THEME TOGGLE STATE MANAGEMENT ───
     const themeToggle = document.getElementById("theme-toggle");
-    const themeIcon = document.getElementById("theme-icon");
     const themeToggleMobile = document.getElementById("theme-toggle-mobile");
-    const themeIconMobile = document.getElementById("theme-icon-mobile");
     const body = document.body;
 
-    // Helper to update toggle icons
+    // Helper to update toggle descriptions
     function updateThemeIcons(isLight) {
-        if (isLight) {
-            themeIcon.className = "fas fa-moon text-lg";
-            themeIconMobile.className = "fas fa-moon text-lg";
-            themeIcon.title = "Switch to Dark Mode";
-        } else {
-            themeIcon.className = "fas fa-sun text-lg text-amber-400";
-            themeIconMobile.className = "fas fa-sun text-lg text-amber-400";
-            themeIcon.title = "Switch to Light Mode";
+        if (themeToggle) {
+            themeToggle.title = isLight ? "Switch to Dark Mode" : "Switch to Light Mode";
+        }
+        if (themeToggleMobile) {
+            themeToggleMobile.title = isLight ? "Switch to Dark Mode" : "Switch to Light Mode";
         }
     }
 
-    // Load theme setting (Default is Dark, Light is toggled via class 'lightmode')
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme === "light") {
-        body.classList.add("lightmode");
-        updateThemeIcons(true);
-    } else {
-        body.classList.remove("lightmode");
-        updateThemeIcons(false);
+    // Load theme setting (Default is Dark, Light is toggled via class 'lightmode' and dark class is toggled on documentElement)
+    function applyTheme(isLight) {
+        if (isLight) {
+            body.classList.add("lightmode");
+            document.documentElement.classList.remove("dark");
+            updateThemeIcons(true);
+        } else {
+            body.classList.remove("lightmode");
+            document.documentElement.classList.add("dark");
+            updateThemeIcons(false);
+        }
     }
+
+    const currentTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isLightMode = currentTheme === "light" || (!currentTheme && !prefersDark);
+    applyTheme(isLightMode);
 
     // Toggle logic for desktop & mobile buttons
     function toggleTheme() {
-        body.classList.toggle("lightmode");
-        const isLight = body.classList.contains("lightmode");
-        localStorage.setItem("theme", isLight ? "light" : "dark");
-        updateThemeIcons(isLight);
+        const isCurrentlyLight = body.classList.contains("lightmode");
+        const nextLightState = !isCurrentlyLight;
+        localStorage.setItem("theme", nextLightState ? "light" : "dark");
+        applyTheme(nextLightState);
     }
 
     if (themeToggle) themeToggle.addEventListener("click", toggleTheme);
@@ -213,7 +216,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === 'ArrowRight') nextImage();
         if (e.key === 'ArrowLeft') prevImage();
     });
-});
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPortfolio);
+} else {
+    initPortfolio();
+}
 
 // ─── MOBILE MENU TOGGLE ───
 function toggleMenu() {
