@@ -224,6 +224,28 @@ if (document.readyState === "loading") {
     initPortfolio();
 }
 
+// Premium navigation and click-to-expand contact menu.
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("header");
+    const desktopLinks = [...document.querySelectorAll('header nav.hidden.md\\:flex a[href^="#"]')];
+    const contactMenu = document.querySelector('body > .fixed.bottom-6.right-6');
+    const contactToggle = contactMenu?.querySelector('button[aria-label="Contact Menu"]');
+
+    const updateNavigation = () => {
+        header?.classList.toggle("nav-compact", window.scrollY > 48);
+        let activeId = "";
+        desktopLinks.forEach(link => {
+            const section = document.querySelector(link.getAttribute("href"));
+            if (section && section.getBoundingClientRect().top < 150) activeId = link.getAttribute("href");
+        });
+        desktopLinks.forEach(link => link.classList.toggle("is-active", link.getAttribute("href") === activeId));
+    };
+    window.addEventListener("scroll", updateNavigation, { passive: true });
+    updateNavigation();
+
+    contactToggle?.addEventListener("click", () => contactMenu.classList.toggle("contact-open"));
+});
+
 // ─── MOBILE MENU TOGGLE ───
 function toggleMenu() {
     const menu = document.getElementById("nav-menu");

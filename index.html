@@ -71,7 +71,7 @@
             <!-- Logo -->
             <a href="#"
                 class="logo font-brand text-3xl font-black tracking-tighter text-text-main hover:text-accent-primary transition-colors flex items-center gap-1">
-                <span>JEA.</span>
+                <span>Verzel.</span>
             </a>
 
             <!-- Desktop Navigation -->
@@ -161,27 +161,28 @@
             </div>
         </nav>
     </header>
+    <a class="contact-pill" href="#contact" onclick="emailMe(event)">CONTACT US <span>→</span></a>
 
     <!-- Main Container -->
     <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-32">
 
         <!-- ══ HERO SECTION ══ -->
-        <section class="min-h-[70vh] flex items-center py-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+        <section id="home" class="cover-page min-h-[70vh] flex items-center py-8">
+            <div class="cover-grid grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
                 <!-- Hero Content -->
-                <div class="lg:col-span-7 space-y-6 text-left">
+                <div class="cover-intro lg:col-span-7 space-y-6 text-left">
                     <!-- Status Badge -->
                     <div
                         class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-rose-700/40 dark:border-rose-900/50 bg-rose-100 dark:bg-rose-950/20 text-rose-950 dark:text-zinc-300 text-xs font-semibold uppercase tracking-wider font-heading">
                         <span class="w-2 h-2 rounded-full bg-rose-700 animate-pulse"></span>
                         Available for contracts & freelance
                     </div>
+                    <div class="verzel-hero-mark" aria-label="Verzel Web Development">VERZEL <span>— DIGITAL SYSTEMS</span></div>
 
                     <h1
                         class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-text-main font-heading">
-                        Turning Your Vision Into <span
-                            class="bg-gradient-to-r from-rose-800 to-[#800020] bg-clip-text text-transparent">Digital
-                            Reality.</span>
+                        Hey there,<br>I’m <span
+                            class="bg-gradient-to-r from-rose-800 to-[#800020] bg-clip-text text-transparent">Verzel.</span>
                     </h1>
 
                     <p class="text-base sm:text-lg text-text-muted leading-relaxed max-w-2xl font-body">
@@ -223,9 +224,10 @@
                 </div>
 
                 <!-- Hero Visual -->
-                <div class="lg:col-span-5 flex justify-center">
+                <div class="cover-visual lg:col-span-5 flex justify-center">
                     <div
                         class="relative w-full max-w-[420px] aspect-[4/5] rounded-3xl overflow-hidden border border-border-card bg-bg-card shadow-2xl group">
+                        <div class="cover-swoosh" aria-hidden="true"></div>
                         <!-- Neon Ambient Backlight -->
                         <div
                             class="absolute inset-0 bg-gradient-to-tr from-accent-primary/10 to-accent-secondary/10 opacity-60 group-hover:opacity-100 transition-opacity duration-500">
@@ -245,6 +247,17 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="cover-followup reveal-item" aria-label="Services overview">
+            <div class="cover-services">
+                <div class="service-list">
+                    <div><span><i class="fas fa-code"></i></span><p><b>Website Development</b><small>Full-stack websites & systems</small></p></div>
+                    <div><span><i class="fas fa-layer-group"></i></span><p><b>Digital Products</b><small>Dashboards & business flows</small></p></div>
+                    <div><span><i class="fas fa-pen-ruler"></i></span><p><b>Brand Experiences</b><small>UI/UX & visual direction</small></p></div>
+                </div>
+                <div class="help-copy"><span>WHAT I DO</span><h2>What do I help<br>you build?</h2><p>I turn ambitious ideas into fast, intuitive digital experiences — from the first user flow to reliable production systems.</p><div><strong>11+</strong><small>Projects delivered</small><strong>100%</strong><small>Built with care</small></div></div>
             </div>
         </section>
 
@@ -914,6 +927,7 @@
                     Illustrations</h2>
                 <p class="text-text-muted max-w-xl">A gallery of graphic designs, vector layouts, client branding seals,
                     and wallpaper layouts.</p>
+                <a class="instagram-credit" href="https://instagram.com/verzel.webdev" target="_blank" rel="noopener">@verzel.webdev <i class="fas fa-arrow-up-right-from-square"></i></a>
             </div>
 
             <!-- Gallery Grid -->
@@ -1019,6 +1033,15 @@
         </section>
 
     </main>
+
+    <footer class="premium-footer relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div>
+            <span>VERZEL / DIGITAL DEVELOPMENT</span>
+            <h2>Let’s make the next idea <em>matter.</em></h2>
+        </div>
+        <a href="https://instagram.com/verzel.webdev" target="_blank" rel="noopener">@verzel.webdev</a>
+        <span>© 2026 Verzel. Philippines · GMT+8</span>
+    </footer>
 
     <!-- ══ LIGHTBOX MODAL ══ -->
     <div id="lightbox"
