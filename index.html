@@ -167,9 +167,9 @@
         <section id="home" class="cover-page min-h-[70vh] flex items-center py-8">
             <div class="cover-grid flex flex-col items-center justify-center text-center w-full gap-8">
                 <!-- Hero Visual -->
-                <div class="cover-visual flex justify-center order-first mb-4">
+                <div class="cover-visual flex justify-center order-first">
                     <div
-                        class="relative w-full max-w-[280px] aspect-square rounded-full overflow-hidden border-4 border-rose-800 bg-bg-card shadow-2xl group animate-float-slow">
+                        class="relative w-full max-w-[250px] aspect-square rounded-full overflow-hidden border-4 border-rose-800 bg-bg-card shadow-2xl group animate-float-slow">
                         <!-- Neon Ambient Backlight -->
                         <div
                             class="absolute inset-0 bg-gradient-to-tr from-accent-primary/10 to-accent-secondary/10 opacity-60 group-hover:opacity-100 transition-opacity duration-500">
@@ -179,70 +179,93 @@
                     </div>
                 </div>
 
-                <!-- Hero Content -->
-                <div class="cover-intro space-y-6 text-center flex flex-col items-center">
-                    <!-- Status Badge -->
-                    <div
-                        class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-rose-700/40 dark:border-rose-900/50 bg-rose-100 dark:bg-rose-950/20 text-rose-950 dark:text-zinc-300 text-xs font-semibold uppercase tracking-wider font-heading">
-                        <span class="w-2 h-2 rounded-full bg-rose-700 animate-pulse"></span>
-                        Available for contracts & freelance
+                <!-- Status Badge -->
+                <div
+                    class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-rose-700/40 dark:border-rose-900/50 bg-rose-100 dark:bg-rose-950/20 text-rose-950 dark:text-zinc-300 text-xs font-semibold uppercase tracking-wider font-heading">
+                    <span class="w-2 h-2 rounded-full bg-rose-700 animate-pulse"></span>
+                    Available for contracts & freelance
+                </div>
+
+                <!-- Two Column Canvas Grid -->
+                <div class="unified-content-grid">
+                    <!-- Left Column: Project List -->
+                    <div class="unified-left">
+                        <div class="service-item">
+                            <span class="service-icon"><i class="fas fa-code"></i></span>
+                            <div>
+                                <b>Website Development</b>
+                                <p>Full-stack websites & systems</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-icon"><i class="fas fa-layer-group"></i></span>
+                            <div>
+                                <b>Digital Products</b>
+                                <p>Dashboards & business flows</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-icon"><i class="fas fa-pen-ruler"></i></span>
+                            <div>
+                                <b>Brand Experiences</b>
+                                <p>UI/UX & visual direction</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="verzel-hero-mark" aria-label="Verzel Web Development">VERZEL <span>— DIGITAL SYSTEMS</span></div>
 
-                    <h1
-                        class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-text-main font-heading">
-                        Hey there,<br>I’m <span
-                            class="bg-gradient-to-r from-rose-800 to-[#800020] bg-clip-text text-transparent">Verzel.</span>
-                    </h1>
+                    <!-- Right Column: Headings, Body, Stats & Socials -->
+                    <div class="unified-right">
+                        <span class="text-rose-500 font-mono text-xs uppercase tracking-widest font-bold">WHAT I DO</span>
+                        <h1>What do I help you build?</h1>
+                        <p class="body-desc">
+                            I turn ambitious ideas into fast, intuitive digital experiences — from the first user flow to reliable production systems.
+                        </p>
 
-                    <p class="text-base sm:text-lg text-text-muted leading-relaxed max-w-2xl font-body mx-auto">
-                        Full-Stack Developer specializing in scalable web ecosystems, dynamic business dashboards, and
-                        fluid user interfaces. I bridge the gap between complex backend logic and pixel-perfect design.
-                    </p>
+                        <!-- Stats Row -->
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <strong>11+</strong>
+                                <small>Projects delivered</small>
+                            </div>
+                            <div class="stat-box">
+                                <strong>100%</strong>
+                                <small>Built with care</small>
+                            </div>
+                        </div>
 
-                    <!-- CTAs & Socials -->
-                    <div class="pt-4 flex flex-wrap items-center justify-center gap-6">
-                        <a href="#" onclick="emailMe(event)"
-                            class="inline-flex items-center gap-2 border border-rose-700 dark:border-rose-800 hover:bg-rose-100 dark:hover:bg-rose-950/30 text-rose-950 dark:text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]">
-                            Send an Email <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <!-- Social Links & Email CTA -->
+                        <div class="socials-row">
+                            <a href="#" onclick="emailMe(event)"
+                                class="inline-flex items-center gap-2 border border-rose-700 dark:border-rose-800 hover:bg-rose-100 dark:hover:bg-rose-950/30 text-rose-950 dark:text-white font-bold px-6 py-3 rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-sm">
+                                Send an Email <i class="fas fa-arrow-right"></i>
+                            </a>
 
-                        <div class="flex items-center gap-4">
-                            <a href="https://www.facebook.com/janzier.30/" target="_blank" aria-label="Facebook"
-                                class="w-11 h-11 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
-                                <i class="fab fa-facebook-f text-lg"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/janvier-erickson-araque-54744b347/" target="_blank"
-                                aria-label="LinkedIn"
-                                class="w-11 h-11 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
-                                <i class="fab fa-linkedin-in text-lg"></i>
-                            </a>
-                            <a href="https://github.com/mRPy30" target="_blank" aria-label="GitHub"
-                                class="w-11 h-11 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
-                                <i class="fab fa-github text-lg"></i>
-                            </a>
-                            <a href="https://wa.me/YOUR_NUMBER_HERE" target="_blank" aria-label="WhatsApp"
-                                class="w-11 h-11 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
-                                <i class="fab fa-whatsapp text-lg"></i>
-                            </a>
-                            <a href="viber://contact?number=YOUR_NUMBER_HERE" target="_blank" aria-label="Viber"
-                                class="w-11 h-11 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
-                                <i class="fab fa-viber text-lg"></i>
-                            </a>
+                            <div class="flex items-center gap-3">
+                                <a href="https://www.facebook.com/janzier.30/" target="_blank" aria-label="Facebook"
+                                    class="w-10 h-10 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
+                                    <i class="fab fa-facebook-f text-base"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/janvier-erickson-araque-54744b347/" target="_blank"
+                                    aria-label="LinkedIn"
+                                    class="w-10 h-10 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
+                                    <i class="fab fa-linkedin-in text-base"></i>
+                                </a>
+                                <a href="https://github.com/mRPy30" target="_blank" aria-label="GitHub"
+                                    class="w-10 h-10 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
+                                    <i class="fab fa-github text-base"></i>
+                                </a>
+                                <a href="https://wa.me/YOUR_NUMBER_HERE" target="_blank" aria-label="WhatsApp"
+                                    class="w-10 h-10 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
+                                    <i class="fab fa-whatsapp text-base"></i>
+                                </a>
+                                <a href="viber://contact?number=YOUR_NUMBER_HERE" target="_blank" aria-label="Viber"
+                                    class="w-10 h-10 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
+                                    <i class="fab fa-viber text-base"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="cover-followup reveal-item" aria-label="Services overview">
-            <div class="cover-services">
-                <div class="service-list">
-                    <div><span><i class="fas fa-code"></i></span><p><b>Website Development</b><small>Full-stack websites & systems</small></p></div>
-                    <div><span><i class="fas fa-layer-group"></i></span><p><b>Digital Products</b><small>Dashboards & business flows</small></p></div>
-                    <div><span><i class="fas fa-pen-ruler"></i></span><p><b>Brand Experiences</b><small>UI/UX & visual direction</small></p></div>
-                </div>
-                <div class="help-copy"><span>WHAT I DO</span><h2>What do I help<br>you build?</h2><p>I turn ambitious ideas into fast, intuitive digital experiences — from the first user flow to reliable production systems.</p><div><strong>11+</strong><small>Projects delivered</small><strong>100%</strong><small>Built with care</small></div></div>
             </div>
         </section>
 
