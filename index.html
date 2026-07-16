@@ -166,24 +166,63 @@
         <!-- ══ HERO SECTION ══ -->
         <section id="home" class="cover-page min-h-[70vh] flex items-center py-8">
             <div class="cover-grid flex flex-col items-center justify-center text-center w-full gap-8">
-                <!-- Hero Visual -->
-                <div class="cover-visual flex justify-center order-first">
-                    <div
-                        class="relative w-full max-w-[250px] aspect-square rounded-full overflow-hidden border-4 border-rose-800 bg-bg-card shadow-2xl group animate-float-slow">
-                        <!-- Neon Ambient Backlight -->
-                        <div
-                            class="absolute inset-0 bg-gradient-to-tr from-accent-primary/10 to-accent-secondary/10 opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                
+                <!-- 3-Column Top Hero Layout -->
+                <div class="hero-three-cols">
+                    <!-- Left Column: Title, Email & Stat -->
+                    <div class="hero-left-col animate-reveal-left">
+                        <h2>Hey There,<br>I'm Verzel.</h2>
+                        <a href="mailto:araquejanvier@gmail.com" onclick="emailMe(event)" class="email-link">araquejanvier@gmail.com</a>
+                        <div class="hero-stat align-right mt-4">
+                            <strong>11+</strong>
+                            <small>Projects delivered</small>
                         </div>
-                        <img src="pictures/grad-picwbg.png" alt="Verzel"
-                            class="w-full h-full object-cover relative z-10">
                     </div>
-                </div>
 
-                <!-- Status Badge -->
-                <div
-                    class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-rose-700/40 dark:border-rose-900/50 bg-rose-100 dark:bg-rose-950/20 text-rose-950 dark:text-zinc-300 text-xs font-semibold uppercase tracking-wider font-heading">
-                    <span class="w-2 h-2 rounded-full bg-rose-700 animate-pulse"></span>
-                    Available for contracts & freelance
+                    <!-- Center Column: Avatar & Badge -->
+                    <div class="hero-center-col">
+                        <div class="cover-visual">
+                            <div class="relative w-full aspect-square rounded-full overflow-hidden group">
+                                <div class="absolute inset-0 bg-gradient-to-tr from-accent-primary/10 to-accent-secondary/10 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <img src="pictures/grad-picwbg.png" alt="Verzel" class="w-full h-full object-cover relative z-10">
+                            </div>
+                        </div>
+                        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-rose-700/40 dark:border-rose-900/50 bg-rose-100 dark:bg-rose-950/20 text-rose-950 dark:text-zinc-300 text-xs font-semibold uppercase tracking-wider font-heading mt-3">
+                            <span class="w-2 h-2 rounded-full bg-rose-700 animate-pulse"></span>
+                            Available for contracts & freelance
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Description, Stat & Socials -->
+                    <div class="hero-right-col animate-reveal-right">
+                        <p class="body-desc">
+                            I turn ambitious ideas into fast, intuitive digital experiences — from the first user flow to reliable production systems.
+                        </p>
+                        <div class="hero-stat align-left mt-2">
+                            <strong>100%</strong>
+                            <small>Built with care</small>
+                        </div>
+                        <div class="socials-row mt-4">
+                            <a href="#" onclick="emailMe(event)"
+                                class="inline-flex items-center gap-2 border border-rose-700 dark:border-rose-800 hover:bg-rose-100 dark:hover:bg-rose-950/30 text-rose-950 dark:text-white font-bold px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-xs">
+                                Send an Email <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <div class="flex items-center gap-2.5">
+                                <a href="https://www.facebook.com/janzier.30/" target="_blank" aria-label="Facebook"
+                                    class="w-9 h-9 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
+                                    <i class="fab fa-facebook-f text-sm"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/janvier-erickson-araque-54744b347/" target="_blank" aria-label="LinkedIn"
+                                    class="w-9 h-9 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
+                                    <i class="fab fa-linkedin-in text-sm"></i>
+                                </a>
+                                <a href="https://github.com/mRPy30" target="_blank" aria-label="GitHub"
+                                    class="w-9 h-9 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
+                                    <i class="fab fa-github text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Two Column Canvas Grid -->

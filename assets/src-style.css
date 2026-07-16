@@ -256,15 +256,7 @@ main > section > .space-y-3 > p { max-width: 570px; font-size: 1rem; line-height
   align-items: center !important;
   justify-content: center !important;
   min-height: auto !important;
-  gap: 2.5rem !important;
-}
-.cover-intro {
-  align-self: center !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  padding-top: 0 !important;
-  width: 100% !important;
+  gap: 3.5rem !important;
 }
 .cover-visual {
   align-self: center !important;
@@ -272,7 +264,6 @@ main > section > .space-y-3 > p { max-width: 570px; font-size: 1rem; line-height
   justify-content: center !important;
   align-items: center !important;
   min-height: auto !important;
-  order: -1 !important; /* photo at top center */
   width: 100% !important;
 }
 .cover-visual > div {
@@ -301,6 +292,119 @@ main > section > .space-y-3 > p { max-width: 570px; font-size: 1rem; line-height
 }
 .cover-visual .absolute.bottom-6 {
   display: none !important;
+}
+
+/* Three-column top hero layout inside cover-grid */
+.hero-three-cols {
+  display: grid;
+  grid-template-cols: 1.1fr auto 1.1fr;
+  width: 100%;
+  max-width: 1100px;
+  gap: 4rem;
+  align-items: center;
+}
+.hero-left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 1.5rem;
+}
+.hero-center-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.hero-right-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1.5rem;
+}
+
+/* Stats on the hero columns */
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.hero-stat.align-right {
+  align-items: flex-end;
+}
+.hero-stat.align-left {
+  align-items: flex-start;
+}
+.hero-stat strong {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  color: #fafafa;
+}
+.hero-stat small {
+  font-size: 9px;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Hero elements styling */
+.hero-left-col h2 {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  color: #fafafa;
+  line-height: 1.1;
+}
+.hero-left-col .email-link {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--premium-red);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.hero-left-col .email-link:hover {
+  opacity: 0.8;
+}
+
+.hero-right-col .body-desc {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #a1a1aa;
+  max-width: 320px;
+}
+
+.hero-right-col .socials-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .hero-three-cols {
+    grid-template-cols: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  .hero-left-col {
+    align-items: center;
+    text-align: center;
+    order: 2;
+  }
+  .hero-center-col {
+    order: 1;
+  }
+  .hero-right-col {
+    align-items: center;
+    text-align: center;
+    order: 3;
+  }
+  .hero-stat.align-right, .hero-stat.align-left {
+    align-items: center;
+  }
 }
 
 /* Two-column layout content below badge */
