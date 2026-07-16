@@ -244,6 +244,40 @@ document.addEventListener("DOMContentLoaded", () => {
     updateNavigation();
 
     contactToggle?.addEventListener("click", () => contactMenu.classList.toggle("contact-open"));
+
+    // ─── TIMELINE SEQUENCE ANIMATION ───
+    const pulseLine = document.getElementById('stream-pulse-line');
+    if (pulseLine) {
+        pulseLine.style.transition = 'stroke-dashoffset 2.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        setTimeout(() => {
+            pulseLine.style.strokeDashoffset = '0';
+        }, 400);
+
+        const nodeGrad = document.getElementById('node-grad');
+        const nodeSkills = document.getElementById('node-skills');
+        const nodeDeploy = document.getElementById('node-deploy');
+
+        setTimeout(() => {
+            if (nodeGrad) {
+                nodeGrad.classList.remove('opacity-40');
+                nodeGrad.classList.add('opacity-100', 'milestone-active');
+            }
+        }, 1100);
+
+        setTimeout(() => {
+            if (nodeSkills) {
+                nodeSkills.classList.remove('opacity-40');
+                nodeSkills.classList.add('opacity-100', 'milestone-active');
+            }
+        }, 1800);
+
+        setTimeout(() => {
+            if (nodeDeploy) {
+                nodeDeploy.classList.remove('opacity-40');
+                nodeDeploy.classList.add('opacity-100', 'milestone-active');
+            }
+        }, 2500);
+    }
 });
 
 // ─── MOBILE MENU TOGGLE ───
