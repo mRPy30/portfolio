@@ -67,35 +67,34 @@
     </div>
 
     <!-- ══ HEADER / NAVBAR ══ -->
-    <header class="sticky top-0 z-50 w-full border-b border-border-card bg-bg-canvas/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between md:justify-center">
+    <header class="sticky top-0 z-50 w-full bg-transparent">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <!-- Logo -->
-            <a href="#"
-                class="logo font-brand text-3xl font-black tracking-tighter text-text-main hover:text-accent-primary transition-colors flex items-center gap-1 md:hidden">
-                <span>Verzel.</span>
+            <a href="#" class="logo font-brand text-3xl font-black tracking-tighter text-text-main hover:text-accent-primary transition-colors">
+                Verzel.
             </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center gap-2">
+            <!-- Desktop Navigation (Center Pill) -->
+            <nav class="hidden md:flex items-center gap-2 bg-bg-card border border-border-card rounded-full px-5 py-2">
                 <a href="#about"
-                    class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200">About</a>
+                    class="text-xs font-semibold text-text-muted hover:text-text-main px-3 py-1.5 rounded-full transition-all duration-200">About</a>
                 <a href="#skills"
-                    class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200">Skills</a>
+                    class="text-xs font-semibold text-text-muted hover:text-text-main px-3 py-1.5 rounded-full transition-all duration-200">Skills</a>
                 <a href="#education"
-                    class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200">Education</a>
+                    class="text-xs font-semibold text-text-muted hover:text-text-main px-3 py-1.5 rounded-full transition-all duration-200">Education</a>
                 <a href="#projects"
-                    class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200">Projects</a>
+                    class="text-xs font-semibold text-text-muted hover:text-text-main px-3 py-1.5 rounded-full transition-all duration-200">Projects</a>
                 <a href="#graphics"
-                    class="text-sm font-medium text-text-muted hover:text-text-main px-4 py-2 rounded-full hover:bg-bg-tag transition-all duration-200 font-sans">Graphics</a>
+                    class="text-xs font-semibold text-text-muted hover:text-text-main px-3 py-1.5 rounded-full transition-all duration-200 font-sans">Graphics</a>
 
-                <div class="h-6 w-[1px] bg-border-card mx-2"></div>
+                <div class="h-4 w-[1px] bg-border-card mx-2"></div>
 
                 <!-- Theme Toggle Button -->
                 <button id="theme-toggle"
-                    class="p-2.5 rounded-full hover:bg-bg-tag border border-transparent hover:border-border-card cursor-pointer transition-all duration-200 flex items-center justify-center"
+                    class="p-1 rounded-full cursor-pointer transition-all duration-200 flex items-center justify-center"
                     aria-label="Toggle Theme">
                     <!-- Sun Icon (visible in light mode) -->
-                    <svg class="sun-icon w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                    <svg class="sun-icon w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="4"></circle>
                         <path
@@ -103,18 +102,24 @@
                         </path>
                     </svg>
                     <!-- Moon Icon (visible in dark mode) -->
-                    <svg class="moon-icon w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                    <svg class="moon-icon w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
             </nav>
 
-            <!-- Mobile Hamburger Button -->
+            <!-- Right side: Send Email button -->
+            <a href="#contact" onclick="emailMe(event)"
+                class="hidden md:inline-flex items-center gap-2 bg-accent-primary hover:bg-[#ff5656] text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full shadow-[0_12px_30px_rgba(227,66,66,0.22)] transition-all duration-300 hover:-translate-y-0.5">
+                Send Email <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+
+            <!-- Mobile Controls -->
             <div class="flex items-center gap-4 md:hidden">
                 <button id="theme-toggle-mobile"
                     class="p-2 rounded-full hover:bg-bg-tag flex items-center justify-center" aria-label="Toggle Theme">
-                    <!-- Sun Icon (visible in light mode) -->
+                    <!-- Sun Icon -->
                     <svg class="sun-icon w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="4"></circle>
@@ -122,7 +127,7 @@
                             d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
                         </path>
                     </svg>
-                    <!-- Moon Icon (visible in dark mode) -->
+                    <!-- Moon Icon -->
                     <svg class="moon-icon w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
@@ -138,7 +143,7 @@
 
         <!-- Mobile Navigation Menu -->
         <nav id="nav-menu"
-            class="hidden md:hidden absolute top-20 left-0 w-full bg-bg-canvas/98 border-b border-border-card backdrop-blur-lg transition-all duration-300">
+            class="hidden md:hidden absolute top-20 left-6 right-6 bg-[#161618]/95 backdrop-blur-lg border border-border-card rounded-2xl p-4 shadow-xl">
             <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
                 <a href="#about"
                     class="text-lg font-medium text-text-muted hover:text-text-main py-3 border-b border-border-card/50"
@@ -152,138 +157,111 @@
                 <a href="#projects"
                     class="text-lg font-medium text-text-muted hover:text-text-main py-3 border-b border-border-card/50"
                     onclick="toggleMenu()">Projects</a>
-                <a href="#graphics" class="text-lg font-medium text-text-muted hover:text-text-main py-3"
+                <a href="#graphics" class="text-lg font-medium text-text-muted hover:text-text-main py-3 border-b border-border-card/50"
                     onclick="toggleMenu()">Graphics</a>
+                <a href="#contact" onclick="emailMe(event); toggleMenu();"
+                    class="mt-2 text-center bg-accent-primary text-white py-2.5 rounded-full font-bold text-xs uppercase tracking-wider block">
+                    Send Email
+                </a>
             </div>
         </nav>
     </header>
-    <a class="logo-pill hidden md:flex" href="#">Verzel.</a>
-    <a class="contact-pill" href="#contact" onclick="emailMe(event)">CONTACT US <span>→</span></a>
 
     <!-- Main Container -->
     <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-32">
 
         <!-- ══ HERO SECTION ══ -->
-        <section id="home" class="cover-page min-h-[85vh] flex items-center py-12 relative overflow-hidden bg-[#0c0c0e] rounded-[36px] border-0">
-            <!-- Radiant Background Ambient Red Light -->
-            <div class="absolute w-[600px] h-[600px] rounded-full bg-rose-950/15 blur-[120px] top-[40%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-0 pointer-events-none"></div>
+        <section id="home" class="cover-page min-h-[85vh] flex items-center py-12 relative overflow-hidden bg-[#121212] rounded-[36px] border-0">
+            <!-- Radiant Background Ambient Red Light behind portrait -->
+            <div class="absolute w-[600px] h-[600px] rounded-full bg-[#e34242]/10 blur-[130px] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-0 pointer-events-none"></div>
 
-            <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch min-h-[580px]">
                 
-                <!-- Left Column (Far Left Body Text) -->
-                <div class="lg:col-span-3 space-y-6 text-left animate-reveal-left order-2 lg:order-1">
-                    <span class="text-rose-500 font-mono text-xs uppercase tracking-widest font-bold block">PROFILE BRIEF</span>
-                    <p class="text-text-muted text-sm sm:text-base leading-relaxed font-body">
-                        Full-Stack Developer specializing in scalable web ecosystems, dynamic business dashboards, and fluid user interfaces. I bridge the gap between complex backend logic and pixel-perfect design.
-                    </p>
-                </div>
-
-                <!-- Center Column (Graduate Portrait & Timeline) -->
-                <div class="lg:col-span-6 flex flex-col items-center justify-center relative order-1 lg:order-2 mb-8 lg:mb-0">
-                    <!-- Cutout Portrait -->
-                    <div class="relative w-full max-w-[340px] sm:max-w-[420px] h-[480px] sm:h-[560px] flex items-end justify-center pointer-events-none select-none">
-                        <img src="pictures/grad-picwbg.png" alt="Verzel" class="w-full h-full object-cover object-top asym-cutout">
-                        <!-- Fade Out bottom gradient -->
-                        <div class="portrait-fade-overlay absolute bottom-0 left-0 right-0 h-28 z-20 pointer-events-none"></div>
-                    </div>
-
-                    <!-- Timeline -->
-                    <div class="relative w-full max-w-md mt-6 z-30 px-4">
-                        <!-- SVG path overlay -->
-                        <svg class="absolute inset-0 w-full h-full pointer-events-none overflow-visible" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Background Path -->
-                            <path d="M 220, -100 L 220, 20 M 220, 20 L 50, 20 M 220, 20 L 220, 20 M 220, 20 L 390, 20" 
-                                  fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="2.5" stroke-linecap="round"/>
-                            <!-- Animate Data Stream Path -->
-                            <path id="stream-pulse-line" d="M 220, -100 L 220, 20 M 220, 20 L 50, 20 M 220, 20 L 220, 20 M 220, 20 L 390, 20" 
-                                  fill="none" stroke="url(#gradient-stream)" stroke-width="3" stroke-linecap="round"
-                                  stroke-dasharray="600" stroke-dashoffset="600" />
-                            <defs>
-                                <linearGradient id="gradient-stream" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#e34242" />
-                                    <stop offset="50%" stop-color="#ffffff" />
-                                    <stop offset="100%" stop-color="#e34242" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-
-                        <!-- Timeline Nodes -->
-                        <div class="flex justify-between items-center relative z-10 w-full">
-                            <!-- Milestone 1 -->
-                            <div id="node-grad" class="timeline-node flex flex-col items-center gap-2 opacity-40 transition-all duration-500">
-                                <div class="w-10 h-10 rounded-full bg-zinc-950 border border-zinc-800 flex items-center justify-center text-xs text-rose-500 shadow-lg milestone-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <span class="text-[9px] font-bold tracking-wider text-text-muted whitespace-nowrap">GRADUATED 2026</span>
-                            </div>
-
-                            <!-- Milestone 2 -->
-                            <div id="node-skills" class="timeline-node flex flex-col items-center gap-2 opacity-40 transition-all duration-500">
-                                <div class="w-10 h-10 rounded-full bg-zinc-950 border border-zinc-800 flex items-center justify-center text-xs text-rose-500 shadow-lg milestone-icon">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <span class="text-[9px] font-bold tracking-wider text-text-muted whitespace-nowrap">SKILLS MASTERED</span>
-                            </div>
-
-                            <!-- Milestone 3 -->
-                            <div id="node-deploy" class="timeline-node flex flex-col items-center gap-2 opacity-40 transition-all duration-500">
-                                <div class="w-10 h-10 rounded-full bg-zinc-950 border border-zinc-800 flex items-center justify-center text-xs text-rose-500 shadow-lg milestone-icon">
-                                    <i class="fas fa-globe"></i>
-                                </div>
-                                <span class="text-[9px] font-bold tracking-wider text-text-muted whitespace-nowrap">DEPLOYING SOLUTIONS</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Right Column (Far Right Journey Title & Stats) -->
-                <div class="lg:col-span-3 space-y-8 text-left lg:text-right animate-reveal-right order-3">
-                    <div class="space-y-2">
-                        <span class="text-rose-500 font-mono text-xs uppercase tracking-widest font-bold block">MY JOURNEY:</span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-text-main leading-tight font-heading">
-                            Hey There,<br>I'm Verzel.
-                        </h2>
-                    </div>
-
-                    <!-- Project Counts / Stats -->
-                    <div class="flex flex-col gap-6 pt-6 border-t border-border-card/20 lg:items-end">
-                        <div class="text-left lg:text-right">
-                            <div class="text-3xl sm:text-4xl font-black text-text-main font-heading leading-none">11+</div>
-                            <div class="text-[10px] text-text-muted uppercase tracking-widest font-semibold mt-1">Projects Delivered</div>
-                        </div>
-                        <div class="text-left lg:text-right">
-                            <div class="text-3xl sm:text-4xl font-black text-text-main font-heading leading-none">190+</div>
-                            <div class="text-[10px] text-text-muted uppercase tracking-widest font-semibold mt-1">Happy Clients</div>
-                        </div>
-                    </div>
-
-                    <!-- Social / CTA shortcuts -->
-                    <div class="pt-4 flex flex-wrap items-center gap-4 lg:justify-end">
-                        <a href="#" onclick="emailMe(event)"
-                            class="inline-flex items-center gap-2 border border-rose-700 dark:border-rose-800 hover:bg-rose-950/30 text-text-main font-bold px-4 py-2 rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-xs">
-                            Send Email <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <div class="flex items-center gap-2">
+                <!-- Left Section (Hero Content) -->
+                <div class="lg:col-span-4 flex flex-col justify-between py-4 text-left animate-reveal-left order-2 lg:order-1">
+                    <div>
+                        <span class="text-[#e34242] font-mono text-xs uppercase tracking-widest font-bold block mb-2">FOLLOW MY SOCIAL MEDIA:</span>
+                        <div class="flex items-center gap-3">
                             <a href="https://www.facebook.com/janzier.30/" target="_blank" aria-label="Facebook"
-                                class="w-8 h-8 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
-                                <i class="fab fa-facebook-f text-xs"></i>
+                                class="text-white hover:text-[#e34242] transition-colors text-sm">
+                                <i class="fab fa-facebook-f"></i>
                             </a>
                             <a href="https://www.linkedin.com/in/janvier-erickson-araque-54744b347/" target="_blank" aria-label="LinkedIn"
-                                class="w-8 h-8 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
-                                <i class="fab fa-linkedin-in text-xs"></i>
+                                class="text-white hover:text-[#e34242] transition-colors text-sm">
+                                <i class="fab fa-linkedin-in"></i>
                             </a>
                             <a href="https://github.com/mRPy30" target="_blank" aria-label="GitHub"
-                                class="w-8 h-8 rounded-full flex items-center justify-center border border-border-card bg-bg-card hover:bg-bg-tag hover:border-accent-primary hover:text-accent-primary transition-all duration-300 hover:-translate-y-1">
-                                <i class="fab fa-github text-xs"></i>
+                                class="text-white hover:text-[#e34242] transition-colors text-sm">
+                                <i class="fab fa-github"></i>
                             </a>
                         </div>
+                    </div>
+
+                    <div class="my-6">
+                        <h1 class="text-5xl sm:text-7xl font-black text-text-main leading-[0.95] tracking-tighter font-heading">
+                            THIS IS<br>VERZEL
+                        </h1>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-2">
+                        <!-- Badge 1 -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-12 h-12 rounded-full bg-[#e34242] flex items-center justify-center text-white text-base shadow-[0_0_15px_rgba(227,66,66,0.6)] group-hover:scale-105 transition-transform duration-300">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <span class="text-[9px] font-bold text-text-muted uppercase tracking-wider mt-2 whitespace-normal break-words leading-tight">GRADUATED 2025</span>
+                        </div>
+                        <!-- Badge 2 -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-12 h-12 rounded-full bg-[#e34242] flex items-center justify-center text-white text-base shadow-[0_0_15px_rgba(227,66,66,0.6)] group-hover:scale-105 transition-transform duration-300">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <span class="text-[9px] font-bold text-text-muted uppercase tracking-wider mt-2 whitespace-normal break-words leading-tight">DEPLOYING SOLUTIONS</span>
+                        </div>
+                        <!-- Badge 3 -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-12 h-12 rounded-full bg-[#e34242] flex items-center justify-center text-white text-base shadow-[0_0_15px_rgba(227,66,66,0.6)] group-hover:scale-105 transition-transform duration-300">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span class="text-[9px] font-bold text-text-muted uppercase tracking-wider mt-2 whitespace-normal break-words leading-tight">1 YEAR EXP.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Section (Portrait Image Cutout) -->
+                <div class="lg:col-span-4 flex flex-col items-center justify-end relative order-1 lg:order-2">
+                    <div class="relative w-full max-w-[340px] sm:max-w-[380px] h-[480px] sm:h-[540px] flex items-end justify-center pointer-events-none select-none">
+                        <img src="../pictures/mypic.png" alt="Verzel" class="w-full h-full object-cover object-top asym-cutout">
+                        <!-- Fade Out bottom gradient -->
+                        <div class="portrait-fade-overlay absolute bottom-0 left-0 right-0 h-24 z-20 pointer-events-none"></div>
+                    </div>
+                </div>
+
+                <!-- Right Section (Hero Content) -->
+                <div class="lg:col-span-4 flex flex-col justify-between py-4 text-right animate-reveal-right order-3">
+                    <!-- Stats Stacked Vertically -->
+                    <div class="flex flex-col gap-6 items-end">
+                        <div class="text-right">
+                            <div class="text-4xl sm:text-5xl font-black text-text-main font-heading leading-none">11+</div>
+                            <div class="text-[10px] text-text-muted uppercase tracking-widest font-semibold mt-1">Projects Delivered</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-4xl sm:text-5xl font-black text-text-main font-heading leading-none">2024</div>
+                            <div class="text-[10px] text-text-muted uppercase tracking-widest font-semibold mt-1">Est.</div>
+                        </div>
+                    </div>
+
+                    <!-- Right-aligned headline -->
+                    <div class="mt-8">
+                        <h2 class="text-4xl sm:text-[3.25rem] font-black text-text-main leading-[0.95] tracking-tighter font-heading text-right uppercase">
+                            YOUR<br>FULLSTACK<br>DEVELOPER<br>PARTNER
+                        </h2>
                     </div>
                 </div>
 
             </div>
 
-            <!-- Bottom services row (scaled down and pushed to the edges) -->
+            <!-- Bottom services row -->
             <div class="absolute bottom-4 left-6 right-6 z-30 hidden lg:flex justify-between items-center text-[10px] text-text-muted/65 border-t border-white/5 pt-3 w-[calc(100%-3rem)] mx-auto font-mono uppercase tracking-wider">
                 <div><b>Website Development</b> — Full-stack websites & systems</div>
                 <div><b>Digital Products</b> — Dashboards & business flows</div>
