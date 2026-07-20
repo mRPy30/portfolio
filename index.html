@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -260,10 +259,323 @@
                     <div class="space-y-6">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-full overflow-hidden border border-border-card bg-bg-tag">
-                                <img src="pictures/mypic.png" alt="Verzel" class="w-full h-full object-cover">
+                                <img src="pictures/mypic.png" alt="Janvier" class="w-full h-full object-cover">
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-text-main font-display">Verzel</h3>
+                                <h3 class="text-lg font-bold text-text-main font-display">Janvier Erickson Araque</h3>
+                                <p class="text-xs text-text-muted">Full-Stack Engineer & Designer</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 text-sm sm:text-base text-text-muted leading-relaxed font-sans">
+                            <p>
+                                I am an engineered-focused developer passionate about constructing secure,
+                                high-performance, and efficient web ecosystems. My workflow bridges secure, robust
+                                backend systems with fluid, pixel-perfect user interfaces, delivering complete
+                                end-to-end applications.
+                            </p>
+                            <p>
+                                With experience spanning custom backend architectures, relational database management,
+                                and UI/UX design, I specialize in building complex business pipelines, automated booking
+                                workflows, and dynamic client dashboards.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 flex flex-wrap gap-2">
+                        <span
+                            class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">Full-Stack
+                            Dev</span>
+                        <span
+                            class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">Backend
+                            Systems</span>
+                        <span
+                            class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">Relational
+                            Databases</span>
+                        <span
+                            class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">UI/UX
+                            Optimization</span>
+                        <span
+                            class="text-xs font-medium bg-bg-tag text-text-main px-3.5 py-1.5 rounded-full border border-border-card">Business
+                            Dashboards</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Location & Clock (1 col) -->
+                <div
+                    class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between hover:border-accent-secondary/30 transition-all duration-300">
+                    <div class="space-y-4">
+                        <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display">
+                            Operational Hub</h3>
+
+                        <!-- Map Marker / Location -->
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-accent-secondary/10 flex items-center justify-center text-accent-secondary border border-accent-secondary/20">
+                                <i class="fas fa-map-marker-alt text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-bold text-text-main">Philippines</div>
+                                <div class="text-xs text-text-muted">Cavite (GMT+8)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Digital Clock Widget -->
+                    <div
+                        class="bg-bg-canvas/50 border border-border-card rounded-xl p-4 mt-6 flex flex-col items-center justify-center">
+                        <div id="live-clock"
+                            class="text-3xl font-black tracking-wider text-accent-secondary font-display font-mono">
+                            00:00:00</div>
+                        <div class="text-[10px] text-text-muted uppercase tracking-widest font-medium mt-1">Live Local
+                            Time</div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Metrics & Stats (1 col) -->
+                <div
+                    class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between hover:border-accent-primary/30 transition-all duration-300">
+                    <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display">Key
+                        Performance Indicators</h3>
+
+                    <div class="grid grid-cols-3 gap-2 mt-4 text-center">
+                        <div class="p-3 bg-bg-tag/50 border border-border-card rounded-xl">
+                            <div class="text-xl font-black text-accent-primary font-display">11+</div>
+                            <div class="text-[9px] text-text-muted uppercase font-semibold mt-1">Projects</div>
+                        </div>
+                        <div class="p-3 bg-bg-tag/50 border border-border-card rounded-xl">
+                            <div class="text-xl font-black text-accent-primary font-display">100%</div>
+                            <div class="text-[9px] text-text-muted uppercase font-semibold mt-1">Quality</div>
+                        </div>
+                        <div class="p-3 bg-bg-tag/50 border border-border-card rounded-xl">
+                            <div class="text-xl font-black text-accent-primary font-display">3+</div>
+                            <div class="text-[9px] text-text-muted uppercase font-semibold mt-1">Years</div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="text-xs text-text-muted leading-relaxed mt-4 bg-accent-primary/[0.03] border border-accent-primary/10 rounded-xl p-3 text-center">
+                        "Delivering scalable systems on time."
+                    </div>
+                </div>
+
+                <!-- Card 4: Frontend Development (1 col) -->
+                <div id="skills"
+                    class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between hover:border-accent-primary/30 transition-all duration-300">
+                    <div>
+                        <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display mb-4">
+                            Frontend Frameworks</h3>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-react.png" alt="React"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                                <span class="text-[9px] font-semibold text-text-muted uppercase">React</span>
+                            </div>
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/vue.png" alt="Vue"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                                <span class="text-[9px] font-semibold text-text-muted uppercase">Vue</span>
+                            </div>
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/tsc.png" alt="TS"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                                <span class="text-[9px] font-semibold text-text-muted uppercase">TypeScript</span>
+                            </div>
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-javascript.png" alt="JS"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                                <span class="text-[9px] font-semibold text-text-muted uppercase">JS</span>
+                            </div>
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-css.png" alt="CSS"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                                <span class="text-[9px] font-semibold text-text-muted uppercase">CSS</span>
+                            </div>
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-html.png" alt="HTML"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                                <span class="text-[9px] font-semibold text-text-muted uppercase">HTML</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Backend & Database (1 col) -->
+                <div
+                    class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between hover:border-accent-primary/30 transition-all duration-300">
+                    <div>
+                        <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display mb-4">
+                            Backend & Server</h3>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-php.png" alt="PHP"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                                <span class="text-[9px] font-semibold text-text-muted uppercase">PHP</span>
+                            </div>
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/supabase.png" alt="Supabase"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                                <span class="text-[9px] font-semibold text-text-muted uppercase">Supabase</span>
+                            </div>
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-phpmyadmin.png" alt="MySQL"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                                <span class="text-[9px] font-semibold text-text-muted uppercase">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Design Tools (1 col, spans 2 on md for grid filling) -->
+                <div
+                    class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md flex flex-col justify-between md:col-span-2 lg:col-span-1 hover:border-accent-primary/30 transition-all duration-300">
+                    <div>
+                        <h3 class="text-xs font-semibold text-text-muted uppercase tracking-wider font-display mb-4">
+                            UI/UX & Design Tools</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-3">
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-figma.png" alt="Figma"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                                <span class="text-[9px] font-semibold text-text-muted uppercase">Figma</span>
+                            </div>
+                            <div
+                                class="p-3 rounded-xl border border-border-card bg-bg-tag/30 flex flex-col items-center justify-center gap-1.5 group hover:border-accent-primary transition-all duration-200">
+                                <img src="pictures/icons-photoshop.png" alt="PS"
+                                    class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200">
+                                <span class="text-[9px] font-semibold text-text-muted uppercase">Photoshop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ══ WORK EXPERIENCE SECTION ══ -->
+        <section id="experience" class="space-y-8 reveal-item">
+            <!-- Section Header -->
+            <div class="space-y-3">
+                <div
+                    class="inline-flex items-center gap-2 text-accent-primary text-xs font-semibold uppercase tracking-wider font-display">
+                    <i class="fas fa-briefcase"></i> Professional History
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-text-main font-display">Work Experience
+                </h2>
+                <p class="text-text-muted max-w-xl">A timeline of my professional journey and significant contributions.
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-l border-border-card ml-3 md:ml-6 space-y-8 pl-8 md:pl-10">
+                <!-- Timeline Item 1 -->
+                <div class="relative group">
+                    <!-- Accent Dot -->
+                    <span
+                        class="absolute -left-[41px] md:-left-[49px] top-1.5 w-4 h-4 rounded-full bg-bg-canvas border-2 border-rose-800 shadow-[0_0_10px_rgba(159,18,57,0.5)] group-hover:bg-rose-800 transition-colors duration-300"></span>
+
+                    <div
+                        class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md hover:border-accent-primary/30 transition-all duration-300">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <h3 class="text-xl font-bold text-text-main font-display">Web Developer & IT Support
+                                Specialist</h3>
+                            <span
+                                class="inline-block px-3 py-1 rounded-full bg-rose-950/20 border border-rose-900/50 text-rose-500 text-xs font-semibold font-mono tracking-widest whitespace-nowrap">2025
+                                - Present</span>
+                        </div>
+                        <div class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">Worldcity
+                            Development Corporation</div>
+
+                        <ul class="space-y-3 text-sm sm:text-base text-text-muted font-sans list-disc list-inside">
+                            <li>Built and deployed 9 live production websites for company affiliates (SolarPower Energy
+                                Corp., Worldcity Real Estate PH & Dubai, Dubai Golden Visa, Mobility Ventures PH, WCG
+                                Consulting Inc., Worldcity Architects, Worldcity Development Corp., Worldcity Group, and
+                                CreditSure).</li>
+                            <li>Developed and maintained secure, database-driven systems using PHP, MySQL, ReactJS,
+                                TypeScript, and JavaScript.</li>
+                            <li>Managed hosting architectures, domains, SSL deployment, website security configurations,
+                                and optimized deliverability for email infrastructure (DNS, SPF, DKIM).</li>
+                            <li>Executed automated email marketing campaigns using Mailchimp and applied core SEO, page
+                                speed, and mobile responsiveness practices.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative group">
+                    <span
+                        class="absolute -left-[41px] md:-left-[49px] top-1.5 w-4 h-4 rounded-full bg-bg-canvas border-2 border-rose-800 shadow-[0_0_10px_rgba(159,18,57,0.5)] group-hover:bg-rose-800 transition-colors duration-300"></span>
+                    <div
+                        class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md hover:border-accent-primary/30 transition-all duration-300">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <h3 class="text-xl font-bold text-text-main font-display">Admin Aide</h3>
+                            <span
+                                class="inline-block px-3 py-1 rounded-full bg-rose-950/20 border border-rose-900/50 text-rose-500 text-xs font-semibold font-mono tracking-widest whitespace-nowrap">03/2025
+                                - 06/2025</span>
+                        </div>
+                        <div class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">EMI Yazaki Eds
+                            Manufacturing Inc.</div>
+                        <ul class="space-y-3 text-sm sm:text-base text-text-muted font-sans list-disc list-inside">
+                            <li>Managed data entry, updated performance reports, and collaborated with the MIS team to
+                                patch system errors.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative group">
+                    <span
+                        class="absolute -left-[41px] md:-left-[49px] top-1.5 w-4 h-4 rounded-full bg-bg-canvas border-2 border-rose-800 shadow-[0_0_10px_rgba(159,18,57,0.5)] group-hover:bg-rose-800 transition-colors duration-300"></span>
+                    <div
+                        class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md hover:border-accent-primary/30 transition-all duration-300">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <h3 class="text-xl font-bold text-text-main font-display">Real Estate Document Encoder
+                                (Part-Time)</h3>
+                            <span
+                                class="inline-block px-3 py-1 rounded-full bg-rose-950/20 border border-rose-900/50 text-rose-500 text-xs font-semibold font-mono tracking-widest whitespace-nowrap">2024
+                                - 2025</span>
+                        </div>
+                        <div class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">Real Estate
+                            Division</div>
+                        <ul class="space-y-3 text-sm sm:text-base text-text-muted font-sans list-disc list-inside">
+                            <li>Verified property data accuracy and managed high volumes of division paperwork.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="relative group">
+                    <span
+                        class="absolute -left-[41px] md:-left-[49px] top-1.5 w-4 h-4 rounded-full bg-bg-canvas border-2 border-rose-800 shadow-[0_0_10px_rgba(159,18,57,0.5)] group-hover:bg-rose-800 transition-colors duration-300"></span>
+                    <div
+                        class="p-6 rounded-2xl border border-border-card bg-bg-card backdrop-blur-md hover:border-accent-primary/30 transition-all duration-300">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <h3 class="text-xl font-bold text-text-main font-display">Freelance Web Designer</h3>
+                            <span
+                                class="inline-block px-3 py-1 rounded-full bg-rose-950/20 border border-rose-900/50 text-rose-500 text-xs font-semibold font-mono tracking-widest whitespace-nowrap">06/2024
+                                - 08/2024</span>
+                        </div>
+                        <ul class="space-y-3 text-sm sm:text-base text-text-muted font-sans list-disc list-inside">
+                            <li>Designed and built custom responsive sites for clients using HTML, CSS, JavaScript,
+                                Figma, and Photoshop.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ EDUCATIONAL BACKGROUND SECTION ══ -->
+        <section id="education" class="space-y-8 reveal-item">
             <!-- Section Header -->
             <div class="space-y-3">
                 <div
@@ -328,10 +640,10 @@
                     class="inline-flex items-center gap-2 text-accent-primary text-xs font-semibold uppercase tracking-wider font-display">
                     <i class="fa-solid fa-code-fork"></i> Production Systems
                 </div>
-                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-text-main font-display">Website Projects
-                </h2>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-text-main font-display">Web Portals &
+                    Dashboards</h2>
                 <p class="text-text-muted max-w-xl">A responsive directory of full-stack platforms, client e-commerce
-                    infrastructure, real estate portals, and many more company websites.</p>
+                    infrastructure, and real estate portals.</p>
             </div>
 
             <!-- Project Cards Grid -->
@@ -378,8 +690,7 @@
                         class="w-full h-full object-cover filter grayscale opacity-50">
                     <div class="absolute inset-0 bg-slate-950/85 flex flex-col justify-end p-5">
                         <span
-                            class="absolute top-4 right-4 bg-slate-800 text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2.5 py-1 rounded-full border border-slate-700">Under
-                            Development</span>
+                            class="absolute top-4 right-4 bg-slate-800 text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2.5 py-1 rounded-full border border-slate-700">Deploying</span>
                         <h3 class="text-base font-bold text-slate-50 font-display">Cavite State University NSTP</h3>
                         <p class="text-xs text-slate-400 mt-1 mb-2 leading-relaxed">Official CVSU Imus Campus National
                             Service Training Program student portal.</p>
@@ -496,8 +807,7 @@
                         class="w-full h-full object-cover filter grayscale opacity-50">
                     <div class="absolute inset-0 bg-slate-950/85 flex flex-col justify-end p-5">
                         <span
-                            class="absolute top-4 right-4 bg-slate-800 text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2.5 py-1 rounded-full border border-slate-700">Under
-                            Development</span>
+                            class="absolute top-4 right-4 bg-slate-800 text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2.5 py-1 rounded-full border border-slate-700">Deploying</span>
                         <h3 class="text-base font-bold text-slate-50 font-display">WCG Consulting Inc.</h3>
                         <p class="text-xs text-slate-400 mt-1 mb-2 leading-relaxed font-sans">Business intelligence
                             inquiry portal and consulting service directories.</p>
@@ -539,36 +849,35 @@
                     </div>
                 </div>
 
-                <!-- Project 13: CreditSure-->
+                <!-- Project 13: CreditSure -->
                 <div
-                    class="relative w-full aspect-video rounded-2xl overflow-hidden border border-border-card bg-bg-card shadow-md opacity-75">
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
                     <img src="pictures/creditsure.png" alt="CreditSure"
-                        class="w-full h-full object-cover filter grayscale opacity-50">
-                    <div class="absolute inset-0 bg-slate-950/85 flex flex-col justify-end p-5">
-                        <span
-                            class="absolute top-4 right-4 bg-slate-800 text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2.5 py-1 rounded-full border border-slate-700">Under
-                        </span>
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
                         <h3 class="text-base font-bold text-slate-50 font-display">CreditSure</h3>
-                        <p class="text-xs text-slate-400 mt-1 mb-2 leading-relaxed">The best loans in the Philippines,
-                            from different banks and financial institutions. Compare options, check eligibility, and get
-                            expert guidance every step of the way.</p>
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">The best loans in the
+                            Philippines, from different banks and financial institutions. Compare options, check
+                            eligibility, and get expert guidance every step of the way.</p>
                         <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Preview Soon</span>
                     </div>
                 </div>
 
                 <!-- Project 14: WDC -->
                 <div
-                    class="relative w-full aspect-video rounded-2xl overflow-hidden border border-border-card bg-bg-card shadow-md opacity-75">
+                    class="relative w-full aspect-video rounded-2xl overflow-hidden group border border-border-card bg-bg-card shadow-md">
                     <img src="pictures/wdc.png" alt="Worldcity Development Corporation"
-                        class="w-full h-full object-cover filter grayscale opacity-50">
-                    <div class="absolute inset-0 bg-slate-950/85 flex flex-col justify-end p-5">
-                        <span
-                            class="absolute top-4 right-4 bg-slate-800 text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2.5 py-1 rounded-full border border-slate-700">Under
-                            Development</span>
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-slate-950/85 md:bg-slate-950/80 md:opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5 md:translate-y-4 group-hover:translate-y-0">
                         <h3 class="text-base font-bold text-slate-50 font-display">Worldcity Development Corporation
                         </h3>
-                        <p class="text-xs text-slate-400 mt-1 mb-2 leading-relaxed">Worldcity stands as a premier
-                            infrastructure and real estate construction developer in the Philippines.</p>
+                        <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed line-clamp-2">Worldcity stands as a
+                            premier infrastructure and real estate construction developer in the Philippines. Operating
+                            as the comprehensive focal point for complex projects, we mobilize premium materials, expert
+                            manpower, and heavy equipment to bring state-of-the-art designs to fruition.
+                        </p>
                         <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Preview Soon</span>
                     </div>
                 </div>
@@ -589,7 +898,6 @@
                     Illustrations</h2>
                 <p class="text-text-muted max-w-xl">A gallery of graphic designs, vector layouts, client branding seals,
                     and wallpaper layouts.</p>
-                <a class="instagram-credit" href="https://instagram.com/verzel.webdev" target="_blank" rel="noopener">@verzel.webdev <i class="fas fa-arrow-up-right-from-square"></i></a>
             </div>
 
             <!-- Gallery Grid -->
@@ -695,15 +1003,6 @@
         </section>
 
     </main>
-
-    <footer class="premium-footer relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div>
-            <span>VERZEL / DIGITAL DEVELOPMENT</span>
-            <h2>Let’s make the next idea <em>matter.</em></h2>
-        </div>
-        <a href="https://instagram.com/verzel.webdev" target="_blank" rel="noopener">@verzel.webdev</a>
-        <span>© 2026 Verzel. Philippines · GMT+8</span>
-    </footer>
 
     <!-- ══ LIGHTBOX MODAL ══ -->
     <div id="lightbox"
