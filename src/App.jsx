@@ -1,5 +1,17 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import portraitImage from '../pictures/mypic.png'
+import solarPowerImage from './optimized/solarpower.jpg'
+import icsmImage from './optimized/icsm.jpg'
+import taskQueyaImage from './optimized/taskqueya.jpg'
+import worldcityImage from './optimized/worldcity.jpg'
+import mobilityImage from './optimized/mobility.jpg'
+import architectsImage from './optimized/architects.jpg'
+import birthdayArtwork from '../pictures/Birthday_celebrant_client.jpg'
+import businessArtwork from '../pictures/client3business.jpg'
+import socialArtwork from './optimized/social-artwork.jpg'
+import conceptArtwork from './optimized/concept-artwork.jpg'
+import identityArtwork from '../pictures/Logo-TQ.png'
 import {
   ArrowDownRight,
   ArrowRight,
@@ -83,7 +95,7 @@ const projects = [
     title: 'SolarPower Energy Corporation',
     category: 'E-commerce · Admin dashboard',
     description: 'B2B solar marketplace with product discovery, custom quoting, checkout flows, and staff operations.',
-    image: '/pictures/solarpower.png',
+    image: solarPowerImage,
     live: 'https://solarpower.com.ph',
     repo: 'https://github.com/mRPy30/SolarPower-Energy-Corporation',
     tags: ['PHP', 'MySQL', 'JavaScript'],
@@ -93,7 +105,7 @@ const projects = [
     title: 'ICSM Creatives',
     category: 'Booking portal · CMS',
     description: 'Online booking system with a decision-support flow and dynamic content management tools.',
-    image: '/pictures/project1.png',
+    image: icsmImage,
     live: 'https://icsmcreatives-woad.vercel.app/',
     repo: 'https://github.com/mRPy30/icsm-creatives',
     tags: ['PHP', 'CSS', 'CMS'],
@@ -102,7 +114,7 @@ const projects = [
     title: 'TaskQueya',
     category: 'Productivity · Collaboration',
     description: 'A collaborative task-management and scheduling product for focused personal workflows.',
-    image: '/pictures/project2.png',
+    image: taskQueyaImage,
     live: 'https://taskqueya.vercel.app/',
     repo: 'https://github.com/mRPy30/taskqueya',
     tags: ['JavaScript', 'CSS', 'Vercel'],
@@ -111,7 +123,7 @@ const projects = [
     title: 'Worldcity Real Estate PH',
     category: 'Property portal · Lead generation',
     description: 'Property directory and conversion-focused agent portal for the Philippine real-estate market.',
-    image: '/pictures/worldcityPh.png',
+    image: worldcityImage,
     live: 'https://worldcityrealestate.ph',
     tags: ['CMS', 'SEO', 'Responsive UI'],
   },
@@ -119,7 +131,7 @@ const projects = [
     title: 'Mobility Ventures',
     category: 'Corporate portal · Clean mobility',
     description: 'A corporate experience showcasing EV charging infrastructure and sustainable transport networks.',
-    image: '/pictures/mobilityventures.png',
+    image: mobilityImage,
     live: 'https://mobilityventures.ph',
     repo: 'https://github.com/mRPy30/mobility-venture',
     tags: ['TypeScript', 'React', 'UI/UX'],
@@ -128,7 +140,7 @@ const projects = [
     title: 'Worldcity Architects',
     category: 'Portfolio · Content system',
     description: 'An editorial architecture portfolio built to present structural concepts and project stories.',
-    image: '/pictures/worldcityarchitects.png',
+    image: architectsImage,
     live: 'https://worldcityarchitects.com',
     repo: 'https://github.com/mRPy30/worldcity-architects',
     tags: ['TypeScript', 'CMS', 'Web design'],
@@ -136,11 +148,11 @@ const projects = [
 ]
 
 const graphics = [
-  { image: '/pictures/Birthday_celebrant_client.jpg', title: 'Celebration Collateral', type: 'Event design' },
-  { image: '/pictures/client3business.jpg', title: 'Business Identity', type: 'Brand material' },
-  { image: '/pictures/quote1.png', title: 'Social Editorial', type: 'Content design' },
-  { image: '/pictures/bts_price.png', title: 'Product Campaign', type: 'Campaign art' },
-  { image: '/pictures/logoPsD - no bg.png', title: 'Identity Exploration', type: 'Logo system' },
+  { image: birthdayArtwork, title: 'Celebration Collateral', type: 'Event design' },
+  { image: businessArtwork, title: 'Business Identity', type: 'Brand material' },
+  { image: socialArtwork, title: 'Social Editorial', type: 'Content design' },
+  { image: conceptArtwork, title: 'Product Campaign', type: 'Campaign art' },
+  { image: identityArtwork, title: 'Identity Exploration', type: 'Logo system' },
 ]
 
 function ThemeToggle({ dark, toggle }) {
@@ -153,10 +165,9 @@ function ThemeToggle({ dark, toggle }) {
   )
 }
 
-function SectionIntro({ index, eyebrow, title, copy }) {
+function SectionIntro({ eyebrow, title, copy }) {
   return (
     <motion.div className="section-intro" variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.35 }}>
-      <span className="section-index">{index}</span>
       <div>
         <p className="eyebrow">{eyebrow}</p>
         <h2>{title}</h2>
@@ -240,14 +251,15 @@ function App() {
             <motion.div className="hero-badges" variants={stagger} initial="hidden" animate="visible">
               {heroBadges.map(([Icon, label, value]) => (
                 <motion.div className="hero-badge" variants={{ hidden: { opacity: 0, scale: 0.45 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.55, ease } } }} whileHover={{ y: -7 }} key={value}>
-                  <Icon size={22} /><span>{label}</span><strong>{value}</strong>
+                  <div className="badge-icon"><Icon size={19} /></div>
+                  <span>{label}</span><strong>{value}</strong>
                 </motion.div>
               ))}
             </motion.div>
           </div>
 
           <motion.div className="portrait" initial={{ opacity: 0, scale: 0.9, y: 32 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.95, ease }}>
-            <img src="/pictures/grad-picwbg.png" alt="Janvier Erickson Araque" />
+            <img src={portraitImage} alt="Verzel, full-stack developer and UI/UX designer" width="784" height="1047" fetchPriority="high" />
           </motion.div>
 
           <div className="hero-right">
@@ -256,7 +268,7 @@ function App() {
               <div><strong>2024</strong><span>Est.</span></div>
             </motion.div>
             <motion.h2 initial={{ opacity: 0, x: 75 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.22, duration: 0.9, ease }}>
-              Your fullstack<br />developer partner
+              Your<br />fullstack<br />developer<br />partner
             </motion.h2>
           </div>
         </div>
@@ -273,12 +285,12 @@ function App() {
       </section>
 
       <section className="content-section about-section" id="about">
-        <SectionIntro index="01" eyebrow="About & expertise" title="Design-minded. Systems-driven." copy="I build dependable digital experiences at the meeting point of clear design, clean engineering, and real business needs." />
+        <SectionIntro eyebrow="About & expertise" title="Design-minded. Systems-driven." copy="I build dependable digital experiences at the meeting point of clear design, clean engineering, and real business needs." />
         <div className="about-layout">
           <motion.div className="about-story" variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
             <span className="about-kicker">Based in the Philippines · Working worldwide</span>
             <h3>From the first sketch to the final deployment.</h3>
-            <p>I’m Janvier Erickson Araque, a full-stack developer who enjoys translating complex workflows into focused, usable products. My background spans production websites, business dashboards, e-commerce systems, and visual design.</p>
+            <p>I’m Verzel, a full-stack developer who enjoys translating complex workflows into focused, usable products. My background spans production websites, business dashboards, e-commerce systems, and visual design.</p>
             <div className="values">
               {['Build with purpose', 'Keep systems practical', 'Make every detail earn its place'].map((value) => <span key={value}><Check size={15} />{value}</span>)}
             </div>
@@ -294,7 +306,7 @@ function App() {
       </section>
 
       <section className="content-section work-section" id="work">
-        <SectionIntro index="02" eyebrow="Web portals & dashboards" title="Selected digital systems." copy="Production work across commerce, booking, real estate, clean mobility, and business operations." />
+        <SectionIntro eyebrow="Web portals & dashboards" title="Selected digital systems." copy="Production work across commerce, booking, real estate, clean mobility, and business operations." />
         <motion.div className="project-grid" variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }}>
           {projects.map((project, index) => <ProjectCard project={project} index={index} key={project.title} />)}
         </motion.div>
@@ -304,7 +316,7 @@ function App() {
       </section>
 
       <section className="content-section graphics-section" id="graphics">
-        <SectionIntro index="03" eyebrow="Creative graphics" title="Visual stories beyond code." copy="Selected brand materials, campaign graphics, and concept work shaped with the same attention to clarity and detail." />
+        <SectionIntro eyebrow="Creative graphics" title="Visual stories beyond code." copy="Selected brand materials, campaign graphics, and concept work shaped with the same attention to clarity and detail." />
         <motion.div className="graphics-grid" variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.08 }}>
           {graphics.map((item, index) => <motion.figure className={`graphic-card graphic-${index + 1}`} variants={reveal} key={item.title}>
             <img src={item.image} alt={item.title} loading="lazy" />
@@ -314,10 +326,10 @@ function App() {
       </section>
 
       <section className="content-section github-section" id="github">
-        <SectionIntro index="04" eyebrow="GitHub activity" title="Consistent work, in public." copy="A living view of experiments, production builds, and the steady practice behind the finished interfaces." />
+        <SectionIntro eyebrow="GitHub activity" title="Consistent work, in public." copy="A living view of experiments, production builds, and the steady practice behind the finished interfaces." />
         <motion.div className="github-panel" variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
           <div className="github-header">
-            <div className="github-identity"><span><Github size={25} /></span><div><strong>mRPy30</strong><small>Janvier Erickson Araque</small></div></div>
+            <div className="github-identity"><span><Github size={25} /></span><div><strong>mRPy30</strong><small>Verzel</small></div></div>
             <a href="https://github.com/mRPy30" target="_blank" rel="noreferrer">View profile <ExternalLink size={15} /></a>
           </div>
           <div className="github-summary">
@@ -353,7 +365,7 @@ function App() {
 
       <footer className="footer">
         <a className="brand" href="#home">Verzel<span>.</span></a>
-        <p>© {new Date().getFullYear()} Janvier Erickson Araque</p>
+        <p>© {new Date().getFullYear()} Verzel</p>
         <a href="#home">Back to top <ArrowUpRight size={14} /></a>
       </footer>
     </main>
