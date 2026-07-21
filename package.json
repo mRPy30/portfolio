@@ -1,16 +1,23 @@
 {
-  "name": "portfolio-revamp",
-  "version": "1.0.0",
-  "description": "Premium Full-Stack Developer Portfolio Revamp",
-  "main": "index.html",
+  "name": "verzel-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "tailwindcss -i assets/src-style.css -o assets/style.css --watch",
-    "build:css": "tailwindcss -i assets/src-style.css -o assets/style.css --minify"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "Janvier Erickson Araque",
-  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "framer-motion": "^12.23.6",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.11"
+  },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.3.0"
+    "@vitejs/plugin-react": "^4.6.0",
+    "vite": "^7.0.4"
   }
 }
