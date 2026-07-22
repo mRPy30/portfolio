@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import portraitImage from '../pictures/mypic.png'
 import solarPowerImage from './optimized/solarpower.jpg'
+import solarKingImage from './optimized/solarking.webp'
 import icsmImage from './optimized/icsm.jpg'
 import taskQueyaImage from './optimized/taskqueya.jpg'
 import worldcityImage from './optimized/worldcity.jpg'
@@ -100,6 +101,14 @@ const projects = [
     repo: 'https://github.com/mRPy30/SolarPower-Energy-Corporation',
     tags: ['PHP', 'MySQL', 'JavaScript'],
     featured: true,
+  },
+  {
+    title: 'SolarKing Philippines',
+    category: 'Solar energy · Corporate website',
+    description: 'A conversion-focused corporate website for a rising Philippine solar company, presenting its systems, services, and clean-energy mission.',
+    image: solarKingImage,
+    live: 'https://solarking.ph',
+    tags: ['Web Design', 'SEO', 'Responsive UI'],
   },
   {
     title: 'ICSM Creatives',
@@ -226,7 +235,7 @@ function App() {
             {navigation.map(([label, href]) => <a href={href} key={label}>{label}</a>)}
             <ThemeToggle dark={dark} toggle={() => setDark((value) => !value)} />
           </nav>
-          <a className="email-cta" href="mailto:araquejanvier@gmail.com">Send email <ArrowRight size={17} /></a>
+          <a className="email-cta" href="mailto:verzel.0130@gmail.com">Send email <ArrowRight size={17} /></a>
           <div className="mobile-controls">
             <ThemeToggle dark={dark} toggle={() => setDark((value) => !value)} />
             <button className="menu-toggle" type="button" onClick={() => setMenuOpen((value) => !value)} aria-expanded={menuOpen} aria-label="Toggle menu">
@@ -357,9 +366,10 @@ function App() {
       <section className="contact-section">
         <motion.div initial={{ opacity: 0, scale: 0.96 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease }} viewport={{ once: true, amount: 0.4 }}>
           <Sparkles size={28} />
-          <p>Have a project in mind?</p>
+          <p className="contact-kicker">Have a project in mind?</p>
           <h2>Let’s build something<br />worth remembering.</h2>
-          <a href="mailto:araquejanvier@gmail.com">Start a conversation <ArrowRight size={19} /></a>
+          <p className="contact-reach">For work, collabs &amp; everything else, reach me at <a className="contact-email" href="mailto:verzel.0130@gmail.com">verzel.0130@gmail.com</a>.</p>
+          <a className="contact-button" href="mailto:verzel.0130@gmail.com">Start a conversation <ArrowRight size={19} /></a>
         </motion.div>
       </section>
 
