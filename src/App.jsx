@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import portraitImage from '../pictures/mypic.png'
+import gradPicImage from '../pictures/grad-picwbg.png'
 import solarPowerImage from './optimized/solarpower.jpg'
 import solarKingImage from './optimized/solarking.webp'
 import icsmImage from './optimized/icsm.jpg'
@@ -8,6 +9,11 @@ import taskQueyaImage from './optimized/taskqueya.jpg'
 import worldcityImage from './optimized/worldcity.jpg'
 import mobilityImage from './optimized/mobility.jpg'
 import architectsImage from './optimized/architects.jpg'
+import worldcityDubaiImage from '../pictures/worldcityDubai.png'
+import wdcImage from '../pictures/wdc.png'
+import wcggroupImage from '../pictures/wcggroup.png'
+import wcgconsultingImage from '../pictures/wcgconsulting.png'
+import creditsureImage from '../pictures/creditsure.png'
 import birthdayArtwork from '../pictures/Birthday_celebrant_client.jpg'
 import businessArtwork from '../pictures/client3business.jpg'
 import socialArtwork from './optimized/social-artwork.jpg'
@@ -41,6 +47,16 @@ const ease = [0.22, 1, 0.36, 1]
 const reveal = {
   hidden: { opacity: 0, y: 42 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease } },
+}
+
+const baseImgVariants = {
+  default: { opacity: 1, scale: 1 },
+  hover: { opacity: 0, scale: 0.95 }
+}
+
+const hoverImgVariants = {
+  default: { opacity: 0, scale: 1.05 },
+  hover: { opacity: 1, scale: 1 }
 }
 
 const stagger = {
@@ -154,6 +170,46 @@ const projects = [
     repo: 'https://github.com/mRPy30/worldcity-architects',
     tags: ['TypeScript', 'CMS', 'Web design'],
   },
+  {
+    title: 'Worldcity Real Estate Dubai',
+    category: 'Property portal · Lead generation',
+    description: 'A premium real estate platform for discovering luxury properties and registering interest in Dubai, UAE.',
+    image: worldcityDubaiImage,
+    live: 'https://www.worldcityrealestate.com/',
+    tags: ['SEO', 'Responsive UI', 'Web Design'],
+  },
+  {
+    title: 'Worldcity Group',
+    category: 'Corporate website · Brand identity',
+    description: 'The central corporate website for Worldcity Group, representing its global services, brand identity, and corporate portfolio.',
+    image: wdcImage,
+    live: 'https://worldcitygroup.com/',
+    tags: ['React', 'SEO', 'Responsive UI'],
+  },
+  {
+    title: 'Worldcity Philippines',
+    category: 'Corporate website · Group directory',
+    description: 'Official corporate directory and business portfolio for Worldcity Group\'s Philippine operations.',
+    image: wcggroupImage,
+    live: 'https://worldcity.ph/',
+    tags: ['React', 'Web Design', 'SEO'],
+  },
+  {
+    title: 'WCG Consulting',
+    category: 'Consulting portal · Advisory',
+    description: 'A professional consulting and advisory landing page for strategic corporate registration and business services.',
+    image: wcgconsultingImage,
+    tags: ['UI/UX Design', 'Prototype', 'Web Design'],
+    previewSoon: true,
+  },
+  {
+    title: 'CreditSure',
+    category: 'Financial services · Loan system',
+    description: 'A secure financial assessment and background verification platform for modern credit services.',
+    image: creditsureImage,
+    tags: ['UI/UX Design', 'Dashboard', 'React'],
+    previewSoon: true,
+  },
 ]
 
 const graphics = [
@@ -187,15 +243,27 @@ function SectionIntro({ eyebrow, title, copy }) {
 }
 
 function ProjectCard({ project, index }) {
+  const isPreview = project.previewSoon
   return (
     <motion.article className={`project-card ${project.featured ? 'featured' : ''}`} variants={reveal}>
-      <a href={project.live} target="_blank" rel="noreferrer" className="project-visual" aria-label={`Open ${project.title} live website`}>
-        <img src={project.image} alt={`${project.title} interface preview`} loading="lazy" />
-        <span className="project-number">0{index + 1}</span>
-        <span className="view-project">View live <ArrowUpRight size={16} /></span>
-      </a>
+      {isPreview ? (
+        <div className="project-visual preview-only" aria-label={`${project.title} interface preview`}>
+          <img src={project.image} alt={`${project.title} interface preview`} loading="lazy" />
+          <span className="project-number">{(index + 1) < 10 ? `0${index + 1}` : index + 1}</span>
+          <span className="view-project preview-badge">Preview soon</span>
+        </div>
+      ) : (
+        <a href={project.live} target="_blank" rel="noreferrer" className="project-visual" aria-label={`Open ${project.title} live website`}>
+          <img src={project.image} alt={`${project.title} interface preview`} loading="lazy" />
+          <span className="project-number">{(index + 1) < 10 ? `0${index + 1}` : index + 1}</span>
+          <span className="view-project">View live <ArrowUpRight size={16} /></span>
+        </a>
+      )}
       <div className="project-info">
-        <p>{project.category}</p>
+        <p>
+          {project.category}
+          {isPreview && <span className="badge-preview">Preview soon</span>}
+        </p>
         <h3>{project.title}</h3>
         <span className="project-description">{project.description}</span>
         <div className="project-footer">
@@ -267,13 +335,43 @@ function App() {
             </motion.div>
           </div>
 
-          <motion.div className="portrait" initial={{ opacity: 0, scale: 0.9, y: 32 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.95, ease }}>
-            <img src={portraitImage} alt="Verzel, full-stack developer and UI/UX designer" width="784" height="1047" fetchPriority="high" />
+          <motion.div 
+            className="portrait" 
+            initial={{ opacity: 0, scale: 0.9, y: 32 }} 
+            animate={{ opacity: 1, scale: 1, y: 0 }} 
+            transition={{ delay: 0.4, duration: 0.95, ease }}
+            whileHover="hover"
+          >
+            <div className="portrait-inner">
+              <motion.img 
+                variants={baseImgVariants}
+                initial="default"
+                animate="default"
+                transition={{ duration: 0.5, ease }}
+                src={portraitImage} 
+                alt="Verzel, full-stack developer and UI/UX designer" 
+                width="784" 
+                height="1047" 
+                fetchPriority="high" 
+              />
+              <motion.img 
+                variants={hoverImgVariants}
+                initial="default"
+                animate="default"
+                transition={{ duration: 0.5, ease }}
+                src={gradPicImage} 
+                alt="Verzel in graduation toga" 
+                width="784" 
+                height="1047" 
+                fetchPriority="high"
+                className="toga-img"
+              />
+            </div>
           </motion.div>
 
           <div className="hero-right">
             <motion.div className="hero-stats" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.34 }}>
-              <div><strong>11+</strong><span>Projects<br />delivered</span></div>
+              <div><strong>16+</strong><span>Projects<br />delivered</span></div>
               <div><strong>2024</strong><span>Est.</span></div>
             </motion.div>
             <motion.h2 initial={{ opacity: 0, x: 75 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.22, duration: 0.9, ease }}>
